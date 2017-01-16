@@ -9,7 +9,10 @@
 <body>
 <dl>
   <dt>한줄입력</dt>
-  <dd><input type="text" /></dd>
+  <dd><input type="text" placeholder="아이디" /></dd>
+    <dd><input type="text" value="아이디" /></dd>
+    <dd><input type="text" value="아이디" placeholder="아이디" /></dd>
+    <dd><input type="text" namw="userid"placeholder="아이디" /></dd><!-- submit하면 userid 값으로 전송 -->
   <dt>비밀번호</dt>
   <dd><input type="password" /></dd>
   <dt>단일선택</dt>
@@ -36,5 +39,13 @@
  <dt>color</dt>
  <dd><input type="color" /></dd> <!-- 브라우저 호환이 안됨 -->
 </dd>
+
+<div>
+<form action="table_gagung.html" method="post">  <!-- get방식 주소가 노출되어 보안에취약 -->
+  <p><input type="text" name="username"></p>
+  <p><input type="text" name="pwd"></p>
+  <p><input type="submit"></p>
+</form>
+</div>
 </body>
 </html>

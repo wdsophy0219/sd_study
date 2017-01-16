@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>input</title>
+</head>
+<body>
+<dl>
+
+<div>
+<fieldset>
+  <LEGND>필수입력항목</LEGND>
+  <form action="table_gagung.html" method="post">
+     <!-- get방식 주소가 노출되어 보안에취약 -->
+     <!-- placeholder, required 하위브라우저와 호환성 문제 있음 -->
+    <p><label for="user">아이디</label> : <input type="text" name="username" id="user"  maxlength="14"
+      placehoder="" required="true"></p>
+    <p>비밀번호 : <input type="text" name="pwd"></p>
+    <p>성별 :
+      <input type="radio" name="gender" value="man" checked="enable">
+      <input type="radio" name="gender" value="woman">
+    </p>
+    <p><input type="submit"></p>
+
+ <!-- input값이 존재하면 label 값이 반드시 와야한다 -->
+</fildset>
+</form>
+</div>
+</body>
+</html>
