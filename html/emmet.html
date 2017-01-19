@@ -6,6 +6,69 @@
   <title>Emmet Syntax</title>
 </head>
 <body>
-    
+    <!-- div+nov>p>span+em^bq -->
+     <div></div>
+     <nov>
+       <p>
+         <span></span>
+         <em></em>
+       </p>
+       <blockquote></blockquote>
+     </nov>
+
+     <!-- div>(header>ul>li*2>a)+footer>p -->
+     <div>
+       <header>
+         <ul>
+           <li><a href=""></a></li>
+           <li><a href=""></a></li>
+         </ul>
+       </header>
+       <footer>
+         <p></p>
+       </footer>
+     </div>
+
+     <!-- div+div>p>span+em^bq -->
+     <div></div>
+     <div>
+       <p><span></span><em></em></p>
+       <blockquote></blockquote>
+     </div>
+
+     <!-- div+div>p>span+em^^bq -->
+     <div></div>
+     <div>
+       <p><span></span><em></em></p>
+     </div>
+     <blockquote></blockquote>
+
+     <!-- ul>li.item$*3 -->
+     <ul>
+       <li class="item1"></li>
+       <li class="item2"></li>
+       <li class="item3"></li>
+     </ul>
+
+     <!-- h$[title=item$]{header $}*3 -->
+     <h1 title="item1">header 1</h1>
+     <h2 title="item2">header 2</h2>
+     <h3 title="item3">header 3</h3>
+
+
+
+     <!-- p[title=item$]{숫자 $}*5 -->
+      <p title="item1">숫자 1</p>
+      <p title="item2">숫자 2</p>
+      <p title="item3">숫자 3</p>
+      <p title="item4">숫자 4</p>
+      <p title="item5">숫자 5</p>
+
+
+
+ <div id="header"></div>
+
+</nav>
+
 </body>
 </html>
