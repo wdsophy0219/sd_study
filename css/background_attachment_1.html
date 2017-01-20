@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>background-attachment 2</title>
+     <style>
+        html,body, div{height:100%;}
+        div{height:100%; border:1px #F00 solid; background-size: cover; background-attachment: fixed;}  /*모바일에서는 background-attachment:fixed가 표현되지 않는다 */
+        .a{background-image: url(../images/Desert.jpg);}
+        .b{background-image: url(../images/Koala.jpg)}
+        .c{background-image: url(../images/Penguins.jpg)}
+        .d{background-image: url(../images/Tulips.jpg)}
+      </style>
+     </head>
+    <body>
+      <div class="a"></div>
+      <div class="b"></div>
+      <div class="a" style="background-attachment: local;"></div>
+ +    <div class="a" style="background-image: url(../images/Jellyfish.jpg);"></div>
+      <div class="c"></div>
+      <div class="d"></div>
+
+    </body>
+</html>
