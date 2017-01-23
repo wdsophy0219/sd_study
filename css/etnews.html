@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <style>
-    .wrap {width: 900px; height:540px; border: 1px rgb(89, 91, 76) solid; margin: 0 auto;}
-    .top {height: 111px; border: 1px #F00 solid; margin: 0 30px;}
+    .wrap {width: 900px; height:540px; border: 1px #ccc solid; margin: 0 auto;}
+    .header {height: 111px; padding-top: 14px; outline: 1px #F00 solid; margin: 0 30px; border-bottom: 2px #ccc solid; }
+     img {vertical-align: top;}
+     h1 {margin: 0; float: left;}
+    .banner {padding-top:20px; float: right;}
+    .edit {clear: right; font-size: 11px;}
     .contents {height: 380px; border: 1px #F00 solid; margin: 25px 30px;}
     .con_left {width: 513px; height: 100%; background-color: rgb(174, 180, 177); float: left}
     .con_right {width: 307px; height: 100%; background-color: rgb(140, 209, 139); margin-left: 533px;}
@@ -16,7 +20,16 @@
 </head>
 <body>
   <div class="wrap">
-      <div class="top"></div>
+      <div class="header">
+        <h1><a href=""><img src="../images/nsd114836462.gif" alt="전자신문 로고"></a></h1>
+          <div class="banner"><a href=""><img src="../images/468_60_01475642087174.jpg" alt="나눔스퀘어 폰트추가"></a></div>
+          <div class="edit">
+            <input type="button" value="구독하기">
+            <input type="button" value="이용자 한마디">
+            <input type="button" vanle="sns 보내기">
+            <p>01-23 14:56 편집</p>
+          </div>
+      </div>
       <div class="contents">
           <div class="con_left">
             <div class="top_news"></div>
