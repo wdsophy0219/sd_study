@@ -4,71 +4,81 @@
     <meta charset="UTF-8">
     <title>news3</title>
     <style>
-        /*reset*/
-        * {margin:0; padding:0;}
-        ul,ol {list-style:none;}
-        a{text-decoration: none; color:#000;}
-        img{vertical-align: top}
-      /*layout*/
-      .wrap{
-        width:900px;
-        height:540px;
-        outline: 1px #F00 solid;
-        margin: 30px auto;
-      }
-      .wrap .top{
-        outline: 1px #F00 solid;
-        height: 91px;
-        margin:0 30px 20px;
-      }
-      .wrap .contents{
-        outline: 1px #F00 solid;
-        height:380px;
-        margin: 0 30px;
-      }
-      .contents .left-contents{
-        outline:1px #00F solid;
-        width:580px;
-        height:100%;
-      }
+    /*reset*/
+    * {margin:0; padding:0;}
+    ul,ol {list-style:none;}
+    a{text-decoration: none; color:#000;}
+    img{vertical-align: top}
+  /*layout*/
+  .wrap{
+    width:900px;
+    height:540px;
+    outline: 1px #F00 solid;
+    margin: 30px auto;
+  }
+  .wrap .top{
+    outline: 1px #F00 solid;
+    height:111px;
+    margin:0 30px 20px;
+  }
+  .wrap .contents{
+    outline: 1px #F00 solid;
+    height:380px;
+    margin: 0 30px;
+  }
+  .contents .left-contents{
+    outline:1px #00F solid;
+    width:580px;
+    height:100%;
+    float: left;
+  }
 
-      .contents .first-news strong{
-        font-size:24px;
-        display: block;
-        margin-bottom:20px;
-        outline: 1px #F00 solid;
-      }
-      .contents .first-news span.thumb{
-        width: 160px; height:94px auto;outline: 1px #F00 solid;
-        display: block;
-        float:left;
-        margin-right:15px;
-      }
-      .contents .first-news span.thumb img{
-        width: 100%;
-        height:100%;
-      }
-      .contents .first-news li{
-        outline:1px #F00 solid;
-        margin-left:175px;
-        font-size:12px;
-      }
-      .contents .first-news li.first span.thumb + span{
-        outline:1px #F00 solid;
-      }
-      .contents .first-news li.first{
-        margin:0 0 10px 0;
-      }
+  .contents .first-news .h_new {margin-right: 30px; display: block;}
 
-      .secount {outline:1px #ad00ff solid;}
-      .secount .news_list {height: 244px; outline:1px #1b620c solid;}
-      .secount .news_list .hot {width:124px; outline:1px #c7139f solid; float: left;}
-      .secount .news_list .hot2 {float: left; clear: left;}
-      .secount .news_list span.thumb1 {width: 124px; height: 76px; outline:1px #F00 solid; display: block;}
-      .secount .news_list span {width: 124px; font-size: 12px; display: block;}
-      .secount .news_list span.thumb1 img {width: 100%; height: 100%;}
-      .secount .news_list li {font-size: 14px;}
+  .contents .first-news strong{
+    font-size:24px;
+    display: block;
+    margin-bottom:10px;
+    outline: 1px #F00 solid;
+  }
+  .contents .first-news span.thumb{
+    width: 160px; height:94px auto;outline: 1px #F00 solid;
+    display: block;
+    float:left;
+    margin-right:15px;
+  }
+  .contents .first-news span.thumb img{
+    width: 100%;
+    height:100%;
+  }
+  .contents .first-news li{
+    outline:1px #F00 solid;
+    margin-left:175px;
+    font-size:12px;
+    margin-bottom: 5px;
+  }
 
+  .contents .first-news li.first span.thumb + span{
+    outline:1px #F00 solid;
+  }
+  .contents .first-news li.first{
+    margin:0 0 10px 0;
+  }
+
+  .secount {outline:1px #ad00ff solid;}
+  .secount .news_list {height: 244px; outline:1px #1b620c solid;}
+  .secount .news_list .hot {width:124px; outline:1px #c7139f solid; float: left; margin: 5px 20px;}
+  .secount .news_list .hot2 {float: left; clear: left; margin: 0 20px;}
+  .secount .news_list span.thumb1 {width: 124px; height: 76px; outline:1px #F00 solid; display: block;}
+  .secount .news_list span {width: 124px; font-size: 12px; display: block;}
+  .secount .news_list span.thumb1 img {width: 100%; height: 100%;}
+  .secount .news_list li {font-size: 14px; padding: 7px 0 1px;}
+
+  .right-contents{outline:1px #00baff solid; height:100%; margin-left:533px; background-color:#CCC;}
+  .right-contents .news h2{font-size:14px; background-color: grey; color:#FFF; padding:5px 10px;}
+  .right-contents li a{font-size: 12px; padding: 5px 10px;}
+
+  </style>
 
     </style>
 </head>
@@ -77,21 +87,21 @@
     <div class="wrap">
         <header class="top"></header>
         <section class="contents">
-            <div class="left-contents">
 
+            <div class="left-contents">
               <article class="first-news">
                 <ul>
                     <li class="first">
                       <a href="">
                         <strong>삼성 “갤노트7 발화 원인은 배터리 결함 때문”</strong>
                         <span class="thumb"><img src="http://static.naver.net/newsstand/2017/0124/etnews/124047/001.jpg" alt=""></span>
-                        <span>삼성전자는 23일 기자간담회를 갖고 갤럭시노트7 발화 원인이 배터리 자체 결함이라고 최종 발표했다. 차기작 `갤럭시S8` 등 스마트폰 안전성 강화를 위한 부품 전문팀 구...</span>
+                        <span class="h_new">삼성전자는 23일 기자간담회를 갖고 갤럭시노트7 발화 원인이 배터리 자체 결함이라고 최종 발표했다. 차기작 `갤럭시S8` 등 스마트폰 안전성 강화를 위한 부품 전문팀 구...</span>
                       </a>
                     </li>
                     <li><a href="">[이슈분석] 삼성전자 "갤럭시S8 혁신으로 세계 스마트폰 1</a></li>
                     <li><a href="">[이슈분석] 삼성전자 "갤럭시S8 혁신으로 세계 스마트폰 1</a></li>
                 </ul>
-            </article>
+              </article>
 
               <article class="secount">
                  <div class="news_list">
@@ -104,11 +114,11 @@
                        <span class="thumb1"><img src="http://static.naver.net/newsstand/2017/0124/etnews/145253/003.jpg" alt=""></span>
                        <span>“한국에서도 된다...포켓몬고 정식 출시</span>
                      </li>
-                     <li class="pink">'일렉트로마트' SSG닷컴 상륙...신세계, 온라인 가전유통 참전</li>
+                     <li>'일렉트로마트' SSG닷컴 상륙...신세계, 온라인 가전유통 참전</li>
                      <li>세계 TV 시장, 양보다 질…대형화, 고급화 뚜렷</li>
                      <li>(2보)삼성 “갤노트7 발화 원인은 배터리 자체 결함”</li>
                      <li>폭스콘 "미국에 70억달러 이상 투자 디스플레이 공장 설립"</li>
-                     <li class="pink">SKT, 양자난수생성기 '소형 칩'화 성공</li>
+                     <li>SKT, 양자난수생성기 '소형 칩'화 성공</li>
                      <li>폴리실리콘값 16달러↑, OCI·한화케미칼 볕든다</li>
                      <li>KT, 세계 최초 100% SDN 구축</li>
                      <li>네패스, 사람 뇌 구조 'AI 구현 칩' 만든다</li>
@@ -116,11 +126,41 @@
                    </ul>
                  </div>
               </article>
+           </div>
 
-
+            <div class="right-contents">
+              <div class="news">
+                <h2>이슈분석</h2>
+                <ul>
+                  <li><a href="">18년만의 전산 분리, 농협 의왕IT통합센터 현장을 </a></li>
+                  <li><a href="">18년만의 전산 분리, 농협 의왕IT통합센터 현장을 </a></li>
+                  <li><a href="">18년만의 전산 분리, 농협 의왕IT통합센터 현장을 </a></li>
+                </ul>
+              </div>
+             <div class="grid_list">
+              <ul>
+                <li>
+                  <div><img src="http://static.naver.net/newsstand/2017/0124/etnews/091348/004.jpg" alt=""></div>
+                  <span>올해 말 하늘 나는 자동차 시제품 나온다</span>
+                </li>
+                <li>
+                  <div><img src="http://static.naver.net/newsstand/2017/0124/etnews/091348/004.jpg" alt=""></div>
+                  <span>올해 말 하늘 나는 자동차 시제품 나온다</span>
+                </li>
+                <li>
+                  <div><img src="http://static.naver.net/newsstand/2017/0124/etnews/091348/004.jpg" alt=""></div>
+                  <span>올해 말 하늘 나는 자동차 시제품 나온다</span>
+                </li>
+                <li>
+                  <div><img src="http://static.naver.net/newsstand/2017/0124/etnews/091348/004.jpg" alt=""></div>
+                  <span>올해 말 하늘 나는 자동차 시제품 나온다</span>
+                </li>
+              </ul>
             </div>
-            <div class="right-contents"></div>
-        </section>
+          </div>
+       </section>
+
+
     </div>
 </body>
 </html>
