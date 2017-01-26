@@ -29,11 +29,22 @@
 
         /*.wrap li ul{height:0;overflow:hidden; transition:1s;}*/
         /*.wrap li:hover ul{height:100px;}*/
+
+        /*img[alt="파일psd"]{border:1px #F00 solid;}*/
+        /*img[alt^="파일"]{border:1px #F00 solid;}*/
+        /*img[alt$="psd"]{border:1px #F00 solid;}*/
+        /*img[alt*="p"]{border:1px #F00 solid;}*/
+        [id^="title"]{font-size:50px;}
+        /*[id$="solid"]{border:1px #F00 solid;}*/
+        /*[id*="red"]{color:red;}*/
+        /*div.wrap.title*/
+
+
     </style>
 </head>
 <body>
-    <div class="wrap">
-        <h2 id="title">title</h2>
+    <div class="wrap title">
+        <h2 id="title_solid">title</h2>
         <ul>
             <li><a href="#">text</a>
                 <ul>
@@ -45,18 +56,20 @@
             </li>
             <li  class="target"><a href="">text</a>
                 <ul>
-                    <li><a href="">text</a></li>
-                    <li><a href="">text</a></li>
-                    <li><a href="">text</a></li>
+                    <li><a href=""><input type="text"></a></li>
+                    <li><a href=""><input type="button" value="확인"></a></li>
+                    <li><a href=""><input type="checkbox"></a></li>
                     <li><a href="">text</a></li>
                 </ul>
             </li>
            <li  class="target"><a href="">text</a>
                 <ul>
-                    <li><a href="">text</a></li>
-                    <li><a href="">text</a></li>
-                    <li><a href="">text</a></li>
-                    <li><a href="">text</a></li>
+                    <li><a href=""><img src="" alt="파일pdf"></a></li>
+                    <li><a href=""><img src="" alt="파일hwp"></a></li>
+                    <li><a href=""><img src="" alt="파일html"></a></li>
+                    <li><a href=""><img src="" alt="파일psd"></a></li>
+                    <li><a href=""><img src="" alt="파일psd"></a></li>
+                    <li><a href=""><img src="" alt="파일psd"></a></li>
                 </ul>
             </li>
 
