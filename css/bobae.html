@@ -8,26 +8,49 @@
   ul,ol {list-style:none;}
   a{text-decoration: none; color:#000;}
   img{vertical-align: top}
-  h1, h2, h3, h4 {margin: 0; padding: 0; border: 0; font-size: 100%; font:inherit; vertical-align: top;}
-  body {background: #fff url(http://i1.daumcdn.net/deco/comics/top/deco/2014_v2/bg_topbar.gif?v=1102) repeat-x 0 0;
-    direction: ltr;}
+  h1, h2, h3, h4 {margin: 0; padding: 0; border: 0; font-size: 100%; font:inherit; vertical-align: baseline;}
+  body {background: url(../images/1px.gif) repeat-x 0 0;  direction: ltr;}
 
 
   /* Layout */
   #wrap {min-width:990px;}
-
-  header {width:100%;}
+  #header {width:100%;}
   .gnb{position: relative; margin: 0 auto; width: 990px; height: 30px;  font-size: 12px;}
-  .lnb{outline:1px #F00 solid;width:990px;margin:0 auto;text-align:left}
-  /*section {vwidth:990px;margin:0 auto;text-align:left;zoom:1}
-  sectionr:after {outline:1px #F00 solid;display:block;clear:both;content:''}
-  article {outline:1px #F00 solid;float:left;width:640px}
-  aside {outline:1px #F00 solid;float:right;position:relative;width:300px}
-  #column_bottom{outline:1px #F00 solid;clear:both;width:990px;margin:0 0 5px;text-align:left;zoom:1}
-  #column_bottom:after{outline:1px #F00 solid;display:block;clear:both;content:''}
-  footer {outline:1px #F00 solid;width:990px;margin:0 auto;text-align:left}*/
+  .lnb{outline:1px #F00 solid; width:990px; margin:0 auto;}
+  #section {outline:1px #F00; width:990px; margin:300px auto; margin-top: 5px;}
+  .article {outline:1px #F00; width:748px; float: left;}
+  .aside {outline:1px solid #00c2ff; margin-left: 752px; height: 1000px;}
+  #footer {width: 990px; height: 500px; margin: 0 auto; clear: both;}
 
- .gnb .top_left li {float:left;}
+  .gnb .top_left {position: absolute; top:8px; left:0;}
+  .gnb .top_left li {float:left; padding-right: 10px;}
+  .gnb .top_service {position: absolute; top:8px; right: 0; }
+  .gnb .top_service li {float:right; padding-left: 10px;}
+
+  .lnb h1 {outline:1px #F00 solid; padding-top:30px; float: left;}
+  .lnb .search {outline:1px #F00 solid; width: 280px; float: left}
+  .lnb .event {outline:1px #F00 solid; float: right;}
+  .lnb .qu {clear: both; float: left; margin-right: 10px;}
+  .lnb .qu li {outline:1px #F00 solid; float: left; margin-right: 10px;}
+
+
+  .lnb .nav {clear: both; position: relative;}
+  .lnb .nav .menu {width:990px; height: 40px; background-color: #3b5999;}
+  .lnb .nav .menu li {float:left;}
+  .lnb .nav .s_menu {width:990px; height: 37px; border-bottom: 1px solid #ccc;}
+  .lnb .s_menu li {float: left; padding-right: 10px; margin: 10px 0 0 10px;}
+  .lnb .notice {position: absolute; top: 8px; right:10px; font-size: 12px; color: #fff;}
+  .lnb .visit {position: absolute; top: 50px; right:5px;}
+  .lnb .visit li {float: left; padding-right: 10px; font-size: 12px; }
+
+  .article .m_banner {outline:1px #4e1645 solid; }
+  .article .m_banner li {float: left; padding-right: 4px; }
+  .article .m_banner li img {border: 1px solid #ccc;}
+  .article .special_prod {outline:1px #164e1b solid; }
+
+  .article .special_prod li:first-child {float: left;}
+  .article .special_prod .s_list {outline:1px #F00 solid; display: block; font-size: 12px; border-bottom: 1px solid #ccc;}
+  .article .special_prod .s_list img {border: 1px solid #ccc;}
 
 
 
@@ -36,12 +59,12 @@
 </head>
 <body>
   <div id="wrap">
-    <header>
+    <div id="header">
       <div class="gnb">
         <ul class="top_left">
-          <li>즐겨찾기</li>
-          <li>기아 k5 하이브리드 (12년식)</li>
-          <li>41</li>
+          <li><a href=""><img src="../images/star.png" alt="">즐겨찾기</a></li>
+          <li><a href=""><img src="../images/ten.png" alt="">k5 하이브리드 (12년식)</a></li>
+          <li><a href=""><img src="../images/aroow.jpg" alt="">41</a></li>
         </ul>
         <ul class="top_service">
           <li>로그인</li>
@@ -55,18 +78,81 @@
         </ul>
       </div>
       <div class="lnb">
-        <h1>보배드림</h1>
+        <h1><a href=""><img src="../images/logo.jpg" alt="보배드림로고"></a></h1>
+        <div class="search">
+          <fieldset>
+            <legend>검색</legend>
+            <label for="search_from"><input type="text" name="search" value="통합검색" id="search_from" placeholder="검색어를 입력해주세요"></label>
+            <input type="button" name="" value="검색" />
+          </fieldset>
+        </div>
+        <div class="event">
+          <img src="../images/event.jpg" alt=""></a>
+        </div>
+        <div class="qu">
+          <ul>
+            <li><a href=""><img src="../images/qu_01.png" alt="인기중고차"></a></li>
+            <li><a href=""><img src="../images/qu_02.png" alt="오토바이"></a></li>
+            <li><a href=""><img src="../images/qu_03.png" alt="용품장터"></a></li>
+            <li><a href=""><img src="../images/qu_04.png" alt="협력업체"></a></li>
+            <li><a href=""><img src="../images/qu_05.png" alt="이벤트"></a></li>
+          </ul>
+        </div>
+        <div class="nav">
+          <ul class="menu">
+            <li><a href=""><img src="../images/m_nav_10.jpg" alt="사이버매장"></a></li>
+            <li><a href=""><img src="../images/m_nav_11.jpg" alt="국산중고차"></a></li>
+            <li><a href=""><img src="../images/m_nav_12.jpg" alt="수입중고차"></a></li>
+            <li><a href=""><img src="../images/m_nav_13.jpg" alt="내차팔기"></a></li>
+            <li><a href=""><img src="../images/m_nav_14.jpg" alt="커뮤니티"></a></li>
+            <li><a href=""><img src="../images/m_nav_15.jpg" alt="더보기"></a></li>
+          </ul>
+          <ul class="s_menu">
+            <li><a href=""><img src="../images/qu_01.png" alt="국산차매장"></a></li>
+            <li><a href=""><img src="../images/qu_02.png" alt="수입차매장"></a></li>
+            <li><a href=""><img src="../images/qu_03.png" alt="승용차매장"></a></li>
+            <li><a href=""><img src="../images/qu_04.png" alt="스포츠카매장"></a></li>
+            <li><a href=""><img src="../images/qu_05.png" alt="4륜/suv매장"></a></li>
+            <li><a href=""><img src="../images/qu_01.png" alt="밴/승합차매장"></a></li>
+            <li><a href=""><img src="../images/qu_02.png" alt="튜닝카매장"></a></li>
+            <li><a href=""><img src="../images/qu_03.png" alt="올드카매장"></a></li>
+            <li><a href=""><img src="../images/qu_04.png" alt="오토갤러리매장"></a></li>
+          </ul>
+          <ul class="notice">
+            <li><a href="">보배드림어플 업데이트 안내</a></li>
+          </ul>
+          <ul class="visit">
+            <li>오늘방문</li>
+            <li>981,478</li>
+            <li>어제방문</li>
+            <li>981,478</li>
+          </ul>
+
+        </div>
+     </div>
+   </div>
+    <div id="section">
+      <div class="article">
+          <ul class="m_banner">
+            <li><a href=""><img src="../images/top_banner.jpg" alt="메르세데즈 벤츠 CLS class 보러가기"></a></li>
+            <li><a href=""><img src="../images/sub_banner.jpg" alt="카운트다운 페스티발"></a></li>
+          </ul>
+          <ul class="special_prod">
+            <li><a href=""><img src="../images/s_prod01.jpg" alt="특종매물1"></a></li>
+            <li class="s_list"><a href=""><img src="../images/s_prod02.jpg" alt="특종매물2"></a>
+            <span>국산중고차 특종매물 1988 현대 스텔라 1.5 88형 GLX극 희소. 1988년 올림픽 공식모델!! </span></li>
+            <li class="s_list"><a href=""><img src="../images/s_prod03.jpg" alt="특종매물3"></a>
+            <span>국산중고차 특종매물 1988 현대 스텔라 1.5 88형 GLX극 희소. 1988년 올림픽 공식모델!! </span></li>
+            <li class="s_list"><a href=""><img src="../images/s_prod04.jpg" alt="특종매물4"></a>
+            <span>국산중고차 특종매물 1988 현대 스텔라 1.5 88형 GLX극 희소. 1988년 올림픽 공식모델!! </span></li>
+          </ul>
 
       </div>
-    </header>
-    <section>
-      <article>
-
-      <aside>
-
-      </aside>
-    </section>
-    <footer>
+      <div class="aside">
+         fhrmdlafslafsalfsalf
+      </div>
+    </div>
+    <div id="footer">
       <p>qhdflsadfdasfl</p>
     </footer>
   </div>
