@@ -9,7 +9,7 @@
   a{text-decoration: none; color:#000;}
   img{vertical-align: top;}
   h1, h2, h3, h4 {margin: 0; padding: 0; border: 0; font-size: 100%; font:inherit; vertical-align: baseline;}
-  body {background: url(../images/1px.gif) repeat-x 0 0;  direction: ltr;}
+  body {background: url(../images/1px.gif) repeat-x 0 0;  direction: ltr; font-size: 12px;}
 
 
   /* Layout */
@@ -21,12 +21,7 @@
   #article {outline:1px #F00; width:748px; float: left;}
   #aside {outline:1px solid #00c2ff; margin-left: 753px; height: 1000px;}
 
-  /*#column_bottom{clear:both;width:990px;margin:0 0 5px;}
-  #column_bottom:after{display:block;clear:both;content:''}
-  #footer{width:940px;margin:0 auto;text-align:left}*/
-
-
-
+  /*상단 TOP부분*/
   .gnb .top_left {position: absolute; top:8px; left:0;}
   .gnb .top_left li {float:left; padding-right: 10px;}
   .gnb .top_service {position: absolute; top:8px; right: 0; }
@@ -38,6 +33,7 @@
   .lnb .qu {clear: both; float: left; margin-bottom: 10px;;}
   .lnb .qu li {float: left; padding-right: 14px;}
 
+   /*네비게이션*/
   .lnb .nav {clear: both; position: relative;}
   .lnb .nav .menu {outline:1px #F00 solid; height: 40px; background-color: #3b5999;}
   .lnb .nav .menu li {float:left;}
@@ -52,7 +48,7 @@
   .m_banner li img {border: 1px solid #ccc;}
 
   .special_prod {width:728px; margin-top: 11px; height: 244px; border-bottom: 1px solid #ccc;}
-  .special_prod .s_list {margin-left: 410px; width: 324px;}
+  .special_prod .s_list {outline:1px #F00 solid; margin-left: 410px; width: 324px;}
   .special_prod .s_thumb {float: left; margin-right: 8px;}
   .special_prod .s_thumb img {border: 1px solid #ccc;}
   .special_prod .s_txt {padding : 15px 0 15px 20px; font-size: 12px;}
@@ -66,6 +62,10 @@
   .new_cyber .c_thumb {width: 136px; height: 102px;}
   .new_cyber .c_thumb img {width: 100%; height: 100%; border: 1px solid #ccc}
   .new_cyber .p_txt {font-size: 12px; width: 136px; height: 48px; display: block; padding-top: 10px; text-align: center;}
+
+
+   /*로그인*/
+
 
 
   </style>
@@ -343,7 +343,33 @@
           </div>
       </div>
       <div id="aside">
-         <p>fhrmdlafslafsalfsalf</p>
+        <div class="m_log">
+          <!-- <div class="id"><label for="u_name"></label><input type="text" name="name" value="" id="u_name" placeholder="아이디"></div>
+          <div class="pw"><label for="u_pwd"></label><input type="password" name="pwd" maxlength="14" value="" id="u_pwd" placeholder="비밀번호"></div>
+          <div class="login"></div>
+          <fieldset>
+            <form class="" action="index.html" method="post">  -->
+        </div>
+        <div class="hot_issue">
+         <h4><img src="" alt="커뮤니티 핫이슈"></h4>
+         <div class="arr_btn">
+           <ul>
+             <li><a href=""><img src="" alt=""></a></li>
+             <li><a href=""><img src="" alt="">1/20</a></li>
+             <li><a href=""><img src="" alt=""></a></li>
+           </ul>
+           <ul>
+             <li>
+              <span="hot_thumb"><a href=""><img src="" alt=""></a></span>
+              <span="num_txt">길가에 멈춰선 차량 돕는 훈훈한 모습</span>
+              </li>
+             <li><a href=""><img src="" alt="">1/20</a></li>
+             <li><a href=""><img src="" alt=""></a></li>
+           </ul>
+         </div>
+
+        </div>
+
       </div>
     </div>
     <div id="footer">
