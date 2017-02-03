@@ -64,15 +64,20 @@
 
 
    /*네비게이션*/
-  .lnb .nav {clear: both; position: relative;}
-  .lnb .nav .menu {outline:1px #F00 solid; height: 40px; background-color: #3b5999;}
-  .lnb .nav .menu li {float:left;}
-  .lnb .nav .s_menu {outline:1px #F00 solid; height: 38px; border-bottom: 1px solid #ccc; }
-  .lnb .s_menu li {float: left; padding: 12px 0;}
+  .nav{width:990px; height:76px; margin:0 auto; border-bottom:1px #F00 solid;}
+  .nav>ul{height:38px; background-color: #CCC;}
+  .nav>ul>li{float:left; line-height:38px;font-size:14px; font-weight:bold;}
+  .nav>ul>li:hover{background: #EEE;}
+  .nav>ul>li:hover ul{display:block;}
+  .nav>ul>li>a{display:block;padding:0 11px; }
+  .nav ul ul{position:absolute; display:none;}
+  .nav li.on ul{display:block;}
+  .nav ul ul li{float:left;margin:0 10px;}
 
-  .lnb .notice {position: absolute; top: 10px; right:10px; font-size: 12px; color: #fff;}
-  .lnb .visit {position: absolute; top: 50px; right:5px;}
-  .lnb .visit li {float: left; padding-right: 10px; font-size: 12px; }
+
+  .notice {position: absolute; top: 10px; right:10px; font-size: 12px; color: #fff;}
+  .visit {position: absolute; top: 50px; right:5px;}
+  .visit li {float: left; padding-right: 10px; font-size: 12px; }
 
   .m_banner li:first-child {float: left; padding-right: 4px;}
   .m_banner li img {border: 1px solid #ccc;}
@@ -132,66 +137,139 @@
               <li><a href=""><i class="icon-mobile"></i>모바일</a></li>
             </ul>
           </div>
-        <div>
+        </div>
+      </div>
 
       <div class="lnb">
         <div class="logo fl"><h1><img src="../images/logo.jpg" alt="보배드림로고"></a></h1></div>
         <div class="event fr">
-          <img src="../images/event.jpg" alt="이벤트배너 바로가기"></a>
-        </div>
+            <img src="../images/event.jpg" alt="이벤트배너 바로가기"></a>
+          </div>
         <div class="search">
-          <div><img src="../images/top_banner.png" alt=""></div>
-          <fieldset>
-              <legend class="ir">검색</legend>
-              <input type="text"><input type="submit" value="검색">
-          </fieldset>
+            <div><img src="../images/top_banner.png" alt=""></div>
+            <fieldset>
+                <legend class="ir">검색</legend>
+                <input type="text"><input type="submit" value="검색">
+            </fieldset>
         </div>
 
         <div class="qu">
-          <ul>
-            <li><a href=""><img src="../images/qu_01.png" alt="인기중고차"></a></li>
-            <li><a href=""><img src="../images/qu_02.png" alt="오토바이"></a></li>
-            <li><a href=""><img src="../images/qu_03.png" alt="용품장터"></a></li>
-            <li><a href=""><img src="../images/qu_04.png" alt="협력업체"></a></li>
-            <li><a href=""><img src="../images/qu_05.png" alt="이벤트"></a></li>
-          </ul>
+            <ul>
+              <li><a href=""><img src="../images/qu_01.png" alt="인기중고차"></a></li>
+              <li><a href=""><img src="../images/qu_02.png" alt="오토바이"></a></li>
+              <li><a href=""><img src="../images/qu_03.png" alt="용품장터"></a></li>
+              <li><a href=""><img src="../images/qu_04.png" alt="협력업체"></a></li>
+              <li><a href=""><img src="../images/qu_05.png" alt="이벤트"></a></li>
+            </ul>
         </div>
+      </div>
 
         <!-- 네이게이션 -->
         <div class="nav">
           <ul>
-            <li><a href=""><img src="../images/m_nav_10.jpg" alt="사이버매장"></a></li>
-            <li><a href=""><img src="../images/m_nav_11.jpg" alt="국산중고차"></a></li>
-            <li><a href=""><img src="../images/m_nav_12.jpg" alt="수입중고차"></a></li>
-            <li><a href=""><img src="../images/m_nav_13.jpg" alt="내차팔기"></a></li>
-            <li><a href=""><img src="../images/m_nav_14.jpg" alt="커뮤니티"></a></li>
-            <li><a href=""><img src="../images/m_nav_15.jpg" alt="더보기"></a></li>
+            <li class="on"><a href=""><img src="../images/m_nav_10.jpg" alt="사이버매장"></a>
+              <ul>
+                <li><a href=""><img src="../images/s_menu_12.png" alt="국산차매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_13.png" alt="수입차매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_14.png" alt="승용차매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_15.png" alt="스포츠카매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_16.png" alt="4륜/suv매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_17.png" alt="밴/승합차매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_18.png" alt="튜닝카매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_19.png" alt="올드카매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_20.png" alt="오토갤러리매장"></a></li>
+              </ul>
+            </li>
+            <li class="on"><a href=""><img src="../images/m_nav_11.jpg" alt="국산중고차"></a>
+              <ul>
+                <li><a href=""><img src="../images/s_menu_12.png" alt="국산차매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_13.png" alt="수입차매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_14.png" alt="승용차매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_15.png" alt="스포츠카매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_16.png" alt="4륜/suv매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_17.png" alt="밴/승합차매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_18.png" alt="튜닝카매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_19.png" alt="올드카매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_20.png" alt="오토갤러리매장"></a></li>
+              </ul>
+            </li>
+            <li class="on"><a href=""><img src="../images/m_nav_12.jpg" alt="수입중고차"></a>
+              <ul>
+                <li><a href=""><img src="../images/s_menu_12.png" alt="국산차매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_13.png" alt="수입차매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_14.png" alt="승용차매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_15.png" alt="스포츠카매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_16.png" alt="4륜/suv매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_17.png" alt="밴/승합차매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_18.png" alt="튜닝카매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_19.png" alt="올드카매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_20.png" alt="오토갤러리매장"></a></li>
+              </ul>
+            </li>
+            <li class="on"><a href=""><img src="../images/m_nav_13.jpg" alt="내차팔기"></a>
+              <ul>
+                <li><a href=""><img src="../images/s_menu_12.png" alt="국산차매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_13.png" alt="수입차매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_14.png" alt="승용차매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_15.png" alt="스포츠카매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_16.png" alt="4륜/suv매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_17.png" alt="밴/승합차매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_18.png" alt="튜닝카매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_19.png" alt="올드카매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_20.png" alt="오토갤러리매장"></a></li>
+              </ul>
+            </li>
+            <li class="on"><a href=""><img src="../images/m_nav_14.jpg" alt="커뮤니티"></a>
+              <ul>
+                <li><a href=""><img src="../images/s_menu_12.png" alt="국산차매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_13.png" alt="수입차매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_14.png" alt="승용차매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_15.png" alt="스포츠카매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_16.png" alt="4륜/suv매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_17.png" alt="밴/승합차매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_18.png" alt="튜닝카매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_19.png" alt="올드카매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_20.png" alt="오토갤러리매장"></a></li>
+              </ul>
+            </li>
+            <li class="on"><img src="../images/m_nav_15.jpg" alt="더보기"></a>
+              <ul>
+                <li><a href=""><img src="../images/s_menu_12.png" alt="국산차매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_13.png" alt="수입차매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_14.png" alt="승용차매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_15.png" alt="스포츠카매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_16.png" alt="4륜/suv매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_17.png" alt="밴/승합차매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_18.png" alt="튜닝카매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_19.png" alt="올드카매장"></a></li>
+                <li><a href=""><img src="../images/s_menu_20.png" alt="오토갤러리매장"></a></li>
+              </ul>
+            </li>
           </ul>
-          <ul>
-            <li><a href=""><img src="../images/s_menu_12.png" alt="국산차매장"></a></li>
-            <li><a href=""><img src="../images/s_menu_13.png" alt="수입차매장"></a></li>
-            <li><a href=""><img src="../images/s_menu_14.png" alt="승용차매장"></a></li>
-            <li><a href=""><img src="../images/s_menu_15.png" alt="스포츠카매장"></a></li>
-            <li><a href=""><img src="../images/s_menu_16.png" alt="4륜/suv매장"></a></li>
-            <li><a href=""><img src="../images/s_menu_17.png" alt="밴/승합차매장"></a></li>
-            <li><a href=""><img src="../images/s_menu_18.png" alt="튜닝카매장"></a></li>
-            <li><a href=""><img src="../images/s_menu_19.png" alt="올드카매장"></a></li>
-            <li><a href=""><img src="../images/s_menu_20.png" alt="오토갤러리매장"></a></li>
-          </ul>
-          <ul class="notice">
-            <li><a href="">보배드림어플 업데이트 안내</a></li>
-          </ul>
-          <ul class="visit">
-            <li>오늘방문</li>
-            <li>981,478</li>
-            <li>어제방문</li>
-            <li>981,478</li>
-          </ul>
-
         </div>
-     </div>
-   </div>
-    <div id="section">
+
+          <div class="notic">
+            <ul>
+              <li><a href="">보배드림어플 업데이트 안내</a></li>
+              <li><a href="">보배드림어플 업데이트 안내</a></li>
+              <li><a href="">보배드림어플 업데이트 안내</a></li>
+              <li><a href="">보배드림어플 업데이트 안내</a></li>
+              <li><a href="">보배드림어플 업데이트 안내</a></li>
+            </ul>
+          </div>
+          <div class="visit">
+            <ul>
+              <li>오늘방문</li>
+              <li>981,478</li>
+              <li>어제방문</li>
+              <li>981,478</li>
+            </ul>
+          </div>
+    </div>
+
+
+
+     <div id="section">
       <div id="article">
           <ul class="m_banner">
             <li><a href=""><img src="../images/top_banner.jpg" alt="메르세데즈 벤츠 CLS class 보러가기"></a></li>
