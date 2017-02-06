@@ -5,26 +5,26 @@
     <meta charset="UTF-8">
     <style>
         /*reset*/
-        
+
         * {
             margin: 0;
             padding: 0;
         }
-        
+
         ul,
         ol {
             list-style: none;
         }
-        
+
         body {
             font-size: 12px;
         }
-        
+
         a {
             text-decoration: none;
             color: #000;
         }
-        
+
         h1,
         h2,
         h3,
@@ -36,35 +36,35 @@
             font: inherit;
             vertical-align: baseline;
         }
-        
+
         button,
         input[type="button"],
         input[type="submit"],
         input[type="reset"] {
             cursor: pointer;
         }
-        
+
         img {
             vertical-align: top;
         }
-        
+
         input {
             vertical-align: middle;
         }
-        
+
         fieldset {
             border: 0;
         }
         /*option*/
-        
+
         .fl {
             float: left;
         }
-        
+
         .fr {
             float: right;
         }
-        
+
         .i.icon-select {
             margin-left: 3px;
             background-image: url(../images/icon_open.png);
@@ -74,7 +74,7 @@
             display: inline-block;
             vertical-align: -3px;
         }
-        
+
         .i.icon-mobile {
             margin-right: 3px;
             background-image: url(../images/icon_mobile.png);
@@ -84,7 +84,7 @@
             display: inline-block;
             vertical-align: -3px;
         }
-        
+
         .ir {
             text-indent: -999px;
             font-size: 0;
@@ -92,31 +92,44 @@
             left: -999px;
             top: -999px;
         }
+        i.bul_more {
+            margin: 3px 2px;
+            background-image: url(../images/bul_more.png);
+            background-repeat: no-repeat;
+            width: 3px;
+            height: 5px;
+            display: inline-block;
+        }
+
+
+
+
+
         /* Layout */
-        
+
         #wrap {
             min-width: 990px;
         }
-        
+
         #header {
             height: 30px;
             background-color: #f8f8f8;
             border-bottom: 1px #d5d0cc solid;
         }
-        
+
         .gnb {
             width: 990px;
             height: 30px;
             line-height: 30px;
             margin: 0 auto;
         }
-        
+
         .lnb {
             height: 107px;
             width: 990px;
             margin: 0 auto;
         }
-        
+
         #section {
             outline: 3px #0500ff;
             width: 990px;
@@ -124,20 +137,20 @@
             margin-top: 5px;
             overflow: hidden;
         }
-        
+
         #article {
             outline: 1px #F00;
             width: 748px;
             float: left;
         }
-        
+
         #aside {
-            outline: 1px solid #00c2ff;
+            border: 1px solid #ccc;
             margin-left: 753px;
-            height: 1000px;
+            height: 1500px;
         }
         /*gnb*/
-        
+
         .gnb a.book_mark {
             font-size: 11px;
             padding-left: 13px;
@@ -145,11 +158,11 @@
             background-repeat: no-repeat;
             background-position: 0 10px;
         }
-        
+
         .gnb .rank {
             margin-left: 14px;
         }
-        
+
         .gnb .rank li {
             display: none;
             font-size: 11px;
@@ -158,7 +171,7 @@
             background-repeat: no-repeat;
             background-position: 0 10px;
         }
-        
+
         .gnb .rank li .up_icon {
             padding-left: 8px;
             background-image: url(../images/icon_up.png);
@@ -166,19 +179,19 @@
             background-position: 0;
             font-style: normal;
         }
-        
+
         .gnb .rank .on {
             display: block;
         }
-        
+
         .gnb .rank i[class^="up_"] {
             color: red;
         }
-        
+
         .gnb .rank i[class^="down_"] {
             color: blue;
         }
-        
+
         .gnb .top_service li {
             float: left;
             padding: 0 8px 0 7px;
@@ -186,30 +199,30 @@
             background-repeat: no-repeat;
             background-position: 0 10px;
         }
-        
+
         .gnb .top_service li strong {
             color: blue;
         }
-        
+
         .gnb .top_service li:first-child {
             background: none;
         }
         /*lnb*/
-        
+
         .lnb .logo {
             width: 105px;
             height: 27px;
             position: relative;
             top: 34px;
         }
-        
+
         .lnb .event {
             width: 244px;
             height: 27px;
             position: relative;
             top: 7px;
         }
-        
+
         .lnb .search {
             width: 280px;
             height: 79px;
@@ -218,14 +231,14 @@
             position: relative;
             top: 16px;
         }
-        
+
         .lnb .search input[type="text"] {
             height: 21px;
             border: 2px solid #3B5999;
             width: 218px;
             padding: 0 10px;
         }
-        
+
         .lnb .search input[type="submit"] {
             height: 25px;
             width: 38px;
@@ -234,166 +247,166 @@
             text-indent: -9999px;
             background: #3b5999 url(../images/icon_search.png) no-repeat center center;
         }
-        
+
         .lnb .qu {
             position: relative;
         }
-        
+
         .lnb .qu li {
             float: left;
         }
-        
+
         .lnb .qu li:first-child img {
             padding-left: 0;
             background-image: noun;
         }
-        
+
         .lnb .qu li img {
             padding: 0 7px 0 8px;
             background-image: url(..images/lnb_horizon.png);
             background-repeat: no-repeat;
         }
         /*네비게이션*/
-        
+
         .nav {
             width: 990px;
             height: 76px;
             margin: 0 auto;
             border-bottom: 1px #F00 solid;
         }
-        
+
         .nav>ul {
             height: 38px;
             background-color: #3b5999;
         }
-        
+
         .nav>ul>li {
             float: left;
             line-height: 38px;
             font-size: 14px;
             font-weight: bold;
         }
-        
+
         .nav>ul>li:hover {
             background: #EEE;
         }
-        
+
         .nav>ul>li:hover ul {
             display: block;
         }
-        
+
         .nav>ul>li>a {
             display: block;
             padding: 0 11px;
         }
-        
+
         .nav ul ul {
             position: absolute;
             display: none;
         }
-        
+
         .nav li.on ul {
             display: block;
         }
-        
+
         .nav ul ul li {
             float: left;
             margin: 0 10px;
         }
-        
+
         .notice {
             position: absolute;
             top: 10px;
             right: 10px;
             color: #fff;
         }
-        
+
         .notice li {
             display: none;
         }
-        
+
         .visit {
             position: absolute;
             top: 50px;
             right: 5px;
         }
-        
+
         .visit li {
             float: left;
             padding-right: 10px;
             font-size: 12px;
         }
-        
+
         .m_banner li:first-child {
             float: left;
             padding-right: 4px;
         }
-        
+
         .m_banner li img {
             border: 1px solid #ccc;
         }
-        
+
         .special_prod {
             width: 728px;
             margin-top: 11px;
             height: 244px;
             border-bottom: 1px solid #ccc;
         }
-        
+
         .special_prod .s_list {
             outline: 1px #F00 solid;
             margin-left: 402px;
             width: 324px;
         }
-        
+
         .special_prod .s_thumb {
             float: left;
             margin-right: 8px;
         }
-        
+
         .special_prod .s_thumb img {
             border: 1px solid #ccc;
         }
-        
+
         .special_prod .s_txt {
             padding: 15px 0 15px 20px;
         }
-        
+
         .special_prod .s_txt dt {
             font-weight: bold;
         }
-        
+
         .new_cyber {
             height: 198px;
             margin: 14px 20px 0 0;
             border-bottom: 1px solid #ccc;
             position: relative;
         }
-        
+
         .new_cyber h3 {
             margin: 14px 0 10px 0;
             display: inline-block;
         }
-        
+
         .new_cyber li {
             float: left;
         }
-        
+
         .new_cyber .c_list {
             padding-right: 10px;
         }
-        
+
         .new_cyber .c_thumb {
             width: 136px;
             height: 102px;
         }
-        
+
         .new_cyber .c_thumb img {
             width: 100%;
             height: 100%;
             border: 1px solid #ccc
         }
-        
+
         .new_cyber .p_txt {
             width: 136px;
             height: 48px;
@@ -401,22 +414,66 @@
             padding-top: 10px;
             text-align: center;
         }
-        
+
         .new_cyber a.more {
             position: absolute;
             top: 14px;
             right: 10px;
         }
-        
-        .new_cyber i.bul_more {
-            margin: 3px 2px;
-            background-image: url(../images/bul_more.png);
-            background-repeat: no-repeat;
-            width: 3px;
-            height: 5px;
-            display: inline-block;
-        }
+
+        /*aside*/
+
         /*로그인*/
+
+
+        /*커뮤니티 핫이슈*/
+      .hot_issue {width: 237px; border-top: 1px solid #ccc; position: relative;}
+      .hot_issue .l_menu {padding: 10px 0 8px 0px;}
+      .hot_issue ol li {margin: 10px; border-bottom: 1px solid #ccc;}
+      .hot_issue .num1 {background-image: url(../images/num1.jpg); background-repeat: no-repeat; background-position: 0;}
+      .hot_issue .num2 {background-image: url(../images/num2.jpg); background-repeat: no-repeat; background-position: 0;}
+      .hot_issue .num3 {background-image: url(../images/num3.png); background-repeat: no-repeat; background-position: 0;}
+      .hot_issue .num_txt {margin: 0 90px 0 18px; height: 64px; display: block;}
+      .hot_issue .hot_thumb {width: 78px; height: 54px; float: right;}
+      .hot_issue .hot_thumb img {width: 100%; height: 100%; border: 1px solid #ccc;}
+      .hot_issue .arr_btn {position: absolute; top: 10px; right: 10px;}
+
+      /*자동차뉴스*/
+      .car_news {margin: 0 10px; position: relative;}
+      .car_news .c_menu {padding: 5px 0 10px 0;}
+      .car_news .c_news {margin-left: 88px; height: 64px; display: block;}
+      .car_news .car_thumb {width: 78px; height: 54px; float: left;}
+      .car_news .car_thumb img {width: 100%; height: 100%; border: 1px solid #ccc;}
+      .car_news .bul_dot {background-image: url(../images/bul_dot.png); background-repeat: no-repeat; background-position: 0; line-height:22px; padding-left: 10px;}
+      .car_news ul {padding-bottom: 20px; border-bottom: 1px solid #ccc;}
+      .car_news a.more {position: absolute; top: 10px; right: 10px;}
+
+
+      /*커뮤니티 인기글*/
+      .cm_favor {margin: 10px 10px; position: relative;}
+      .cm_favor .cm_menu {padding: 5px 0 10px 0;}
+      .cm_favor .cm_news {margin-left: 88px; height: 64px; display: block;}
+      .cm_favor .cm_thumb {width: 78px; height: 54px; float: left;}
+      .cm_favor .cm_thumb img {width: 100%; height: 100%; border: 1px solid #ccc;}
+      .cm_favor .bul_dot {background-image: url(../images/bul_dot.png); background-repeat: no-repeat; background-position: 0; line-height:22px; padding-left: 10px;}
+      .cm_favor ul {padding-bottom: 20px; border-bottom: 1px solid #ccc;}
+      .cm_favor a.more {position: absolute; top: 10px; right: 10px;}
+
+
+      /*내차소 인기순위*/
+      .myc_hot {margin: 0 10px; position: relative;}
+      .myc_hot .mc_menu {padding: 10px 0 10px 0px;}
+      .myc_hot ol li {margin: 10px 0; border-bottom: 1px solid #ccc;}
+      .myc_hot ol li:last-child {border:0 none;}
+      .myc_hot .num1 {background-image: url(../images/num1.jpg); background-repeat: no-repeat; background-position: 0;}
+      .myc_hot .num2 {background-image: url(../images/num2.jpg); background-repeat: no-repeat; background-position: 0;}
+      .myc_hot .num3 {background-image: url(../images/num3.png); background-repeat: no-repeat; background-position: 0;}
+      .myc_hot .mc_txt {margin: 0 90px 0 18px; height: 51px; display: block;}
+      .myc_hot .mc_thumb {width: 78px; height: 41px; float: right;}
+      .myc_hot .mc_thumb img {width: 100%; height: 100%; border: 1px solid #ccc;}
+      .myc_hot a.more {position: absolute; top: 10px; right: 10px;}
+
+
     </style>
     <title>보배드림</title>
 </head>
@@ -687,7 +744,7 @@
             </ul>
         </div>
 
-        <div class="notic">
+        <div class="notice">
             <ul>
                 <li><a href="">보배드림어플 업데이트 안내</a></li>
                 <li><a href="">보배드림어플 업데이트 안내</a></li>
@@ -1029,69 +1086,89 @@
             </div>
 
             <div class="hot_issue">
-                <h4><img src="" alt="커뮤니티 핫이슈"></h4>
-                <div class="arr_btn">
-                    <ul>
-                        <li>
-                            <a href=""><img src="" alt=""></a>
+                    <div class="l_menu"><img src="../images/c_issue.jpg" alt="커뮤니티 핫이슈"></div>
+                    <ol>
+                        <li class="num1">
+                            <span class="hot_thumb">
+                            <a href=""><img src="../images/c_issue_01.jpg" alt=""></a>
+                            </span>
+                            <span class="num_txt"><a href="">길가에 멈춰선 차량 돕는 훈훈한 모습</a></span>
                         </li>
-                        <li>
-                            <a href=""><img src="" alt="">1/20</a>
+                        <li class="num2">
+                            <span class="hot_thumb">
+                            <a href=""><img src="../images/c_issue_02.jpg" alt=""></a>
+                            </span>
+                            <span class="num_txt"><i class="num2"></i><a href="">유리를 박살내고 차량용품 싹쓸이</a></span>
                         </li>
-                        <li>
-                            <a href=""><img src="" alt=""></a>
+                        <li class="num3">
+                            <span class="hot_thumb">
+                            <a href=""><img src="../images/c_issue_03.jpg" alt=""></a>
+                            </span>
+                            <span class="num_txt"><i class="num3"></i><a href="">짙은안개 고속도로 살벌한 추돌사고</a></span>
                         </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <span="hot_thumb">
-                                <a href=""><img src="" alt=""></a>
-                                </span>
-                                <span="num_txt">길가에 멈춰선 차량 돕는 훈훈한 모습</span>
-                        </li>
-                        <li>
-                            <a href=""><img src="" alt="">1/20</a>
-                        </li>
-                        <li>
-                            <a href=""><img src="" alt=""></a>
-                        </li>
-                    </ul>
-                </div>
+                    </ol>
+                    <div class="arr_btn">
+                        <a href=""><img src="../images/rew.png" alt="이전"></a>
+                        <span>1/20</span>
+                       <a href=""><img src="../images/ff.png" alt="다음"></a>
+                    </div>
+              </div>
 
-            </div>
             <div class="car_news">
-                <h4><img src="..imges/" alt="커뮤니티 핫이슈"></h4>
-                <a href="#"><img src="" /></a>
-                <span>르노삼성 부산공장 중대형 핵심 기지 될 것</span>
+                <div class="c_menu"><img src="../images/c_news.png" alt="자동차 뉴스"></div>
                 <ul>
-                    <li>쌍용 EREV, 전기자동차 2015년 양산</li>
-                    <li>[2012 결산] 전자, 자동차, 철강 등</li>
-                    <li>남양연구소 'T-LPDi'상용화 박차</li>
-                    <li>올해들어 수입차 CEO 대거 교체</li>
+                    <li><span class="car_thumb"><a href="#"><img src="../images/c_news01.jpg" alt="르노삼성"/></a></span>
+                        <span class="c_news"><a href="#">르노삼성 부산공장 중대형 핵심 기지 될 것</a></span></li>
+                    <li class="bul_dot"><a href=""> 쌍용 EREV, 전기자동차 2015년 양산</a></li>
+                    <li class="bul_dot"><a href=""> [2012 결산] 전자, 자동차, 철강 등</a></li>
+                    <li class="bul_dot"><a href=""> 남양연구소 'T-LPDi'상용화 박차</a></li>
+                    <li class="bul_dot"><a href=""> 올해들어 수입차 CEO 대거 교체</a></li>
                 </ul>
-                <a href="">더보기<i class="bul_more"></i></a>
+                <a href="" class="more">더보기<i class="bul_more"></i></a>
             </div>
 
-            <div class="comm_favor">
-                <ul>
-                    <li>
-                        <a href=""><img src="" alt=""></a>
-                        <span>신호위반 접촉사고 망설임 없이 바로 도주</span>
-                    </li>
-                    <li>
-                        <a href=""><img src="" alt=""></a>
-                        <span>중앙선을 넘어선 순간 대형사고 간신히 모면</span>
-                    </li>
-                    <li>
-                        <a href=""><img src="" alt=""></a>
-                        <span>짙은 안개 고속도로 살벌한 추돌 사고</span>
-                    </li>
+            <div class="cm_favor">
+                  <div class="cm_menu"><img src="../images/c_favor.png" alt="커뮤니티 인기글"></div>
+                  <ul>
+                      <li><span class="cm_thumb"><a href="#"><img src="../images/c_favor_01.jpg" alt="르노삼성"/></a></span>
+                          <span class="cm_news"><a href="#">르노삼성 부산공장 중대형 핵심 기지 될 것</a></span></li>
+                      <li><span class="cm_thumb"><a href="#"><img src="../images/c_favor_02.jpg" alt="르노삼성"/></a></span>
+                          <span class="cm_news"><a href="#">르노삼성 부산공장 중대형 핵심 기지 될 것</a></span></li>
+                      <li><span class="cm_thumb"><a href="#"><img src="../images/c_favor_03.jpg" alt="르노삼성"/></a></span>
+                           <span class="cm_news"><a href="#">르노삼성 부산공장 중대형 핵심 기지 될 것</a></span></li>
                 </ul>
-                <a href="">더보기<i class="bul_more"></i></a>
+                <a href="" class="more">더보기<i class="bul_more"></i></a>
             </div>
+
+
+            <div class="myc_hot">
+                    <div class="mc_menu"><img src="../images/c_mycar.png" alt="내차소 인기순위"></div>
+                    <ol>
+                        <li class="num1">
+                            <span class="mc_thumb">
+                            <a href=""><img src="../images/c_myc_01.jpg" alt=""></a>
+                            </span>
+                            <span class="mc_txt"><a href="">270ELISA 남의 현대 투스카니</a></span>
+                        </li>
+                        <li class="num2">
+                            <span class="mc_thumb">
+                            <a href=""><img src="../images/c_myc_02.jpg" alt=""></a>
+                            </span>
+                            <span class="mc_txt"><i class="num2"></i><a href="">대금이 님의 현대 뉴 제네시스</a></span>
+                        </li>
+                        <li class="num3">
+                            <span class="mc_thumb">
+                            <a href=""><img src="../images/c_myc_03.jpg" alt=""></a>
+                            </span>
+                            <span class="mc_txt"><i class="num3"></i><a href="">날아라콩떡 님의 아우디 뉴A6</a></span>
+                        </li>
+                    </ol>
+                    <a href="" class="more">더보기<i class="bul_more"></i></a>
+              </div>
+
 
         </div>
-    </div>
+
     </div>
     <div id="footer">
         <p>qhdflsadfdasfl</p>
