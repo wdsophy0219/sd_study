@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+
+        ul{
+            list-style:none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu{
+            width:300px;
+            margin: 0 auto;
+            border:1px #F00 solid;
+        }
+
+        li div{
+            overflow;
+            height:0;
+            visibility:hidden;
+            transition:1s;
+        }
+        li div:target{
+            visibility:visible;
+            height:100px;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="#a1">text1</a>
+                <div id="a1">Lorem ipsum dolor sit amet, </div>
+            </li>
+            <li>
+                <a href="#a2">text2</a>
+                <div id="a2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel dolores doloribus temporibus animi, eveniet minus perferendis! Distinctio animi ab, ullam perferendis dolore quidem, porro quam perspiciatis, enim, maiores reiciendis eos.</div>
+            </li>
+            <li>
+                <a href="#a3">text3</a>
+                <div id="a3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus est odio optio minima quaerat perspiciatis tenetur blanditiis, vero officiis eos illo ad et beatae laborum, nulla iure, obcaecati quidem eveniet.</div>
+            </li>
+            <li>
+                <a href="#a4">text4</a>
+                <div id="a4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere blanditiis odit nihil omnis iusto, deserunt asperiores aperiam cupiditate nobis nam modi impedit, amet quos aspernatur laborum vero debitis, vitae esse!</div>
+            </li>
+        </ul>
+
+    </div>
+
+</body>
+</html>
