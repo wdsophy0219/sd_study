@@ -421,7 +421,7 @@
         border-top: 1px solid #ccc;
     }
     .title_group .c_menu {
-      padding: 10px 0 8px 0px;
+      padding : 12px 0 0 12px;
     }
     .title_group .count:after{
         content:"/";
@@ -448,7 +448,7 @@
         border: none;
     }
     .number-list{padding:12px;}
-    .number-list li {height: 54px; padding:8px 0; border-bottom:1px solid #ccc; outline: 1px solid #F00;}
+    .number-list li {height: 54px; padding:8px 0; border-bottom:1px solid #ccc;}
     .number-list li:first-child{border-top:0;}
     .number-list li img{float:right; padding-left: 14px; width: 78px; height: 54px; }
     .number-list li span{
@@ -471,7 +471,7 @@
     }
 
     /*자동차뉴스*/
-    .car_news {margin: 0 10px; position: relative;}
+    .car_news {margin: 0 12px; position: relative;}
     .car_news .c_menu {padding: 5px 0 10px 0;}
     .car_news .c_news {margin-left: 88px; height: 64px; display: block;}
     .car_news .car_thumb {width: 78px; height: 54px; float: left;}
@@ -482,29 +482,63 @@
 
 
     /*커뮤니티 인기글*/
-    .cm_favor {margin: 10px 10px; position: relative;}
+    .cm_favor {margin: 10px 12px; position: relative;}
     .cm_favor .cm_menu {padding: 5px 0 10px 0;}
     .cm_favor .cm_news {margin-left: 88px; height: 64px; display: block;}
     .cm_favor .cm_thumb {width: 78px; height: 54px; float: left;}
     .cm_favor .cm_thumb img {width: 100%; height: 100%; border: 1px solid #ccc;}
     .cm_favor .bul_dot {background-image: url(../images/bul_dot.png); background-repeat: no-repeat; background-position: 0; line-height:22px; padding-left: 10px;}
-    .cm_favor ul {padding-bottom: 20px; border-bottom: 1px solid #ccc;}
+    .cm_favor ul {padding-bottom: 10px; border-bottom: 1px solid #ccc;}
     .cm_favor a.more {position: absolute; top: 10px; right: 10px;}
 
 
     /*내차소 인기순위*/
-    .myc_hot {margin: 0 10px; position: relative;}
-    .myc_hot .mc_menu {padding: 10px 0 10px 0px;}
-    .myc_hot ol li {margin: 10px 0; border-bottom: 1px solid #ccc;}
-    .myc_hot ol li:last-child {border:0 none;}
-    .myc_hot .num1 {background-image: url(../images/num1.jpg); background-repeat: no-repeat; background-position: 0;}
-    .myc_hot .num2 {background-image: url(../images/num2.jpg); background-repeat: no-repeat; background-position: 0;}
-    .myc_hot .num3 {background-image: url(../images/num3.png); background-repeat: no-repeat; background-position: 0;}
-    .myc_hot .mc_txt {margin: 0 90px 0 18px; height: 51px; display: block;}
-    .myc_hot .mc_thumb {width: 78px; height: 41px; float: right;}
-    .myc_hot .mc_thumb img {width: 100%; height: 100%; border: 1px solid #ccc;}
-    .myc_hot a.more {position: absolute; top: 10px; right: 10px;}
 
+    .myc_hot{
+        position: relative;
+;
+    }
+    .myc_hot a.more {
+      position: absolute;
+      top: 10px;
+      right: 12px;}
+
+    .myc_group .ct_menu {
+      padding : 12px 0 0 12px;
+    }
+    .myc_group .count:after{
+        content:"/";
+        margin:0 3px;
+    }
+    .myc_group .btngroup {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+    }
+
+
+    .number-list{padding:12px;}
+    .number-list li {height: 41px; padding:8px 0; border-bottom:1px solid #ccc;}
+    .number-list li:first-child{border-top:0;}
+    .number-list li img{float:right; padding-left: 14px; width: 78px; height: 41px; }
+    .number-list li span{
+        background-repeat:no-repeat;
+        padding-left: 14px;
+        height: 54px;
+        display:block;
+        vertical-align: baseline;
+        background-position:0 3px;
+    }
+
+    .number-list li:nth-child(1) span{
+         background-image:url(../images/num1.jpg);
+    }
+    .number-list li:nth-child(2) span{
+         background-image:url(../images/num2.jpg);
+    }
+    .number-list li:nth-child(3) span{
+         background-image:url(../images/num3.png);
+    }
 
     </style>
     <title>보배드림</title>
@@ -1005,31 +1039,30 @@
                     <a href="" class="more">더보기<i class="bul_more"></i></a>
                   </div>
 
-
                   <div class="myc_hot">
-                    <div class="mc_menu"><img src="../images/c_mycar.png" alt="내차소 인기순위"></div>
-                    <ol>
-                      <li class="num1">
-                        <span class="mc_thumb">
-                          <a href=""><img src="../images/c_myc_01.jpg" alt=""></a>
-                        </span>
-                        <span class="mc_txt"><a href="">270ELISA 남의 현대 투스카니</a></span>
-                      </li>
-                      <li class="num2">
-                        <span class="mc_thumb">
-                          <a href=""><img src="../images/c_myc_02.jpg" alt=""></a>
-                        </span>
-                        <span class="mc_txt"><i class="num2"></i><a href="">대금이 님의 현대 뉴 제네시스</a></span>
-                      </li>
-                      <li class="num3">
-                        <span class="mc_thumb">
-                          <a href=""><img src="../images/c_myc_03.jpg" alt=""></a>
-                        </span>
-                        <span class="mc_txt"><i class="num3"></i><a href="">날아라콩떡 님의 아우디 뉴A6</a></span>
-                      </li>
-                    </ol>
-                    <a href="" class="more">더보기<i class="bul_more"></i></a>
+                      <div class="myc_group">
+                          <div class="ct_menu"><img src="../images/c_mycar.png" alt="내차소 인기순위"></div>
+                          <a href="" class="more">더보기<i class="bul_more"></i></a>
+                      </div>
+                      <div class="number-list">
+                          <ol>
+                              <li>
+                                  <img src="../images/c_myc_01.jpg" alt="">
+                                  <span>270ELISA 남의 현대 투스카니</span>
+                              </li>
+                              <li>
+                                  <img src="../images/c_myc_02.jpg" alt="">
+                                  <span>대금이 님의 현대 뉴 제네시스</span>
+                              </li>
+                              <li>
+                                  <img src="../images/c_myc_03.jpg" alt="">
+                                  <span>날아라콩떡 님의 아우디 뉴A6</span>
+                              </li>
+                          </ol>
+                      </div>
                   </div>
+
+                  </div> -->
 
                   <div class="bb_story">
                     <div class="mc_menu"><img src="../images/b_mycar.png" alt="보배드림이야기"></div>
