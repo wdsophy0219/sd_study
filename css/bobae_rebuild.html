@@ -478,7 +478,7 @@
     .car_news .car_thumb img {width: 100%; height: 100%; border: 1px solid #ccc;}
     .car_news .bul_dot {background-image: url(../images/bul_dot.png); background-repeat: no-repeat; background-position: 0; line-height:22px; padding-left: 10px;}
     .car_news ul {padding-bottom: 20px; border-bottom: 1px solid #ccc;}
-    .car_news a.more {position: absolute; top: 10px; right: 10px;}
+    .car_news a.more {position: absolute; top: 10px; right: 0px;}
 
 
     /*커뮤니티 인기글*/
@@ -489,11 +489,10 @@
     .cm_favor .cm_thumb img {width: 100%; height: 100%; border: 1px solid #ccc;}
     .cm_favor .bul_dot {background-image: url(../images/bul_dot.png); background-repeat: no-repeat; background-position: 0; line-height:22px; padding-left: 10px;}
     .cm_favor ul {padding-bottom: 10px; border-bottom: 1px solid #ccc;}
-    .cm_favor a.more {position: absolute; top: 10px; right: 10px;}
+    .cm_favor a.more {position: absolute; top: 10px; right: 0px;}
 
 
     /*내차소 인기순위*/
-
     .myc_hot{
         position: relative;
 ;
@@ -506,16 +505,12 @@
     .myc_group .ct_menu {
       padding : 12px 0 0 12px;
     }
-    .myc_group .count:after{
-        content:"/";
-        margin:0 3px;
-    }
+
     .myc_group .btngroup {
       position: absolute;
       top: 8px;
       right: 12px;
     }
-
 
     .number-list{padding:12px;}
     .number-list li {height: 41px; padding:8px 0; border-bottom:1px solid #ccc;}
@@ -539,6 +534,17 @@
     .number-list li:nth-child(3) span{
          background-image:url(../images/num3.png);
     }
+
+   .bb_story {margin: 0 12px; position: relative;}
+   .bb_story .bb_menu {padding: 5px 0 10px 0;}
+   .bb_slider span a {position: relative;}
+   .bb_slider .bb_tit {position: absolute; left: 0; bottom: 0; background: rgba(28, 28, 28, 0.67); width: 213px; height: 25px;}
+   .bb_slider .bb_tit cite {color: #FFF; font-size: 12px; font-weight: normal;line-height: 25px; padding-left: 5px;}
+   .bb_slider .bb_btn {position: absolute; right: 5px; top: 4px;}
+   .bb_slider .bb_btn input[type="button"]{border:0; width:17px; height:17px; text-indent:-9999px; background-image:url(../images/btn_2.png); background-repeat: no-repeat;}
+   .bb_slider .bb_btn input[value="이전"]{background-position: -17px 0;cursor:pointer;}
+   .bb_story a.more {position: absolute; top: 5px; right: 0;}
+
 
     </style>
     <title>보배드림</title>
@@ -971,9 +977,9 @@
                 <fieldset>
                     <legend>로그인</legend>
                     <div class="login_field">
-                        <input type="text" name=""/>
-                        <input type="password" name=""/>
-                        <input type="submit" name="" value="login"/>
+                        <input type="text" name="" placeholder="아이디"/>
+                        <input type="password" name="" placeholder="패스워드"/>
+                        <input type="submit" name="" value="로그인"/>
                     </div>
                     <div class="login_option">
                         <span class="fl"><input type="checkbox" id="idsave"> <label for="idsave">ID저장 </label></span>
@@ -1062,12 +1068,27 @@
                       </div>
                   </div>
 
-                  </div> -->
+                   <div class="event_news">
+                       <div class="event_group">
+                           <div class="ev_menu"><img src="../images/c_mycar.png" alt="내차소 인기순위"></div>
+                       <a href="" class="more">더보기<i class="bul_more"></i></a>
+                          <span><a href=""><img src="" alt=""></a></span>
+                          <span>맨즈박스에 참여한 브랜드 중 마음에 드는 상품을 골라주세요!</span>
+                        </div>
+                   </div>
 
                   <div class="bb_story">
-                    <div class="mc_menu"><img src="../images/b_mycar.png" alt="보배드림이야기"></div>
-                    <a href=""><img src="..images/b_story.jpg")</a>
-
+                    <div class="bb_menu"><img src="../images/b_story.png" alt="보배드림이야기"></div>
+                    <div class="bb_slider">
+                    <span><a href=""><img src="../images/slider.jpg"></a></span>
+                        <div class="bb_tit">
+                            <div><cite>BMW 1시리즈의 가성비</cite></div>
+                            <div class="bb_btn">
+                                <input type="button" value="다음">
+                                <input type="button" value="이전">
+                            </div>
+                        </div>
+                    </div>
                     <a href="" class="more">더보기<i class="bul_more"></i></a>
                   </div>
 
