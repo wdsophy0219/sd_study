@@ -75,11 +75,11 @@
     /* Layout */
 
     #wrap {
-      min-width: 990px;
+      min-width:990px;
     }
 
     #header {
-      height: 30px;
+      height: 0px;
       background-color: #f8f8f8;
       border-bottom: 1px #d5d0cc solid;
     }
@@ -98,7 +98,6 @@
     }
 
     #container{
-      outline: 3px #0500ff;
       width: 990px;
       margin:5px auto 0;
     }
@@ -112,6 +111,16 @@
       margin-left: 753px;
       border: 1px solid #ccc;
     }
+
+    #footer {
+        width: 990px;
+        margin: 0 auto;
+        border-top: 3px solid #8c909f;
+        border-bottom: 1px solid #8c909f;
+        text-align: left;
+        outline: 1px solid F00;
+    }
+
     /*gnb*/
 
     .gnb a.book_mark {
@@ -548,9 +557,35 @@
    .event_news {margin: 15px 12px; position: relative; border-top:1px solid #ccc;}
    .event_news .ev_menu {padding: 15px 0 10px 0;}
    .event_news a.more {position: absolute; top: 15px; right: 0;}
-   .event_news .ev_thumb {width:78px; height: 54px; float: left; margin-right: 10px;}
+   .event_news .ev_thumb {width:78px; height: 54px; float: left; margin-right: 10px; display: block; float: left; margin-right: 10px; }
    .event_news .ev_thumb img {width:100%; height: 100%; }
-   .event_news .ev_txt { margin-left: 88px; height: 54px;}
+   .event_news .ev_txt { height: 54px; line-height: 18px;}
+
+    /*sns*/
+   .sns {margin: 15px 12px 0; border-top: 1px solid #ccc;}
+   .sns .sns_menu {padding: 15px 0 10px 0;}
+   .sns::after {content: ""; clear: both; display: block;}
+
+
+    /*footer */
+    .noti_map {width: 990px; padding: 6px 0; border: 1px solid #ccc;}
+    .noti_map span a {font-size: 12px; line-height: 16px; letter-spacing: -0.5px; vertical-align: baseline; color: #333;}
+    .noti_map .noti {font-weight: bold; float: left; margin: 0 16px;}
+    .noti_map .all_map {font-weight: bold; float: right; margin-right: 16px; }
+    .all_map a.more {position: absolute; top: 5px; right: 0; outline: 1px solid #F00; }
+    .sitemap {width: 990px; border: 1px solid #CCC;}
+    .sitemap::after {content: ""; clear: both; display: block;}
+    .sitemap div[class^="smap"] {float:left; width: 98px; outline: 1px solid #F00; margin: 23px 16px; display: inline-block;}
+    .sitemap h5 {font-size: 13px; font-weight: bold; padding-bottom: 23px; color: #333;}
+    .sitemap li {height: 18px;}
+    .sitemap a {font-size: 11px; letter-spacing: -1px; border-top: 1px solid #8c909f; color: #333;}
+
+
+
+
+
+
+
     </style>
     <title>보배드림</title>
   </head>
@@ -1093,15 +1128,111 @@
                         <a href="" class="more">더보기<i class="bul_more"></i></a>
                          <span class="ev_thumb"><a href=""><img src="../images/event_news_10.jpg" alt=""></a></span>
                          <span class="ev_txt">맨즈박스에 참여한 브랜드 중 마음에 드는 상품을 골라주세요!</span>
-
                   </div>
-
+                   <div class="sns">
+                      <div class="sns_menu"><img src="../images/sns.png" alt="이벤트 소식"></div>
+                      <a href=""><img src="../images/sns01.png" alt="페이스북"></a>
+                      <a href=""><img src="../images/sns02.png" alt="트위터"></a>
+                      <a href=""><img src="../images/sns03.png" alt="블로그"></a>
+                      <a href=""><img src="../images/sns04.png" alt="카카오톡"></a>
+                      <a href=""><img src="../images/sns05.png" alt="유투브"></a>
+                      <a href=""><img src="../images/sns06.png" alt="구글"></a>
+                  </div>
 
                 </div>
 
               </div>
               <div id="footer">
-                <p>qhdflsadfdasfl</p>
+                <div class="noti_map">
+                      <span class="noti"><a href="">공지사항</a></span>
+                      <span class="all_map"><a href="" class="more">서비스 전체보기<i class="bul_more"></a></span>
+                      <span class="not_news"><a href="">보배드림 어플 업데이트 안내</a></span>
+                </div>
+                <div class="sitemap">
+                    <div class="smap01">
+                     <h5>사이버매장</h5>
+                        <ul>
+                            <li><a href="">국산차매장</a></li>
+                            <li><a href="">수입차매장</a></li>
+                            <li><a href="">튜닝카매장</a></li>
+                            <li><a href="">승용차매장</a></li>
+                            <li><a href="">스포트카매장</a></li>
+                            <li><a href="">4륜/SUV매장</a></li>
+                            <li><a href="">승합차매장</a></li>
+                            <li><a href="">오토갤러리매장</a></li>
+                        </ul>
+                    </div>
+                    <div class="smap02">
+                     <h5>국한중고차</h5>
+                        <ul>
+                            <li><a href="">전체차량</a></li>
+                            <li><a href="">인기차량</a></li>
+                            <li><a href="">확인차량</a></li>
+                            <li><a href="">경매차량</a></li>
+                            <li><a href="">특수/특장차</a></li>
+                            <li><a href="">국산차매장</a></li>
+                            <li><a href="">중고차시세</a></li>
+                            <li><a href="">차종별검색</a></li>
+                        </ul>
+                    </div>
+                    <div class="smap03">
+                     <h5>수입중고차</h5>
+                        <ul>
+                            <li><a href="">전체차량</a></li>
+                            <li><a href="">인기차량</a></li>
+                            <li><a href="">확인차량</a></li>
+                            <li><a href="">경매차량</a></li>
+                            <li><a href="">특수/특장차</a></li>
+                            <li><a href="">국산차매장</a></li>
+                            <li><a href="">중고차시세</a></li>
+                            <li><a href="">차종별검색</a></li>
+                        </ul>
+                    </div>
+                    <div class="smap04">
+                     <h5>내차팔기</h5>
+                        <ul>
+                            <li><a href="">사이버매물등록</a></li>
+                            <li><a href="">국산차등록</a></li>
+                            <li><a href="">수입차등록</a></li>
+                            <li><a href="">매물등록권 구입</a></li>
+                        </ul>
+                    </div>
+                    <div class="smap05">
+                     <h5>게시판</h5>
+                        <ul>
+                            <li><a href="">베스트글</a></li>
+                            <li><a href="">자유게시판</a></li>
+                            <li><a href="">질문과 답변</a></li>
+                            <li><a href="">시승기</a></li>
+                            <li><a href="">내차소개</a></li>
+                            <li><a href="">자동차동영상</a></li>
+                            <li><a href="">특종사진</a></li>
+                            <li><a href="">레이싱모델</a></li>
+                        </ul>
+                    </div>
+                    <div class="smap06">
+                     <h5>자료실</h5>
+                        <ul>
+                            <li><a href="">내차소개</a></li>
+                            <li><a href="">자동차동영상</a></li>
+                            <li><a href="">특종사진</a></li>
+                            <li><a href="">레이싱모델</a></li>
+                        </ul>
+                    </div>
+                    <div class="smap07">
+                     <h5>특종모델</h5>
+                        <ul>
+                            <li><a href="">국산차매장</a></li>
+                            <li><a href="">수입차매장</a></li>
+                            <li><a href="">튜닝카매장</a></li>
+                            <li><a href="">승용차매장</a></li>
+                            <li><a href="">스포트카매장</a></li>
+                            <li><a href="">4륜/SUV매장</a></li>
+                            <li><a href="">qps/승합차매장</a></li>
+                            <li><a href="">오토갤러리매장</a></li>
+                        </ul>
+                    </div>
+                </div>
               </div>
             </div>
           </body>
