@@ -18,9 +18,7 @@
   button,
   input[type="button"],
   input[type="submit"],
-  input[type="reset"] {
-    cursor: pointer;
-  }
+  input[type="reset"] {cursor: pointer;}
 
   /*option*/
   .fl {float: left;}
@@ -28,6 +26,7 @@
 
   .icon-select {margin-left: 3px; background-image: url(../images/icon_open.png); background-repeat: no-repeat; width: 12px; height: 12px; display: inline-block; vertical-align: -3px;}
   .icon-mobile {margin-right: 3px; background-image: url(../images/icon_mobile.png); background-repeat: no-repeat; width: 8px; height: 12px; display: inline-block; vertical-align: -3px;}
+  .icon-dot {padding-left: 6px; background-image: url(../images/bul_dot.png); background-repeat: no-repeat; width:2px; height: 2px; display: inline-block; vertical-align: 3px;}
   .bul_more {margin: 3px 2px; background-image: url(../images/bul_more.png); background-repeat: no-repeat; width: 3px; height: 5px; display: inline-block;}
   .bbul_more {margin: 2px 4px; background-image: url(../images/arr07.png); background-repeat: no-repeat; width: 3px; height: 5px; display: inline-block;}
 
@@ -40,7 +39,7 @@
   #container {width: 990px; margin:5px auto 0;}
   #container .section{width:748px; float:left;}
   #aside {margin-left: 753px; border: 1px solid #ccc;}
-  #footer {width: 990px; margin: 0 auto; border-top: 3px solid #8c909f; border-bottom: 1px solid #8c909f; text-align: left; outline: 1px solid F00;}
+  #footer {width: 990px; margin: 0 auto; border-top: 3px solid #8c909f; text-align: left; }
 
   /*gnb*/
   .gnb a.book_mark {font-size: 11px; padding-left: 13px; background-image: url(../images/icon_star.png); background-repeat: no-repeat; background-position: 0 10px;}
@@ -56,7 +55,7 @@
 
   /*lnb*/
   .lnb {height:107px;  margin:0 auto;  width: 990px;}
-  .lnb .logo {position: relative; top: 34px;}
+  .lnb .logo {position: relative; top: 34px; left: 8px;}
   .lnb .event {position: relative; top: 20px;}
   .event .ev_btn {position: relative; bottom: 16px; left:4px; z-index: 5}
   .event .ev_btn input[value="prev"] {border:0; font-size: 0; text-indent: -9999px; width:15px; height:15px; background-image:url(../images/arr05.png); background-repeat: no-repeat;}
@@ -66,26 +65,19 @@
   .lnb .search input[type="submit"] {height: 27px;  width: 38px; border: 0; font-size: 0; text-indent: -9999px; background: #3b5999; background-image: url(../images/icon_search.png); background-repeat: no-repeat; background-position: center;}
   .qu {position: relative; bottom: -10px;}
   .qu ul {font-size: 0;}
-  .qu li {font-size:13px; display:inline-block; margin:0 5px; font-weight: bold;}
-  .qu li:first-child {margin-left:0;}
-
-  .lnb .search {width: 280px; height: 73px;  margin: 0 auto; position: relative; top: 19px;}
-  .lnb .search input[type="text"] {height: 23px; border: 2px solid #3B5999; width: 237px;}
-  .lnb .search input[type="submit"] {height: 27px;  width: 38px; border: 0; font-size: 0; text-indent: -9999px; background: #3b5999; background-image: url(../images/icon_search.png); background-repeat: no-repeat; background-position: center;}
-  .qu {position: relative; bottom: -10px;}
-  .qu ul {font-size: 0;}
-  .qu li {font-size:13px; display:inline-block; margin:0 5px; font-weight: bold;}
-  .qu li:first-child {margin-left:0;}
+  .qu ul li {font-size:13px; display:inline-block; font-weight: bold; padding:0 8px; float:left; background-image: url(../images/top_horizon.png); background-repeat: no-repeat; background-position: 0 3px;}
+  .qu ul li:first-child {background: none;}
 
   /*네비게이션*/
   .main_menu {width: 990px; height: 76px; margin:0 auto; position:relative;}
   .main_menu ul{height:39px;}
   .main_menu>ul {background-color: #3b5999;}
-  .main_menu>ul>li {float:left; line-height:39px;}
+  .main_menu>ul>li {float:left; line-height:39px; background-image: url(../images/mbr_menu.png); background-repeat: no-repeat; background-position: 0 14px;}
+  .main_menu>ul>li:first-child {background: none;}
   .main_menu>ul>li>a {display:block; color:#FFF; font-size:15px; font-weight: bold; letter-spacing: -0.8px; padding:0 10px;}
   .main_menu>ul>li>a:hover {background-color: #5785f2;}
   .main_menu .sub_cate ul {position:absolute; left:0;}
-  .main_menu .sub_cate ul li {padding:0 5px; float:left; background-image: url(../images/top_horizon.png); background-repeat: no-repeat; background-position: 0 12px;}
+  .main_menu .sub_cate ul li {padding:0 5px; float:left; background-image: url(../images/top_horizon.png); background-repeat: no-repeat; background-position: 0 14px;}
   .main_menu .sub_cate ul li:first-child {background: none;}
   .main_menu .sub_cate ul li a {color:#666; font-size:13px; font-weight: bold; letter-spacing: -0.5px;}
 
@@ -191,14 +183,14 @@
   .hotnews{position: relative; border-top: 1px solid #ccc;}
   .title_group .c_menu {padding : 12px 0 0 12px;}
   .title_group .count:after{content:"/";  margin:0 3px;}
-  .title_group .btngroup {  position: absolute;top: 8px; right: 12px;}
-  .title_group input.next{width: 17px;  height: 17px;  background:url(../images/rew.png); background-repeat: no-repeat; border: none;}
-  .title_group input.prev{width: 17px;  height: 17px;  background:url(../images/ff.png); background-repeat: no-repeat; border: none;}
-  .number-list{padding:12px;}
+  .title_group .btngroup {position: absolute;top: 8px; right: 12px;}
+  .title_group input.next {width: 17px;  height: 17px;  background:url(../images/rew.png); background-repeat: no-repeat; border: none;}
+  .title_group input.prev {width: 17px;  height: 17px;  background:url(../images/ff.png); background-repeat: no-repeat; border: none;}
+  .number-list {padding:12px;}
   .number-list li {height: 54px; padding:8px 0; border-bottom:1px solid #ccc;}
   .number-list li:first-child{border-top:0;}
-  .number-list li img{float:right; padding-left: 14px; width: 78px; height: 54px; }
-  .number-list li span{ background-repeat:no-repeat; padding-left: 14px;  height: 54px;  display:block;  vertical-align: baseline;  background-position:0 3px;}
+  .number-list li img {float:right; padding-left: 14px; width: 78px; height: 54px; }
+  .number-list li span {background-repeat:no-repeat; padding-left: 14px;  height: 54px;  display:block;  vertical-align: baseline;  background-position:0 3px;}
   .number-list li:nth-child(1) span{ background-image:url(../images/num1.jpg);}
   .number-list li:nth-child(2) span{ background-image:url(../images/num2.jpg);}
   .number-list li:nth-child(3) span{ background-image:url(../images/num3.png);}
@@ -209,8 +201,9 @@
   .car_news .c_news {margin-left: 88px; height: 64px; display: block;}
   .car_news .car_thumb {width: 78px; height: 54px; float: left;}
   .car_news .car_thumb img {width: 100%; height: 100%; border: 1px solid #ccc;}
-  .car_news .bul_dot {background-image: url(../images/bul_dot.png); background-repeat: no-repeat; background-position: 0; line-height:22px; padding-left: 10px;}
   .car_news ul {padding-bottom: 20px; border-bottom: 1px solid #ccc;}
+  .car_news li {line-height: 22px;}
+  .car_news li:first-child {line-height: 18px;}
   .car_news a.more {position: absolute; top: 10px; right: 0px;}
 
   /*커뮤니티 인기글*/
@@ -219,7 +212,6 @@
   .cm_favor .cm_news {margin-left: 88px; height: 64px; display: block;}
   .cm_favor .cm_thumb {width: 78px; height: 54px; float: left;}
   .cm_favor .cm_thumb img {width: 100%; height: 100%; border: 1px solid #ccc;}
-  .cm_favor .bul_dot {background-image: url(../images/bul_dot.png); background-repeat: no-repeat; background-position: 0; line-height:22px; padding-left: 10px;}
   .cm_favor ul {padding-bottom: 10px; border-bottom: 1px solid #ccc;}
   .cm_favor a.more {position: absolute; top: 10px; right: 0px;}
 
@@ -264,23 +256,42 @@
 
 
   /*footer */
-  .noti_map {width: 990px; padding: 6px 0; border: 1px solid #ccc;}
-  .noti_map span a {font-size: 12px; line-height: 16px; letter-spacing: -0.5px; color: #333;}
+  .noti_map {padding: 6px 0; border: 1px solid #ccc; border-top: 0;}
+  .noti_map span a {font-size: 12px; line-height: 16px; letter-spacing: -0.8px; color: #333;}
   .noti_map .noti {font-weight: bold; margin: 0 16px;}
   .noti_map .all_map {font-weight: bold; float: right; margin-right: 16px;}
-  .sitemap {width: 990px; border: 1px solid #CCC; background: #f9f9f9;}
+  .sitemap {border: 1px solid #CCC; background: #f9f9f9;}
   .sitemap::after {content: ""; clear: both; display: block;}
-  .sitemap div[class^=smap] {float:left; width: 98px; outline: 1px solid #F00; margin: 23px 16px; display: inline-block;}
+  .sitemap div[class^=smap] {float:left; height: 171px; display: inline-block;}
+  .sitemap .smap01 {padding-left: 16px; width: 123px; margin:23px 0 20px 0;}
+  .sitemap .smap02,.smap03,.smap04,.smap05,.smap06 {margin:23px 0 20px 0; padding-left: 10px; width: 112px; border-left: 1px solid #e1e1e1;}
+  .sitemap .smap07 {padding : 23px 0 20px 10px; width: 215px; border-left: 1px solid #ccc;}
+  .sitemap  h5 {margin-bottom: 15px; font-size: 13px; letter-spacing: -0.8px; font-weight: bold; color: #333;}
+  .sitemap li a {font-size: 11px; line-height: 18px; color: #666;}
 
+  .f_contact {height: 30px; border-bottom: 1px solid #ccc;}
+  .f_contact dl {font-size: 0;}
+  .f_contact dl dt {font-size: 13px; letter-spacing: -0.8px; font-weight: bold; color: #333; margin-right: 10px; line-height: 30px; display: inline-block;}
+  .f_contact dl dd {font-size: 12px; color: #666; font-weight: normal; line-height: 30px; display: inline-block; margin-right: 10px;}
+  .f_contact .flink::after {content: ""; padding-right: 6px; background-image: url(../images/top_horizon.png); background-repeat: no-repeat; background-position: 3px 2px;}
 
+  .policy {height: 49px; margin: 20px 170px;}
+  .policy ul {font-size:0;}
+  .policy ul li {float: left; padding: 0 10px; line-height: 18px; text-align: center; background-image: url(../images/top_horizon.png); background-repeat: no-repeat; background-position: 0 4px; display: inline-block;}
+  .policy ul li:first-child {background: none;}
+  .policy ul li a {font-size: 12px; color: #666; font-weight: bold;}
 
-
-
-
+  .co_info {height: 122px;}
+  .co_info span {font-size: 11px; line-height: 16px; color: #888;}
+  .co_info .bar {display: inline-block; margin: 0 6px 0 6px; color: #c3c3c3;}
 
   </style>
+
+
+
+
   <title>보배드림</title>
-</head>
+</head}>
 
 <body>
 
@@ -760,10 +771,10 @@
           <ul>
             <li><span class="car_thumb"><a href="#"><img src="../images/c_news01.jpg" alt="르노삼성"/></a></span>
               <span class="c_news"><a href="">르노삼성 부산공장 중대형 핵심 기지 될 것</a></span></li>
-              <li class="bul_dot"><a href=""> 쌍용 EREV, 전기자동차 2015년 양산</a></li>
-              <li class="bul_dot"><a href=""> [2012 결산] 전자, 자동차, 철강 등</a></li>
-              <li class="bul_dot"><a href=""> 남양연구소 'T-LPDi'상용화 박차</a></li>
-              <li class="bul_dot"><a href=""> 올해들어 수입차 CEO 대거 교체</a></li>
+              <li><i class="icon-dot"></i><a href=""> 쌍용 EREV, 전기자동차 2015년 양산</a></li>
+              <li><i class="icon-dot"></i><a href=""> [2012 결산] 전자, 자동차, 철강 등</a></li>
+              <li><i class="icon-dot"></i><a href=""> 남양연구소 'T-LPDi'상용화 박차</a></li>
+              <li><i class="icon-dot"></i><a href=""> 올해들어 수입차 CEO 대거 교체</a></li>
             </ul>
             <a href="" class="more">더보기<i class="bul_more"></i></a>
           </div>
@@ -859,7 +870,7 @@
                       </ul>
                   </div>
                   <div class="smap02">
-                   <h5>국한중고차</h5>
+                   <h5>국산중고차</h5>
                       <ul>
                           <li><a href="">전체차량</a></li>
                           <li><a href="">인기차량</a></li>
@@ -928,6 +939,35 @@
                           <li><a href="">오토갤러리매장</a></li>
                       </ul>
                   </div>
+              </div>
+              <div class="f_contact">
+                <dl>
+                 <dt><i class="icon-dot"></i>이용문의</dt><dd>02-784-2329</dd>
+                 <dt><i class="icon-dot"></i>차량광고</dt><dd>02-784-2329</dd>
+                 <dt><i class="icon-dot"></i>제휴문의</dt><dd>070-4272-0165</dd>
+                 <dt><i class="icon-dot"></i>협력업체</dt><dd>070-4272-0158</dd>
+                 <dt><i class="icon-dot"></i>커뮤니티</dt><dd>02-784-2329</dd>
+                 <dt><i class="icon-dot"></i>신고센터</dt><dd><a class="flink" href="">장애/오류신고</a><a href="">권리침해신고</a></dd>
+                </dl>
+              </div>
+              <div class="policy">
+                <ul>
+                  <li><a href="">회사소개</a></li>
+                  <li><a href="">제휴광고</a></li>
+                  <li><a href="">협력업체신청</a></li>
+                  <li><a href="">인재채용</a></li>
+                  <li><a href="">이용약과</a></li>
+                  <li><a href="">개인정보취급방침</a></li>
+                  <li><a href="">고객센터</a></li>
+                  <li><a href="">사이트맵</a></li>
+                </ul>
+              </div>
+              <div class="co_info">
+                <span>사업자등록번호 : 117-81-64543  통신판매업신고번호 : 제 2012-서울영등포-0697호</span><br>
+                <span>주식회사 보배네트워크</span><span class="bar">|</span>주소 : 서울 영등포구 양평동3가 16 우림E비즈센터 11,12층   대표이사 : 김보배   개인정보관리책임자 : 김태형 </span><br>
+                <span>대표전화 : 02-784-2329   대표팩스 : 02-6499-2329   이메일 : bobaedream@bobaedream.co.kr</span><br>
+                <span> Copyright (c) BOBAENETWORK All rights reserved </span><br>
+                <span class="copyright">보배드림은 통신판매중개자이며 차량판매의 당사자가 아닙니다. 따라서 보배드림은 차량 거래검토 및 거래에 대하여 어떤 책임을 지지 않습니다.</span>
               </div>
             </div>
           </div>
