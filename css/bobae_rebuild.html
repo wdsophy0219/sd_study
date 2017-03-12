@@ -23,50 +23,18 @@
   }
 
   /*option*/
-
   .fl {float: left;}
   .fr {float: right;}
 
-  .i.icon-select {
-    margin-left: 3px;
-    background-image: url(../images/icon_open.png);
-    background-repeat: no-repeat;
-    width: 12px;
-    height: 12px;
-    display: inline-block;
-    vertical-align: -3px;
-  }
+  .icon-select {margin-left: 3px; background-image: url(../images/icon_open.png); background-repeat: no-repeat; width: 12px; height: 12px; display: inline-block; vertical-align: -3px;}
+  .icon-mobile {margin-right: 3px; background-image: url(../images/icon_mobile.png); background-repeat: no-repeat; width: 8px; height: 12px; display: inline-block; vertical-align: -3px;}
+  .bul_more {margin: 3px 2px; background-image: url(../images/bul_more.png); background-repeat: no-repeat; width: 3px; height: 5px; display: inline-block;}
+  .bbul_more {margin: 2px 4px; background-image: url(../images/arr07.png); background-repeat: no-repeat; width: 3px; height: 5px; display: inline-block;}
 
-  .i.icon-mobile {
-    margin-right: 3px;
-    background-image: url(../images/icon_mobile.png);
-    background-repeat: no-repeat;
-    width: 8px;
-    height: 12px;
-    display: inline-block;
-    vertical-align: -3px;
-  }
-
-  .ir {
-    text-indent: -999px;
-    font-size: 0;
-    position: absolute;
-    left: -999px;
-    top: -999px;
-  }
-
-  i.bul_more {
-    margin: 3px 2px;
-    background-image: url(../images/bul_more.png);
-    background-repeat: no-repeat;
-    width: 3px;
-    height: 5px;
-    display: inline-block;
-  }
 
   /* Layout */
   #wrap {min-width:990px;}
-  #header {height: 0px;  background-color: #f8f8f8; border-bottom: 1px #d5d0cc solid;}
+  #header {height: 0px; height:30px; background-color: #f8f8f8; border-bottom: 1px #d5d0cc solid;}
   .gnb {width: 990px;  height: 30px; line-height: 30px;  margin: 0 auto;}
   .lnb {height: 107px; width: 990px; margin: 0 auto;}
   #container {width: 990px; margin:5px auto 0;}
@@ -75,7 +43,7 @@
   #footer {width: 990px; margin: 0 auto; border-top: 3px solid #8c909f; border-bottom: 1px solid #8c909f; text-align: left; outline: 1px solid F00;}
 
   /*gnb*/
-  .gnb a.book_mark {font-size: 11px; padding-left: 13px; background-image: url(../images/icon_star.png); background-repeat: no-repeat;   background-position: 0 10px;}
+  .gnb a.book_mark {font-size: 11px; padding-left: 13px; background-image: url(../images/icon_star.png); background-repeat: no-repeat; background-position: 0 10px;}
   .gnb .rank {margin-left: 14px;}
   .gnb .rank li {display: none; font-size: 11px;  padding-left: 20px;  background-image: url(../images/icon_num.png); background-repeat: no-repeat;  background-position: 0 10px;}
   .gnb .rank li .up_icon {padding-left: 8px;  background-image: url(../images/icon_up.png); background-repeat: no-repeat; background-position: 0; font-style: normal;}
@@ -89,58 +57,44 @@
   /*lnb*/
   .lnb {height:107px;  margin:0 auto;  width: 990px;}
   .lnb .logo {position: relative; top: 34px;}
-  .lnb .event {position: relative; top: 6px;}
+  .lnb .event {position: relative; top: 20px;}
+  .event .ev_btn {position: relative; bottom: 16px; left:4px; z-index: 5}
+  .event .ev_btn input[value="prev"] {border:0; font-size: 0; text-indent: -9999px; width:15px; height:15px; background-image:url(../images/arr05.png); background-repeat: no-repeat;}
+  .event .ev_btn input[value="next"] {border:0; font-size: 0; text-indent: -9999px; width:15px; height:15px; background-image:url(../images/arr06.png); background-repeat: no-repeat;}
   .lnb .search {width: 280px; height: 73px;  margin: 0 auto; position: relative; top: 19px;}
   .lnb .search input[type="text"] {height: 23px; border: 2px solid #3B5999; width: 237px;}
-  .lnb .search input[type="submit"] {height: 27px;  width: 38px; border: 0; font-size: 0; text-indent: -9999px; background: #3b5999; background-image: url(../images/icon_search.png); background-repeat: no-repeat;}
-  .qu ul{font-size: 0;}
+  .lnb .search input[type="submit"] {height: 27px;  width: 38px; border: 0; font-size: 0; text-indent: -9999px; background: #3b5999; background-image: url(../images/icon_search.png); background-repeat: no-repeat; background-position: center;}
+  .qu {position: relative; bottom: -10px;}
+  .qu ul {font-size: 0;}
   .qu li {font-size:13px; display:inline-block; margin:0 5px; font-weight: bold;}
-  .qu li:first-child {pmargin-left:0;}
+  .qu li:first-child {margin-left:0;}
 
-
+  .lnb .search {width: 280px; height: 73px;  margin: 0 auto; position: relative; top: 19px;}
+  .lnb .search input[type="text"] {height: 23px; border: 2px solid #3B5999; width: 237px;}
+  .lnb .search input[type="submit"] {height: 27px;  width: 38px; border: 0; font-size: 0; text-indent: -9999px; background: #3b5999; background-image: url(../images/icon_search.png); background-repeat: no-repeat; background-position: center;}
+  .qu {position: relative; bottom: -10px;}
+  .qu ul {font-size: 0;}
+  .qu li {font-size:13px; display:inline-block; margin:0 5px; font-weight: bold;}
+  .qu li:first-child {margin-left:0;}
 
   /*네비게이션*/
+  .main_menu {width: 990px; height: 76px; margin:0 auto; position:relative;}
+  .main_menu ul{height:39px;}
+  .main_menu>ul {background-color: #3b5999;}
+  .main_menu>ul>li {float:left; line-height:39px;}
+  .main_menu>ul>li>a {display:block; color:#FFF; font-size:15px; font-weight: bold; letter-spacing: -0.8px; padding:0 10px;}
+  .main_menu>ul>li>a:hover {background-color: #5785f2;}
+  .main_menu .sub_cate ul {position:absolute; left:0;}
+  .main_menu .sub_cate ul li {padding:0 5px; float:left; background-image: url(../images/top_horizon.png); background-repeat: no-repeat; background-position: 0 12px;}
+  .main_menu .sub_cate ul li:first-child {background: none;}
+  .main_menu .sub_cate ul li a {color:#666; font-size:13px; font-weight: bold; letter-spacing: -0.5px;}
 
-  .main_menu {width: 990px;
-      border:1px #F00 solid;
-      height: 76px;
-      margin:0 auto;
-      position:relative;
-  }
-  .main_menu ul{
-   height:39px;
-  }
-  .main_menu>ul{
-      background-color: #3b5999;
-  }
-  .main_menu>ul>li{
-      float:left;
-      line-height:39px;
-  }
-  .main_menu>ul>li>a{
-
-      display:block;
-      color:#FFF;
-      font-size:15px;
-      padding:0 10px;
-  }
-  .main_menu>ul>li>a:hover{
-      background-color: #5785f2;
-  }
-  .main_menu>ul>li ul{
-      position:absolute;
-      left:0;
-  }
-  .main_menu>ul>li li{
-      margin:0 10px;
-      float:left;
-  }
-
+  /*공지사항*/
   .main_menu .information {min-width:200px; position:absolute; right:0; top:0;}
-  .main_menu .notice{line-height:37px;}
-  .main_menu .notice h2{font-size:11px; color:#FFF;  float:left; padding-right:9px; margin-right:7px;}
-  .main_menu .notice span{color:#FFF;}
-  .main_menu .intoday div{float:left; line-height:37px;}
+  .main_menu .notice {line-height:37px;}
+  .main_menu .notice h2 {font-size:11px; color:#FFF; float:left; margin-right:7px;}
+  .main_menu .notice span {color:#FFF;}
+  .main_menu .intoday div {float:left; line-height:37px;}
   .main_menu .intoday div:first-child{margin-right:10px;}
   .main_menu .intoday div span:first-child+span{color:#005dde;margin-left:10px;font-weight:bold;}
 
@@ -207,7 +161,7 @@
   .mtcycle_old .p_txt {width: 136px; height: 48px; display: block; padding-top: 10px; text-align: center;}
   .mtcycle_old a.more {position: absolute; top: 14px; right: 10px;}
 
-  /*오토바이중고차 신규매물*/
+  /*협력업체*/
   .cooper {height: 198px; margin: 14px 20px 0 0; position: relative;}
   .cooper h3 {margin: 14px 0 10px 0; display: inline-block;}
   .cooper li {float: left;}
@@ -223,15 +177,15 @@
   .login {background-color: #f6f6f6;}
   .login fieldset {padding:12px;}
   .login fieldset input[type="text"],.login fieldset input[type="password"] {width:139px; height:26px; border:1px solid #c7cbce; background: #fff; float:left;}
-  .login fieldset input[placeholder="아이디"],.login fieldset input[placeholder="패스워드"] {padding-left: 10px; font-size: 11px; color: #979797; font-weight: bold;}
+  .login fieldset input[placeholder="아이디"],.login fieldset input[placeholder="패스워드"] {padding-left: 10px; font-size: 11px; color: #979797;}
   .login fieldset input[type="password"] {border-top-color:#CCC;}
   .login fieldset input[type="text"] {border-bottom:0;}
-  .login fieldset input[type="submit"] {margin-left:5px; width: 54px;  height: 54px; border:1px solid #858b9d; color: #3d4959; background: #fff; font-size: 13px; font-weight: bold;}
+  .login fieldset input[type="submit"] {margin-left:5px; width: 54px;  height: 54px; border:1px solid #858b9d; color: #3d4959; background: #fff; font-size: 13px; font-weight: bold; letter-spacing: -0.5px;}
   .login fieldset .login_option {clear:both; margin-top:10px;}
   .login_option {color: #6d7078;}
   .login_option label {padding-left: 3px;}
-  .login_option .signin {font-weight: bold;}
-
+  .login_option a.signin {font-weight: bold;}
+  .login_option a.signin::after {content: ""; padding-right: 4px; background-image: url(../images/top_horizon.png); background-repeat: no-repeat; background-position: 2px 2px;}
 
   /*커뮤니티 핫이슈*/
   .hotnews{position: relative; border-top: 1px solid #ccc;}
@@ -292,7 +246,7 @@
  .bb_slider .bb_tit cite {color: #FFF; font-size: 12px; font-weight: normal;line-height: 25px; padding-left: 5px;}
  .bb_slider .bb_btn {position: absolute; right: 5px; top: 4px;}
  .bb_slider .bb_btn input[type="button"]{border:0; width:17px; height:17px; text-indent:-9999px; background-image:url(../images/btn_2.png); background-repeat: no-repeat;}
- .bb_slider .bb_btn input[value="이전"]{background-position: -17px 0;cursor:pointer;}
+ .bb_slider .bb_btn input[value="이전"]{background-position: -16px 0; cursor:pointer;}
  .bb_story a.more {position: absolute; top: 5px; right: 0;}
 
  .evnews {margin: 15px 12px; position: relative; border-top:1px solid #ccc;}
@@ -305,6 +259,7 @@
   /*sns*/
  .sns {margin: 15px 12px 0; border-top: 1px solid #ccc;}
  .sns .sns_menu {padding: 15px 0 10px 0;}
+ .sns img {border: 0; padding:0 2px 5px 0;}
  .sns::after {content: ""; clear: both; display: block;}
 
 
@@ -313,15 +268,9 @@
   .noti_map span a {font-size: 12px; line-height: 16px; letter-spacing: -0.5px; color: #333;}
   .noti_map .noti {font-weight: bold; margin: 0 16px;}
   .noti_map .all_map {font-weight: bold; float: right; margin-right: 16px;}
-
-  /*.noti_map .not_news {padding-left: 6px;}*/
-
   .sitemap {width: 990px; border: 1px solid #CCC; background: #f9f9f9;}
   .sitemap::after {content: ""; clear: both; display: block;}
   .sitemap div[class^=smap] {float:left; width: 98px; outline: 1px solid #F00; margin: 23px 16px; display: inline-block;}
-  .sitemap h5 {font-size: 13px; font-weight: bold; padding-bottom: 23px; color: #333;}
-  .sitemap li {height: 18px;}
-  .sitemap a {font-size: 11px; letter-spacing: -1px; border-top: 1px solid #8c909f; color: #333;}
 
 
 
@@ -373,6 +322,10 @@
         </div>
         <div class="event fr">
           <a href=""><img src="../images/event.jpg" alt="이벤트배너 바로가기"></a>
+            <div class="ev_btn">
+              <input value="prev" type="button">
+              <input value="next" type="button">
+            </div>
         </div>
         <div class="search">
           <a href=""><img src="../images/top_banner.png" alt=""></a>
@@ -398,7 +351,7 @@
 
           <ul>
               <li><a href="">사이버매장</a>
-                  <div>
+                  <div class="sub_cate">
                       <ul>
                           <li><a href="">국산차매장</a></li>
                           <li><a href="">수입차매장</a></li>
@@ -421,7 +374,7 @@
 
           <div class="information">
               <div class="notice">
-                  <h2>공지</h2>
+                  <h2>공지<i class="bbul_more"></i></h2>
                   <span>보배드림 어플리케이션 안내</span>
               </div>
               <div class="intoday">
@@ -766,7 +719,7 @@
                   </div>
                   <div class="login_option">
                       <span class="fl"><input type="checkbox" id="idsave"> <label for="idsave">ID저장 </label></span>
-                      <span class="fr"><a href="" class="signin">회원가입</a> <a href="">ID / 비밀번호찾기</a></span>
+                      <span class="fr"><a class="signin" href="">회원가입</a> <a href="">ID / 비밀번호찾기</a></span>
                   </div>
               </fieldset>
           </div>
@@ -888,7 +841,7 @@
             <div id="footer">
               <div class="noti_map">
                     <span class="noti"><a href="">공지사항</a></span>
-                    <span class="all_map"><a href="">서비스 전체보기</a></span>
+                    <span class="all_map"><a href="" class="more">서비스 전체보기<i class="bbul_more"></i></a></span>
                     <span class="not_news"><a href="">보배드림 어플 업데이트 안내</a></span>
               </div>
               <div class="sitemap">
