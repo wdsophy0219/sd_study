@@ -1,1240 +1,983 @@
-  <!DOCTYPE html>
-  <html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <style>
-    /*reset*/
-    *{margin:0;padding:0;}
-    body{font-size:12px;}
-    ul,ol,dl,li{list-style:none;}
-    img{vertical-align:top; border:0;}
-    fieldset{border:0;}
-    legend{font-size:0;text-indent:-9999px;}
-    input,botton{vertical-align:middle;}
-    a{text-decoration:none; color:#373737;}
-    i,em,cite{font-style:normal;}
-
-    button,
-    input[type="button"],
-    input[type="submit"],
-    input[type="reset"] {
-      cursor: pointer;
-    }
-
-    /*option*/
-
-    .fl {
-      float: left;
-    }
-
-    .fr {
-      float: right;
-    }
-
-    .i.icon-select {
-      margin-left: 3px;
-      background-image: url(../images/icon_open.png);
-      background-repeat: no-repeat;
-      width: 12px;
-      height: 12px;
-      display: inline-block;
-      vertical-align: -3px;
-    }
-
-    .i.icon-mobile {
-      margin-right: 3px;
-      background-image: url(../images/icon_mobile.png);
-      background-repeat: no-repeat;
-      width: 8px;
-      height: 12px;
-      display: inline-block;
-      vertical-align: -3px;
-    }
-
-    .ir {
-      text-indent: -999px;
-      font-size: 0;
-      position: absolute;
-      left: -999px;
-      top: -999px;
-    }
-    i.bul_more {
-      margin: 3px 2px;
-      background-image: url(../images/bul_more.png);
-      background-repeat: no-repeat;
-      width: 3px;
-      height: 5px;
-      display: inline-block;
-    }
-
-
-
-
-
-    /* Layout */
-
-    #wrap {
-      min-width:990px;
-    }
-
-    #header {
-      height: 0px;
-      background-color: #f8f8f8;
-      border-bottom: 1px #d5d0cc solid;
-    }
-
-    .gnb {
-      width: 990px;
-      height: 30px;
-      line-height: 30px;
-      margin: 0 auto;
-    }
-
-    .lnb {
-      height: 107px;
-      width: 990px;
-      margin: 0 auto;
-    }
-
-    #container{
-      width: 990px;
-      margin:5px auto 0;
-    }
-
-    #container .section{
-        width:748px;
-        float:left;
-    }
-
-    #aside {
-      margin-left: 753px;
-      border: 1px solid #ccc;
-    }
-
-    #footer {
-        width: 990px;
-        margin: 0 auto;
-        border-top: 3px solid #8c909f;
-        border-bottom: 1px solid #8c909f;
-        text-align: left;
-        outline: 1px solid F00;
-    }
-
-    /*gnb*/
-
-    .gnb a.book_mark {
-      font-size: 11px;
-      padding-left: 13px;
-      background-image: url(../images/icon_star.png);
-      background-repeat: no-repeat;
-      background-position: 0 10px;
-    }
-
-    .gnb .rank {
-      margin-left: 14px;
-    }
-
-    .gnb .rank li {
-      display: none;
-      font-size: 11px;
-      padding-left: 20px;
-      background-image: url(../images/icon_num.png);
-      background-repeat: no-repeat;
-      background-position: 0 10px;
-    }
-
-    .gnb .rank li .up_icon {
-      padding-left: 8px;
-      background-image: url(../images/icon_up.png);
-      background-repeat: no-repeat;
-      background-position: 0;
-      font-style: normal;
-    }
-
-    .gnb .rank .on {
-      display: block;
-    }
-
-    .gnb .rank i[class^="up_"] {
-      color: red;
-    }
-
-    .gnb .rank i[class^="down_"] {
-      color: blue;
-    }
-
-    .gnb .top_service li {
-      float: left;
-      padding: 0 8px 0 7px;
-      background-image: url(../images/top_horizon.png);
-      background-repeat: no-repeat;
-      background-position: 0 10px;
-    }
-
-    .gnb .top_service li strong {
-      color: blue;
-    }
-
-    .gnb .top_service li:first-child {
-      background: none;
-    }
-    /*lnb*/
-    .lnb{
-        height:107px;
-        margin:0 auto;
-        width: 990px;
-    }
-    .lnb .logo {
-      position: relative;
-      top: 34px;
-    }
-
-    .lnb .event {
-      position: relative;
-      top: 6px;
-    }
-
-    .lnb .search {
-      width: 280px;
-      height: 73px;
-      margin: 0 auto;
-      position: relative;
-      top: 19px;
-    }
-
-    .lnb .search input[type="text"] {
-      height: 23px;
-      border: 2px solid #3B5999;
-      width: 237px;
-    }
-
-    .lnb .search input[type="submit"] {
-      height: 27px;
-      width: 38px;
-      border: 0;
-      font-size: 0;
-      text-indent: -9999px;
-      background: #3b5999;
-      background-image: url(../images/icon_search.png);
-      background-repeat: no-repeat;
-    }
-
-    .qu ul{
-      font-size: 0;
-    }
-
-    .qu li {
-      font-size:14px;
-      display:inline-block;
-      margin:0 5px;
-    }
-
-    .qu li:first-child {
-      pmargin-left:0;
-    }
-
-
-
-    /*네비게이션*/
-
-    .main_menu{
-        width: 990px;
-        border:1px #F00 solid;
-        height: 76px;
-        margin:0 auto;
-        position:relative;
-    }
-    .main_menu ul{
-     height:39px;
-    }
-    .main_menu>ul{
-        background-color: #3b5999;
-    }
-    .main_menu>ul>li{
-        float:left;
-        line-height:39px;
-    }
-    .main_menu>ul>li>a{
-
-        display:block;
-        color:#FFF;
-        font-size:15px;
-        padding:0 10px;
-    }
-    .main_menu>ul>li>a:hover{
-        background-color: #5785f2;
-    }
-    .main_menu>ul>li ul{
-        position:absolute;
-        left:0;
-    }
-    .main_menu>ul>li li{
-        margin:0 10px;
-        float:left;
-    }
-
-    .main_menu .information{
-        border:1px #F00 solid;
-        min-width:200px;
-        position:absolute;
-        right:0;
-        top:0;
-    }
-    .main_menu .notice{line-height:37px;}
-    .main_menu .notice h2{font-size:11px; color:#FFF;  float:left; padding-right:9px; margin-right:7px;}
-    .main_menu .notice span{color:#FFF;}
-
-    .main_menu .intoday div{float:left; line-height:37px;}
-    .main_menu .intoday div:first-child{margin-right:10px;}
-    .main_menu .intoday div span:first-child+span{color:#005dde;margin-left:10px;font-weight:bold;}
-
-    .section .sec-line{
-        height:102px;
-        border-bottom:11px;
-    }
-    .section .sec-line div{
-        border:1px #c7cbce solid;
-    }
-
-    .section .sec-hotlist{
-        margin-top:11px;
-        height:232px;
-    }
-    .section .sec-hotlist .main_banner{
-        float:left;
-        width:400px;
-        height:230px;
-        border:1px #c7cbce solid;
-        position:relative;
-    }
-
-    .section .sec-hotlist .main_banner~li {margin-left:408px; border-top:1px #e4e6e5 solid; height:79px;}
-    .section .sec-hotlist .main_banner~li img{border:1px #CCC solid; float:left; margin-right:13px;}
-    .section .sec-hotlist .main_banner~li strong{display:block; padding-top:13px;}
-    .section .sec-hotlist .main_banner~li {margin-right:15px;}
-    .section .sec-hotlist .main_banner+li{border-top:0 none; height:76px;}
-    .section .sec-hotlist .main_banner+li~li img{margin-top:3px;}
-    .section .sec-hotlist .main_banner .descrip{
-        position:absolute;
-        bottom:0; left:0; right:0; height:44px;
-        background-color:rgba(0,0,0,.8);
-        color:#FFF;
-
-    }
-    .section .sec-hotlist .main_banner .descrip>div{
-        margin:5px;
-    }
-    .section .sec-hotlist .main_banner .descrip strong{
-        font-size:14px;
-        display:block;
-    }
-
-    .section .sec-hotlist .main_banner .descrip cite{
-        font-size:12px;
-        font-style:normal;
-    }
-    .section .sec-hotlist .main_banner .btngroup{
-        text-align:center;
-
-        position:absolute;
-        right:0; top:0;
-        font-size:0;
-    }
-    .section .sec-hotlist .main_banner .btngroup span{
-        font-size:12px;
-    }
-    .section .sec-hotlist .main_banner .btngroup .number:after{
-        content:"/";
-        margin:0 5px;
-    }
-
-    .section .sec-hotlist .main_banner .btngroup input[type="button"]{
-        border:0;
-        width:17px;
-        height:17px;
-        text-indent:-9999px;
-        background-image:url(../images/icon_left_right.png);
-    }
-    .section .sec-hotlist .main_banner .btngroup input[value="이전"]{
-        background-position: -17px 0;
-        cursor:pointer;
-    }
-
-
-    .new_cyber {
-      height: 198px;
-      margin: 14px 20px 0 0;
-      border-bottom: 1px solid #ccc;
-      position: relative;
-    }
-
-    .new_cyber h3 {
-      margin: 14px 0 10px 0;
-      display: inline-block;
-    }
-
-    .new_cyber li {
-      float: left;
-    }
-
-    .new_cyber .c_list {
-      padding-right: 10px;
-    }
-
-    .new_cyber .c_thumb {
-      width: 136px;
-      height: 102px;
-    }
-
-    .new_cyber .c_thumb img {
-      width: 100%;
-      height: 100%;
-      border: 1px solid #ccc
-    }
-
-    .new_cyber .p_txt {
-      width: 136px;
-      height: 48px;
-      display: block;
-      padding-top: 10px;
-      text-align: center;
-    }
-
-    .new_cyber a.more {
-      position: absolute;
-      top: 14px;
-      right: 10px;
-    }
-
-    /*aside*/
-    /*로그인*/
-    .login {background-color: #f6f6f6;}
-    .login fieldset{padding:12px;}
-    .login fieldset input[type="text"],
-    .login fieldset input[type="password"]{width:149px;height:26px;border:1px #333 solid; float:left;}
-    .login fieldset input[type="password"]{border-top-color:#CCC;}
-    .login fieldset input[type="text"]{border-bottom:0;}
-    .login fieldset input[type="submit"]{
-        margin-left:5px;
-        width: 54px;
-        height: 54px;
-        border:1px #a7abb3 solid;
-    }
-    .login fieldset .login_option{clear:both;margin-top:10px;}
-
-
-    /*커뮤니티 핫이슈*/
-    .hotnews{
-        position: relative;
-        border-top: 1px solid #ccc;
-    }
-    .title_group .c_menu {
-      padding : 12px 0 0 12px;
-    }
-    .title_group .count:after{
-        content:"/";
-        margin:0 3px;
-    }
-    .title_group .btngroup {
-      position: absolute;
-      top: 8px;
-      right: 12px;
-    }
-
-    .title_group input.next{
-        width: 17px;
-        height: 17px;
-        background:url(../images/rew.png);
-        background-repeat: no-repeat;
-        border: none;
-    }
-    .title_group input.prev{
-        width: 17px;
-        height: 17px;
-        background:url(../images/ff.png);
-        background-repeat: no-repeat;
-        border: none;
-    }
-    .number-list{padding:12px;}
-    .number-list li {height: 54px; padding:8px 0; border-bottom:1px solid #ccc;}
-    .number-list li:first-child{border-top:0;}
-    .number-list li img{float:right; padding-left: 14px; width: 78px; height: 54px; }
-    .number-list li span{
-        background-repeat:no-repeat;
-        padding-left: 14px;
-        height: 54px;
-        display:block;
-        vertical-align: baseline;
-        background-position:0 3px;
-    }
-
-    .number-list li:nth-child(1) span{
-         background-image:url(../images/num1.jpg);
-    }
-    .number-list li:nth-child(2) span{
-         background-image:url(../images/num2.jpg);
-    }
-    .number-list li:nth-child(3) span{
-         background-image:url(../images/num3.png);
-    }
-
-    /*자동차뉴스*/
-    .car_news {margin: 0 12px; position: relative;}
-    .car_news .c_menu {padding: 5px 0 10px 0;}
-    .car_news .c_news {margin-left: 88px; height: 64px; display: block;}
-    .car_news .car_thumb {width: 78px; height: 54px; float: left;}
-    .car_news .car_thumb img {width: 100%; height: 100%; border: 1px solid #ccc;}
-    .car_news .bul_dot {background-image: url(../images/bul_dot.png); background-repeat: no-repeat; background-position: 0; line-height:22px; padding-left: 10px;}
-    .car_news ul {padding-bottom: 20px; border-bottom: 1px solid #ccc;}
-    .car_news a.more {position: absolute; top: 10px; right: 0px;}
-
-
-    /*커뮤니티 인기글*/
-    .cm_favor {margin: 10px 12px; position: relative;}
-    .cm_favor .cm_menu {padding: 5px 0 10px 0;}
-    .cm_favor .cm_news {margin-left: 88px; height: 64px; display: block;}
-    .cm_favor .cm_thumb {width: 78px; height: 54px; float: left;}
-    .cm_favor .cm_thumb img {width: 100%; height: 100%; border: 1px solid #ccc;}
-    .cm_favor .bul_dot {background-image: url(../images/bul_dot.png); background-repeat: no-repeat; background-position: 0; line-height:22px; padding-left: 10px;}
-    .cm_favor ul {padding-bottom: 10px; border-bottom: 1px solid #ccc;}
-    .cm_favor a.more {position: absolute; top: 10px; right: 0px;}
-
-
-    /*내차소 인기순위*/
-    .myc_hot{
-        position: relative;
-;
-    }
-    .myc_hot a.more {
-      position: absolute;
-      top: 10px;
-      right: 12px;}
-
-    .myc_group .ct_menu {
-      padding : 12px 0 0 12px;
-    }
-
-    .myc_group .btngroup {
-      position: absolute;
-      top: 8px;
-      right: 12px;
-    }
-
-    .number-list{padding:12px;}
-    .number-list li {height: 41px; padding:8px 0; border-bottom:1px solid #ccc;}
-    .number-list li:first-child{border-top:0;}
-    .number-list li img{float:right; padding-left: 14px; width: 78px; height: 41px; }
-    .number-list li span{
-        background-repeat:no-repeat;
-        padding-left: 14px;
-        height: 54px;
-        display:block;
-        vertical-align: baseline;
-        background-position:0 3px;
-    }
-
-    .number-list li:nth-child(1) span{
-         background-image:url(../images/num1.jpg);
-    }
-    .number-list li:nth-child(2) span{
-         background-image:url(../images/num2.jpg);
-    }
-    .number-list li:nth-child(3) span{
-         background-image:url(../images/num3.png);
-    }
-
-   .bb_story {margin: 0 12px; position: relative; border-bottom: 1px solid #ccc;}
-   .bb_story .bb_menu {padding: 5px 0 10px 0;}
-   .bb_slider span a {position: relative;}
-   .bb_slider .bb_tit {position: absolute; left: 0; bottom: 0; background: rgba(28, 28, 28, 0.67); width: 213px; height: 25px;}
-   .bb_slider .bb_tit cite {color: #FFF; font-size: 12px; font-weight: normal;line-height: 25px; padding-left: 5px;}
-   .bb_slider .bb_btn {position: absolute; right: 5px; top: 4px;}
-   .bb_slider .bb_btn input[type="button"]{border:0; width:17px; height:17px; text-indent:-9999px; background-image:url(../images/btn_2.png); background-repeat: no-repeat;}
-   .bb_slider .bb_btn input[value="이전"]{background-position: -17px 0;cursor:pointer;}
-   .bb_story a.more {position: absolute; top: 5px; right: 0;}
-
-   .event_news {margin: 15px 12px; position: relative; border-top:1px solid #ccc;}
-   .event_news .ev_menu {padding: 15px 0 10px 0;}
-   .event_news a.more {position: absolute; top: 15px; right: 0;}
-   .event_news .ev_thumb {width:78px; height: 54px; float: left; margin-right: 10px; display: block; float: left; margin-right: 10px; }
-   .event_news .ev_thumb img {width:100%; height: 100%; }
-   .event_news .ev_txt { height: 54px; line-height: 18px;}
-
-    /*sns*/
-   .sns {margin: 15px 12px 0; border-top: 1px solid #ccc;}
-   .sns .sns_menu {padding: 15px 0 10px 0;}
-   .sns::after {content: ""; clear: both; display: block;}
-
-
-    /*footer */
-    .noti_map {width: 990px; padding: 6px 0; border: 1px solid #ccc;}
-    .noti_map span a {font-size: 12px; line-height: 16px; letter-spacing: -0.5px; vertical-align: baseline; color: #333;}
-    .noti_map .noti {font-weight: bold; float: left; margin: 0 16px;}
-    .noti_map .all_map {font-weight: bold; float: right; margin-right: 16px; }
-    .all_map a.more {position: absolute; top: 5px; right: 0; outline: 1px solid #F00; }
-    .sitemap {width: 990px; border: 1px solid #CCC;}
-    .sitemap::after {content: ""; clear: both; display: block;}
-    .sitemap div[class^="smap"] {float:left; width: 98px; outline: 1px solid #F00; margin: 23px 16px; display: inline-block;}
-    .sitemap h5 {font-size: 13px; font-weight: bold; padding-bottom: 23px; color: #333;}
-    .sitemap li {height: 18px;}
-    .sitemap a {font-size: 11px; letter-spacing: -1px; border-top: 1px solid #8c909f; color: #333;}
-
-
-
-
-
-
-
-    </style>
-    <title>보배드림</title>
-  </head>
-
-  <body>
-
-    <div id="wrap">
-      <div id="header">
-
-        <div class="gnb">
-          <div class="top_left">
-            <a href="" class="fl book_mark">즐겨찾기</a>
-
-            <ol class="fl rank">
-              <li><a href="">기아k5출시</a></li>
-              <li><a href="">기아k5출시</a></li>
-              <li><a href="">기아k5출시</a></li>
-              <li><a href="">기아k5출시</a></li>
-              <li><a href="">기아k5출시</a></li>
-              <li class="on"><a href="">기아k5출시<i class="up_icon">45</i></a></li>
-            </ol>
-          </div>
-
-          <div class="fr top_service">
-            <ul>
-              <li><a href="">로그인</a></li>
-              <li><a href="">회원가입</a></li>
-              <li><a href="">마이 페이지</a><i class="icon-select"></i></li>
-              <li><a href="">쪽지</a></li>
-              <li><a href="">찜한차량</a></li>
-              <li><a href="">고객센터</a></li>
-              <li><a href="">전체메뉴<i class="icon-select"></i></a></li>
-              <li><a href=""><i class="icon-mobile"></i>모바일</a></li>
-            </ul>
-          </div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+  /*reset*/
+  *{margin:0;padding:0;}
+  body{font-size:12px;}
+  ul,ol,dl,li{list-style:none;}
+  img{vertical-align:top; border:0;}
+  fieldset{border:0;}
+  legend{font-size:0;text-indent:-9999px;}
+  input,botton{vertical-align:middle;}
+  a{text-decoration:none; color:#373737;}
+  i,em,cite{font-style:normal;}
+
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"] {
+    cursor: pointer;
+  }
+
+  /*option*/
+
+  .fl {float: left;}
+  .fr {float: right;}
+
+  .i.icon-select {
+    margin-left: 3px;
+    background-image: url(../images/icon_open.png);
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    vertical-align: -3px;
+  }
+
+  .i.icon-mobile {
+    margin-right: 3px;
+    background-image: url(../images/icon_mobile.png);
+    background-repeat: no-repeat;
+    width: 8px;
+    height: 12px;
+    display: inline-block;
+    vertical-align: -3px;
+  }
+
+  .ir {
+    text-indent: -999px;
+    font-size: 0;
+    position: absolute;
+    left: -999px;
+    top: -999px;
+  }
+
+  i.bul_more {
+    margin: 3px 2px;
+    background-image: url(../images/bul_more.png);
+    background-repeat: no-repeat;
+    width: 3px;
+    height: 5px;
+    display: inline-block;
+  }
+
+  /* Layout */
+  #wrap {min-width:990px;}
+  #header {height: 0px;  background-color: #f8f8f8; border-bottom: 1px #d5d0cc solid;}
+  .gnb {width: 990px;  height: 30px; line-height: 30px;  margin: 0 auto;}
+  .lnb {height: 107px; width: 990px; margin: 0 auto;}
+  #container {width: 990px; margin:5px auto 0;}
+  #container .section{width:748px; float:left;}
+  #aside {margin-left: 753px; border: 1px solid #ccc;}
+  #footer {width: 990px; margin: 0 auto; border-top: 3px solid #8c909f; border-bottom: 1px solid #8c909f; text-align: left; outline: 1px solid F00;}
+
+  /*gnb*/
+  .gnb a.book_mark {font-size: 11px; padding-left: 13px; background-image: url(../images/icon_star.png); background-repeat: no-repeat;   background-position: 0 10px;}
+  .gnb .rank {margin-left: 14px;}
+  .gnb .rank li {display: none; font-size: 11px;  padding-left: 20px;  background-image: url(../images/icon_num.png); background-repeat: no-repeat;  background-position: 0 10px;}
+  .gnb .rank li .up_icon {padding-left: 8px;  background-image: url(../images/icon_up.png); background-repeat: no-repeat; background-position: 0; font-style: normal;}
+  .gnb .rank .on {display: block;}
+  .gnb .rank i[class^="up_"] {color: red;}
+  .gnb .rank i[class^="down_"] {color: blue;}
+  .gnb .top_service li {float: left; padding: 0 8px 0 7px; background-image: url(../images/top_horizon.png); background-repeat: no-repeat; background-position: 0 10px; }
+  .gnb .top_service li strong {color: blue;}
+  .gnb .top_service li:first-child {background: none;}
+
+  /*lnb*/
+  .lnb {height:107px;  margin:0 auto;  width: 990px;}
+  .lnb .logo {position: relative; top: 34px;}
+  .lnb .event {position: relative; top: 6px;}
+  .lnb .search {width: 280px; height: 73px;  margin: 0 auto; position: relative; top: 19px;}
+  .lnb .search input[type="text"] {height: 23px; border: 2px solid #3B5999; width: 237px;}
+  .lnb .search input[type="submit"] {height: 27px;  width: 38px; border: 0; font-size: 0; text-indent: -9999px; background: #3b5999; background-image: url(../images/icon_search.png); background-repeat: no-repeat;}
+  .qu ul{font-size: 0;}
+  .qu li {font-size:13px; display:inline-block; margin:0 5px; font-weight: bold;}
+  .qu li:first-child {pmargin-left:0;}
+
+
+
+  /*네비게이션*/
+
+  .main_menu {width: 990px;
+      border:1px #F00 solid;
+      height: 76px;
+      margin:0 auto;
+      position:relative;
+  }
+  .main_menu ul{
+   height:39px;
+  }
+  .main_menu>ul{
+      background-color: #3b5999;
+  }
+  .main_menu>ul>li{
+      float:left;
+      line-height:39px;
+  }
+  .main_menu>ul>li>a{
+
+      display:block;
+      color:#FFF;
+      font-size:15px;
+      padding:0 10px;
+  }
+  .main_menu>ul>li>a:hover{
+      background-color: #5785f2;
+  }
+  .main_menu>ul>li ul{
+      position:absolute;
+      left:0;
+  }
+  .main_menu>ul>li li{
+      margin:0 10px;
+      float:left;
+  }
+
+  .main_menu .information {min-width:200px; position:absolute; right:0; top:0;}
+  .main_menu .notice{line-height:37px;}
+  .main_menu .notice h2{font-size:11px; color:#FFF;  float:left; padding-right:9px; margin-right:7px;}
+  .main_menu .notice span{color:#FFF;}
+  .main_menu .intoday div{float:left; line-height:37px;}
+  .main_menu .intoday div:first-child{margin-right:10px;}
+  .main_menu .intoday div span:first-child+span{color:#005dde;margin-left:10px;font-weight:bold;}
+
+
+  /*container 시작*/
+  .section .sec-line {height:102px; border-bottom:11px;}
+  .section .sec-line div {border:1px #c7cbce solid;}
+  .section .sec-hotlist {margin-top:11px; height:232px;}
+  .sec-hotlist .main_banner {float:left; width:400px; height:230px; border:1px #c7cbce solid; position:relative;}
+  .section .main_banner~li {margin-left:408px; border-top:1px #e4e6e5 solid; height:79px;}
+  .section .main_banner~li img {border:1px #CCC solid; float:left; margin-right:13px;}
+  .section .main_banner~li strong {display:block; padding-top:13px;}
+  .section .main_banner~li {margin-right:15px;}
+  .section .main_banner+li {border-top:0 none; height:76px;}
+  .section .main_banner+li~li img {margin-top:3px;}
+  .main_banner .descrip {position:absolute; bottom:0; left:0; right:0; height:44px; background-color:rgba(0,0,0,.8); color:#FFF;}
+  .main_banner .descrip>div {margin:5px;}
+  .main_banner .descrip strong {font-size:14px; display:block;}
+  .main_banner .descrip cite {font-size:12px; font-style:normal;}
+  .main_banner .btngroup {text-align:center; position:absolute; right:0; top:0; font-size:0;}
+  .main_banner .btngroup span {font-size:12px;}
+  .main_banner .btngroup .number:after {content:"/"; margin:0 5px;}
+  .main_banner .btngroup input[type="button"] {border:0; width:17px; height:17px; text-indent:-9999px; background-image:url(../images/icon_left_right.png);}
+  .main_banner .btngroup input[value="이전"] {background-position: -17px 0; cursor:pointer;}
+
+  /*사이버매장 신규매물*/
+  .new_cyber {height: 198px; margin: 14px 20px 0 0; border-bottom: 1px solid #ccc; position: relative;}
+  .new_cyber h3 {margin: 14px 0 10px 0; display: inline-block;}
+  .new_cyber li {float: left;}
+  .new_cyber .c_list {padding-right: 10px;}
+  .new_cyber .c_thumb {width: 136px; height: 102px;}
+  .new_cyber .c_thumb img {width: 100%; height: 100%; border: 1px solid #ccc;}
+  .new_cyber .p_txt {width: 136px; height: 48px; display: block; padding-top: 10px; text-align: center;}
+  .new_cyber a.more {position: absolute; top: 14px; right: 10px;}
+
+
+  /*국산중고차 신규매물*/
+  .korea_old {height: 198px; margin: 14px 20px 0 0; border-bottom: 1px solid #ccc; position: relative;}
+  .korea_old h3 {margin: 14px 0 10px 0; display: inline-block;}
+  .korea_old li {float: left;}
+  .korea_old .c_list {padding-right: 10px;}
+  .korea_old .c_thumb {width: 136px; height: 102px;}
+  .korea_old .c_thumb img {width: 100%; height: 100%; border: 1px solid #ccc;}
+  .korea_old .p_txt {width: 136px; height: 48px; display: block; padding-top: 10px; text-align: center;}
+  .korea_old a.more {position: absolute; top: 14px; right: 10px;}
+
+  /*수입중고차 신규매물*/
+  .import_old {height: 198px; margin: 14px 20px 0 0; border-bottom: 1px solid #ccc; position: relative;}
+  .import_old h3 {margin: 14px 0 10px 0; display: inline-block;}
+  .import_old li {float: left;}
+  .import_old .c_list {padding-right: 10px;}
+  .import_old .c_thumb {width: 136px; height: 102px;}
+  .import_old .c_thumb img {width: 100%; height: 100%; border: 1px solid #ccc;}
+  .import_old .p_txt {width: 136px; height: 48px; display: block; padding-top: 10px; text-align: center;}
+  .import_old a.more {position: absolute; top: 14px; right: 10px;}
+
+  /*오토바이중고차 신규매물*/
+  .mtcycle_old {height: 198px; margin: 14px 20px 0 0; border-bottom: 1px solid #ccc; position: relative;}
+  .mtcycle_old h3 {margin: 14px 0 10px 0; display: inline-block;}
+  .mtcycle_old li {float: left;}
+  .mtcycle_old .c_list {padding-right: 10px;}
+  .mtcycle_old .c_thumb {width: 136px; height: 102px;}
+  .mtcycle_old .c_thumb img {width: 100%; height: 100%; border: 1px solid #ccc;}
+  .mtcycle_old .p_txt {width: 136px; height: 48px; display: block; padding-top: 10px; text-align: center;}
+  .mtcycle_old a.more {position: absolute; top: 14px; right: 10px;}
+
+  /*오토바이중고차 신규매물*/
+  .cooper {height: 198px; margin: 14px 20px 0 0; position: relative;}
+  .cooper h3 {margin: 14px 0 10px 0; display: inline-block;}
+  .cooper li {float: left;}
+  .cooper .c_list {padding-right: 10px;}
+  .cooper .c_thumb {width: 136px; height: 102px;}
+  .cooper .c_thumb img {width: 100%; height: 100%; border: 1px solid #ccc;}
+  .cooper .p_txt {width: 136px; height: 48px; display: block; padding-top: 10px; text-align: center;}
+  .cooper a.more {position: absolute; top: 14px; right: 10px;}
+
+
+  /*aside*/
+  /*로그인*/
+  .login {background-color: #f6f6f6;}
+  .login fieldset {padding:12px;}
+  .login fieldset input[type="text"],.login fieldset input[type="password"] {width:139px; height:26px; border:1px solid #c7cbce; background: #fff; float:left;}
+  .login fieldset input[placeholder="아이디"],.login fieldset input[placeholder="패스워드"] {padding-left: 10px; font-size: 11px; color: #979797; font-weight: bold;}
+  .login fieldset input[type="password"] {border-top-color:#CCC;}
+  .login fieldset input[type="text"] {border-bottom:0;}
+  .login fieldset input[type="submit"] {margin-left:5px; width: 54px;  height: 54px; border:1px solid #858b9d; color: #3d4959; background: #fff; font-size: 13px; font-weight: bold;}
+  .login fieldset .login_option {clear:both; margin-top:10px;}
+  .login_option {color: #6d7078;}
+  .login_option label {padding-left: 3px;}
+  .login_option .signin {font-weight: bold;}
+
+
+  /*커뮤니티 핫이슈*/
+  .hotnews{position: relative; border-top: 1px solid #ccc;}
+  .title_group .c_menu {padding : 12px 0 0 12px;}
+  .title_group .count:after{content:"/";  margin:0 3px;}
+  .title_group .btngroup {  position: absolute;top: 8px; right: 12px;}
+  .title_group input.next{width: 17px;  height: 17px;  background:url(../images/rew.png); background-repeat: no-repeat; border: none;}
+  .title_group input.prev{width: 17px;  height: 17px;  background:url(../images/ff.png); background-repeat: no-repeat; border: none;}
+  .number-list{padding:12px;}
+  .number-list li {height: 54px; padding:8px 0; border-bottom:1px solid #ccc;}
+  .number-list li:first-child{border-top:0;}
+  .number-list li img{float:right; padding-left: 14px; width: 78px; height: 54px; }
+  .number-list li span{ background-repeat:no-repeat; padding-left: 14px;  height: 54px;  display:block;  vertical-align: baseline;  background-position:0 3px;}
+  .number-list li:nth-child(1) span{ background-image:url(../images/num1.jpg);}
+  .number-list li:nth-child(2) span{ background-image:url(../images/num2.jpg);}
+  .number-list li:nth-child(3) span{ background-image:url(../images/num3.png);}
+
+  /*자동차뉴스*/
+  .car_news {margin: 0 12px; position: relative;}
+  .car_news .c_menu {padding: 5px 0 10px 0;}
+  .car_news .c_news {margin-left: 88px; height: 64px; display: block;}
+  .car_news .car_thumb {width: 78px; height: 54px; float: left;}
+  .car_news .car_thumb img {width: 100%; height: 100%; border: 1px solid #ccc;}
+  .car_news .bul_dot {background-image: url(../images/bul_dot.png); background-repeat: no-repeat; background-position: 0; line-height:22px; padding-left: 10px;}
+  .car_news ul {padding-bottom: 20px; border-bottom: 1px solid #ccc;}
+  .car_news a.more {position: absolute; top: 10px; right: 0px;}
+
+  /*커뮤니티 인기글*/
+  .cm_favor {margin: 10px 12px; position: relative;}
+  .cm_favor .cm_menu {padding: 5px 0 10px 0;}
+  .cm_favor .cm_news {margin-left: 88px; height: 64px; display: block;}
+  .cm_favor .cm_thumb {width: 78px; height: 54px; float: left;}
+  .cm_favor .cm_thumb img {width: 100%; height: 100%; border: 1px solid #ccc;}
+  .cm_favor .bul_dot {background-image: url(../images/bul_dot.png); background-repeat: no-repeat; background-position: 0; line-height:22px; padding-left: 10px;}
+  .cm_favor ul {padding-bottom: 10px; border-bottom: 1px solid #ccc;}
+  .cm_favor a.more {position: absolute; top: 10px; right: 0px;}
+
+
+  /*내차소 인기순위*/
+  .myc_hot{position: relative;}
+  .myc_hot a.more {position: absolute; top: 10px; right: 12px;}
+  .myc_group .ct_menu {padding : 12px 0 0 12px;}
+  .myc_group .btngroup {position: absolute;top: 8px; right: 12px;}
+  .number-list{padding:12px;}
+  .number-list li {height: 41px; padding:8px 0; border-bottom:1px solid #ccc;}
+  .number-list li:first-child{border-top:0;}
+  .number-list li img{float:right; padding-left: 14px; width: 78px; height: 41px; }
+  .number-list li span{background-repeat:no-repeat; padding-left: 14px; height: 54px; display:block; vertical-align: baseline; background-position:0 3px;}
+  .number-list li:nth-child(1) span{background-image:url(../images/num1.jpg);}
+  .number-list li:nth-child(2) span{background-image:url(../images/num2.jpg);}
+  .number-list li:nth-child(3) span{background-image:url(../images/num3.png);}
+
+ /*보배드림 이야기*/
+ .bb_story {margin: 0 12px; position: relative; border-bottom: 1px solid #ccc;}
+ .bb_story .bb_menu {padding: 5px 0 10px 0;}
+ .bb_slider span a {position: relative;}
+ .bb_slider .bb_tit {position: absolute; left: 0; bottom: 0; background: rgba(28, 28, 28, 0.67); width: 213px; height: 25px;}
+ .bb_slider .bb_tit cite {color: #FFF; font-size: 12px; font-weight: normal;line-height: 25px; padding-left: 5px;}
+ .bb_slider .bb_btn {position: absolute; right: 5px; top: 4px;}
+ .bb_slider .bb_btn input[type="button"]{border:0; width:17px; height:17px; text-indent:-9999px; background-image:url(../images/btn_2.png); background-repeat: no-repeat;}
+ .bb_slider .bb_btn input[value="이전"]{background-position: -17px 0;cursor:pointer;}
+ .bb_story a.more {position: absolute; top: 5px; right: 0;}
+
+ .evnews {margin: 15px 12px; position: relative; border-top:1px solid #ccc;}
+ .evnews .ev_menu {padding: 15px 0 10px 0;}
+ .evnews a.more {position: absolute; top: 15px; right: 0;}
+ .evnews .ev_thumb {width:78px; height: 54px; float: left; margin-right: 10px; display: block; float: left; margin-right: 10px; }
+ .evnews .ev_thumb img {width:100%; height: 100%; }
+ .evnews .ev_txt { height: 54px; line-height: 18px;}
+
+  /*sns*/
+ .sns {margin: 15px 12px 0; border-top: 1px solid #ccc;}
+ .sns .sns_menu {padding: 15px 0 10px 0;}
+ .sns::after {content: ""; clear: both; display: block;}
+
+
+  /*footer */
+  .noti_map {width: 990px; padding: 6px 0; border: 1px solid #ccc;}
+  .noti_map span a {font-size: 12px; line-height: 16px; letter-spacing: -0.5px; color: #333;}
+  .noti_map .noti {font-weight: bold; margin: 0 16px;}
+  .noti_map .all_map {font-weight: bold; float: right; margin-right: 16px;}
+
+  /*.noti_map .not_news {padding-left: 6px;}*/
+
+  .sitemap {width: 990px; border: 1px solid #CCC; background: #f9f9f9;}
+  .sitemap::after {content: ""; clear: both; display: block;}
+  .sitemap div[class^=smap] {float:left; width: 98px; outline: 1px solid #F00; margin: 23px 16px; display: inline-block;}
+  .sitemap h5 {font-size: 13px; font-weight: bold; padding-bottom: 23px; color: #333;}
+  .sitemap li {height: 18px;}
+  .sitemap a {font-size: 11px; letter-spacing: -1px; border-top: 1px solid #8c909f; color: #333;}
+
+
+
+
+
+
+
+  </style>
+  <title>보배드림</title>
+</head>
+
+<body>
+
+  <div id="wrap">
+    <div id="header">
+
+      <div class="gnb">
+        <div class="top_left">
+          <a href="" class="fl book_mark">즐겨찾기</a>
+
+          <ol class="fl rank">
+            <li><a href="">기아k5출시</a></li>
+            <li><a href="">기아k5출시</a></li>
+            <li><a href="">기아k5출시</a></li>
+            <li><a href="">기아k5출시</a></li>
+            <li><a href="">기아k5출시</a></li>
+            <li class="on"><a href="">기아k5출시<i class="up_icon">45</i></a></li>
+          </ol>
+        </div>
+
+        <div class="fr top_service">
+          <ul>
+            <li><a href="">로그인</a></li>
+            <li><a href="">회원가입</a></li>
+            <li><a href="">마이 페이지</a><i class="icon-select"></i></li>
+            <li><a href="">쪽지</a></li>
+            <li><a href="">찜한차량</a></li>
+            <li><a href="">고객센터</a></li>
+            <li><a href="">전체메뉴<i class="icon-select"></i></a></li>
+            <li><a href=""><i class="icon-mobile"></i>모바일</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="lnb">
+        <div class="logo fl">
+          <h1><a href=""><img src="../images/logo.jpg" alt="보배드림"></a></h1>
+        </div>
+        <div class="event fr">
+          <a href=""><img src="../images/event.jpg" alt="이벤트배너 바로가기"></a>
+        </div>
+        <div class="search">
+          <a href=""><img src="../images/top_banner.png" alt=""></a>
+          <fieldset>
+            <legend class="ir">검색</legend>
+            <input type="text"><input type="submit" value="검색">
+          </fieldset>
+        </div>
+
+        <div class="qu">
+          <ul>
+              <li><a href="">인기중고차</a></li>
+              <li><a href="">오토바이</a></li>
+              <li><a href="">용품장터</a></li>
+              <li><a href="">협력업체</a></li>
+              <li><a href="">이벤트</a></li>
+          </ul>
         </div>
       </div>
 
-      <div class="lnb">
-          <div class="logo fl">
-            <h1><a href=""><img src="../images/logo.jpg" alt="보배드림"></a></h1>
-          </div>
-          <div class="event fr">
-            <a href=""><img src="../images/event.jpg" alt="이벤트배너 바로가기"></a>
-          </div>
-          <div class="search">
-            <a href=""><img src="../images/top_banner.png" alt=""></a>
-            <fieldset>
-              <legend class="ir">검색</legend>
-              <input type="text"><input type="submit" value="검색">
-            </fieldset>
-          </div>
+      <!-- 내비게이션 -->
+      <div class="main_menu">
 
-          <div class="qu">
-            <ul>
-                <li><a href="">인기중고차</a></li>
-                <li><a href="">오토바이</a></li>
-                <li><a href="">용품장터</a></li>
-                <li><a href="">협력업체</a></li>
-                <li><a href="">이벤트</a></li>
-            </ul>
-          </div>
-        </div>
+          <ul>
+              <li><a href="">사이버매장</a>
+                  <div>
+                      <ul>
+                          <li><a href="">국산차매장</a></li>
+                          <li><a href="">수입차매장</a></li>
+                          <li><a href="">승용차매장</a></li>
+                          <li><a href="">스포츠카매장</a></li>
+                          <li><a href="">4륜/RV매장</a></li>
+                          <li><a href="">밴/승합차매장</a></li>
+                          <li><a href="">튜닝카매장</a></li>
+                          <li><a href="">올드카매장</a></li>
+                          <li><a href="">오토갤러리매장</a></li>
+                      </ul>
+                  </div>
+              </li>
+              <li><a href="">국산차매장</a></li>
+              <li><a href="">수입차매장</a></li>
+              <li><a href="">내차팔기</a></li>
+              <li><a href="">커뮤니티</a></li>
+              <li><a href="">더보기</a></li>
+          </ul>
 
-        <!-- 내비게이션 -->
-        <div class="main_menu">
-
-            <ul>
-                <li><a href="">사이버매장</a>
-                    <div>
-                        <ul>
-                            <li><a href="">국산차매장</a></li>
-                            <li><a href="">수입차매장</a></li>
-                            <li><a href="">승용차매장</a></li>
-                            <li><a href="">스포츠카매장</a></li>
-                            <li><a href="">4륜/RV매장</a></li>
-                            <li><a href="">밴/승합차매장</a></li>
-                            <li><a href="">튜닝카매장</a></li>
-                            <li><a href="">올드카매장</a></li>
-                            <li><a href="">오토갤러리매장</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="">국산차매장</a></li>
-                <li><a href="">수입차매장</a></li>
-                <li><a href="">내차팔기</a></li>
-                <li><a href="">커뮤니티</a></li>
-                <li><a href="">더보기</a></li>
-            </ul>
-
-            <div class="information">
-                <div class="notice">
-                    <h2>공지</h2>
-                    <span>보배드림 어플리케이션 안내</span>
-                </div>
-                <div class="intoday">
-                    <div  class="today">
-                        <span>오늘방문</span><span>5,542</span>
-                    </div>
-                    <div class="yesday">
-                        <span>어제방문</span><span>54,154</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-      <div id="container">
-        <div class="section">
-          <div class="sec-line">
-              <div class="fl"><img src="../images/top_banner.jpg" alt="메르세데즈 벤츠 CLS class 보러가기"></div>
-              <div class="fr"><img src="../images/sub_banner.jpg" alt="카운트다운 페스티발"></div>
-          </div>
-          <div class="sec-hotlist">
-              <div class="newcar-list">
-                  <ul>
-                      <li class="main_banner">
-                          <span>
-                              <img src="../images/s_prod01.png" alt="특종매물1">
-                          </span>
-                          <div class="descrip">
-                              <div>
-                                  <strong>사이버매장특종매물</strong>
-                                  <cite>2013 아우디 R8 5.2 V10 스파이더</cite>
-                              </div>
-                              <div class="btngroup">
-                                  <div class="count">
-                                      <span class="number">1</span><span>3</span>
-                                  </div>
-                                  <input type="button" value="다음">
-                                  <input type="button" value="이전">
-                              </div>
-                          </div>
-
-                      </li>
-                      <li>
-                          <a href="">
-                              <img src="../images/s_prod02.jpg" alt="특종매물2">
-                              <strong>국산중고차 특종매물</strong>
-                              <cite>1988 현대 스텔라 1.5 88형 GLX 극 희소. 1988년 올림픽 공식모델!! </cite>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="">
-                              <img src="../images/s_prod03.jpg" alt="특종매물3">
-                              <strong>수입중고차 특종매물</strong>
-                              <cite>2012 람보르기니 가야르도 LP560-411.8초 → 200km 람보르기니!!</cite>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="">
-                              <img src="../images/s_prod04.jpg" alt="특종매물4">
-                              <strong>오토바이 특종매물</strong>
-                              <cite>2011 브램모 엠펄즈 R공인연비 1L → 16.km</cite>
-                          </a>
-                      </li>
-                  </ul>
+          <div class="information">
+              <div class="notice">
+                  <h2>공지</h2>
+                  <span>보배드림 어플리케이션 안내</span>
+              </div>
+              <div class="intoday">
+                  <div  class="today">
+                      <span>오늘방문</span><span>5,542</span>
+                  </div>
+                  <div class="yesday">
+                      <span>어제방문</span><span>54,154</span>
+                  </div>
               </div>
           </div>
+      </div>
 
-          <!-- 사이버매장 신규매물 -->
-          <div class="new_cyber">
-            <h3><img src="../images/prod_menu_01.png" alt="사이버매장 신규매물"></h3>
-            <ul>
-              <li class="c_list">
-                <div class="c_thumb">
-                  <a href=""><img src="../images/c_prod01.jpg" alt="사이버매장 신규매물1"></a>
-                </div>
-                <dl class="p_txt">
-                  <dt>BMW IM 쿠페</dt>
-                  <dd>2001년식</dd>
-                </dl>
-              </li>
-              <li class="c_list">
-                <div class="c_thumb">
-                  <a href=""><img src="../images/c_prod02.jpg" alt="사이버매장 신규매물1"></a>
-                </div>
-                <dl class="p_txt">
-                  <dt>렉서스 뉴 ES300h</dt>
-                  <dd>2001년식</dd>
-                </dl>
-              </li>
-              <li class="c_list">
-                <div class="c_thumb">
-                  <a href=""><img src="../images/c_prod03.jpg" alt="사이버매장 신규매물1"></a>
-                </div>
-                <dl class="p_txt">
-                  <dt>람보르기니 가야르도</dt>
-                  <dd>2001년식</dd>
-                </dl>
-              </li>
-              <li class="c_list">
-                <div class="c_thumb">
-                  <a href=""><img src="../images/c_prod04.jpg" alt="사이버매장 신규매물1"></a>
-                </div>
-                <dl class="p_txt">
-                  <dt>렉서스 뉴 ES300h</dt>
-                  <dd>2001년식m</dd>
-                </dl>
-              </li>
-              <li>
-                <div class="c_thumb">
-                  <a href=""><img src="../images/c_prod05.jpg" alt="사이버매장 신규매물1"></a>
-                </div>
-                <dl class="p_txt">
-                  <dt>2람보르기니 가야르도</dt>
-                  <dd>2001년식</dd>
-                </dl>
-              </li>
-            </ul>
-            <a href="#" class="more">더보기<i class="bul_more"></i></a>
-          </div>
-
-          <!-- 국산중고차 신규매물 -->
-          <div class="new_cyber">
-            <h3><img src="../images/prod_menu_02.png" alt="국산중고차 신규매물"></h3>
-            <ul>
-              <li class="c_list">
-                <div class="c_thumb">
-                  <a href=""><img src="../images/c_prod21.jpg" alt="사이버매장 신규매물1"></a>
-                </div>
-                <dl class="p_txt">
-                  <dt>BMW IM 쿠페</dt>
-                  <dd>2001년식</dd>
-                </dl>
-              </li>
-              <li class="c_list">
-                <div class="c_thumb">
-                  <a href=""><img src="../images/c_prod22.jpg" alt="사이버매장 신규매물1"></a>
-                </div>
-                <dl class="p_txt">
-                  <dt>렉서스 뉴 ES300h</dt>
-                  <dd>2001년식</dd>
-                </dl>
-              </li>
-              <li class="c_list">
-                <div class="c_thumb">
-                  <a href=""><img src="../images/c_prod23.jpg" alt="사이버매장 신규매물1"></a>
-                </div>
-                <dl class="p_txt">
-                  <dt>람보르기니 가야르도</dt>
-                  <dd>2001년식</dd>
-                </dl>
-              </li>
-              <li class="c_list">
-                <div class="c_thumb">
-                  <a href=""><img src="../images/c_prod24.jpg" alt="사이버매장 신규매물1"></a>
-                </div>
-                <dl class="p_txt">
-                  <dt>렉서스 뉴 ES300h</dt>
-                  <dd>2001년식m</dd>
-                </dl>
-              </li>
-              <li>
-                <div class="c_thumb">
-                  <a href=""><img src="../images/c_prod25.jpg" alt="사이버매장 신규매물1"></a>
-                </div>
-                <dl class="p_txt">
-                  <dt>2람보르기니 가야르도</dt>
-                  <dd>2001년식</dd>
-                </dl>
-              </li>
-            </ul>
-            <a href="#" class="more">더보기<i class="bul_more"></i></a>
-          </div>
-
-          <!-- 수입중고차 신규매물 -->
-          <div class="new_cyber">
-            <h3><img src="../images/prod_menu_03.png" alt="수입중고차 신규매물"></h3>
-            <ul>
-              <li class="c_list">
-                <div class="c_thumb">
-                  <a href=""><img src="../images/c_prod31.jpg" alt="사이버매장 신규매물1"></a>
-                </div>
-                <dl class="p_txt">
-                  <dt>BMW IM 쿠페</dt>
-                  <dd>2001년식</dd>
-                </dl>
-              </li>
-              <li class="c_list">
-                <div class="c_thumb">
-                  <a href=""><img src="../images/c_prod32.jpg" alt="사이버매장 신규매물1"></a>
-                </div>
-                <dl class="p_txt">
-                  <dt>렉서스 뉴 ES300h</dt>
-                  <dd>2001년식</dd>
-                </dl>
-              </li>
-              <li class="c_list">
-                <div class="c_thumb">
-                  <a href=""><img src="../images/c_prod33.jpg" alt="사이버매장 신규매물1"></a>
-                </div>
-                <dl class="p_txt">
-                  <dt>람보르기니 가야르도</dt>
-                  <dd>2001년식</dd>
-                </dl>
-              </li>
-              <li class="c_list">
-                <div class="c_thumb">
-                  <a href=""><img src="../images/c_prod34.jpg" alt="사이버매장 신규매물1"></a>
-                </div>
-                <dl class="p_txt">
-                  <dt>렉서스 뉴 ES300h</dt>
-                  <dd>2001년식m</dd>
-                </dl>
-              </li>
-              <li>
-                <div class="c_thumb">
-                  <a href=""><img src="../images/c_prod35.jpg" alt="사이버매장 신규매물1"></a>
-                </div>
-                <dl class="p_txt">
-                  <dt>2람보르기니 가야르도</dt>
-                  <dd>2001년식</dd>
-                </dl>
-              </li>
-            </ul>
-            <a href="#" class="more">더보기<i class="bul_more"></i></a>
-          </div>
-
-          <!-- 오토바이 신규매물 -->
-          <div class="new_cyber">
-            <h3><img src="../images/prod_menu_04.png" alt="오토바이 신규매물"></h3>
-            <ul>
-              <li class="c_list">
-                <div class="c_thumb">
-                  <a href=""><img src="../images/c_prod41.jpg" alt="사이버매장 신규매물1"></a>
-                </div>
-                <dl class="p_txt">
-                  <dt>BMW IM 쿠페</dt>
-                  <dd>2001년식</dd>
-                </dl>
-              </li>
-              <li class="c_list">
-                <div class="c_thumb">
-                  <a href=""><img src="../images/c_prod42.jpg" alt="사이버매장 신규매물1"></a>
-                </div>
-                <dl class="p_txt">
-                  <dt>렉서스 뉴 ES300h</dt>
-                  <dd>2001년식</dd>
-                </dl>
-              </li>
-              <li class="c_list">
-                <div class="c_thumb">
-                  <a href=""><img src="../images/c_prod43.jpg" alt="사이버매장 신규매물1"></a>
-                </div>
-                <dl class="p_txt">
-                  <dt>람보르기니 가야르도</dt>
-                  <dd>2001년식</dd>
-                </dl>
-              </li>
-              <li class="c_list">
-                <div class="c_thumb">
-                  <a href=""><img src="../images/c_prod44.jpg" alt="사이버매장 신규매물1"></a>
-                </div>
-                <dl class="p_txt">
-                  <dt>렉서스 뉴 ES300h</dt>
-                  <dd>2001년식m</dd>
-                </dl>
-              </li>
-              <li>
-                <div class="c_thumb">
-                  <a href=""><img src="../images/c_prod45.jpg" alt="사이버매장 신규매물1"></a>
-                </div>
-                <dl class="p_txt">
-                  <dt>2람보르기니 가야르도</dt>
-                  <dd>2001년식</dd>
-                </dl>
-              </li>
-            </ul>
-            <a href="#" class="more">더보기<i class="bul_more"></i></a>
-          </div>
-
-          <!-- 협력업체 -->
-          <div class="new_cyber">
-            <h3><img src="../images/prod_menu_05.png" alt="협력업체"></h3>
-            <ul>
-              <li class="c_list">
-                <div class="c_thumb">
-                  <a href=""><img src="../images/c_prod51.jpg" alt="사이버매장 신규매물1"></a>
-                </div>
-                <dl class="p_txt">
-                  <dt>BMW IM 쿠페</dt>
-                  <dd>2001년식</dd>
-                </dl>
-              </li>
-              <li class="c_list">
-                <div class="c_thumb">
-                  <a href=""><img src="../images/c_prod52.jpg" alt="사이버매장 신규매물1"></a>
-                </div>
-                <dl class="p_txt">
-                  <dt>렉서스 뉴 ES300h</dt>
-                  <dd>2001년식</dd>
-                </dl>
-              </li>
-              <li class="c_list">
-                <div class="c_thumb">
-                  <a href=""><img src="../images/c_prod53.jpg" alt="사이버매장 신규매물1"></a>
-                </div>
-                <dl class="p_txt">
-                  <dt>람보르기니 가야르도</dt>
-                  <dd>2001년식</dd>
-                </dl>
-              </li>
-              <li class="c_list">
-                <div class="c_thumb">
-                  <a href=""><img src="../images/c_prod54.jpg" alt="사이버매장 신규매물1"></a>
-                </div>
-                <dl class="p_txt">
-                  <dt>렉서스 뉴 ES300h</dt>
-                  <dd>2001년식m</dd>
-                </dl>
-              </li>
-              <li>
-                <div class="c_thumb">
-                  <a href=""><img src="../images/c_prod55.jpg" alt="사이버매장 신규매물1"></a>
-                </div>
-                <dl class="p_txt">
-                  <dt>2람보르기니 가야르도</dt>
-                  <dd>2001년식</dd>
-                </dl>
-              </li>
-            </ul>
-            <a href="#" class="more">더보기<i class="bul_more"></i></a>
-          </div>
+    <div id="container">
+      <div class="section">
+        <div class="sec-line">
+            <div class="fl"><img src="../images/top_banner.jpg" alt="메르세데즈 벤츠 CLS class 보러가기"></div>
+            <div class="fr"><img src="../images/sub_banner.jpg" alt="카운트다운 페스티발"></div>
         </div>
-
-
-        <div id="aside">
-            <div class="login">
-                <fieldset>
-                    <legend>로그인</legend>
-                    <div class="login_field">
-                        <input type="text" name="" placeholder="아이디"/>
-                        <input type="password" name="" placeholder="패스워드"/>
-                        <input type="submit" name="" value="로그인"/>
-                    </div>
-                    <div class="login_option">
-                        <span class="fl"><input type="checkbox" id="idsave"> <label for="idsave">ID저장 </label></span>
-                        <span class="fr"><a href="">회원가입</a> <a href="">ID/비밀번호찾기</a></span>
-                    </div>
-                </fieldset>
-            </div>
-
-            <div class="hotnews">
-                <div class="title_group">
-                    <div class="c_menu"><img src="../images/c_issue.jpg" alt="자동차 뉴스"></div>
-
-                    <div class="btngroup fr">
-
-                        <input type="button" class="next">
-                        <span class="count">1</span><span>3</span>
-                        <input type="button" class="prev">
-
-                    </div>
-                </div>
-                <div class="number-list">
-                    <ol>
-                        <li>
-                            <img src="../images/c_issue_01.jpg" alt="">
-                            <span>길가에 멈춰선 차량돕는 훈훈한 모습</span>
-                        </li>
-                        <li>
-                            <img src="../images/c_issue_02.jpg" alt="">
-                            <span>유리를 박살내고 차량용품 싹쓸이</span>
-                        </li>
-                        <li>
-                            <img src="../images/c_issue_03.jpg" alt="">
-                            <span>짙은안개 고속도로 살벌한 추돌사고</span>
-                        </li>
-                    </ol>
-                </div>
-            </div>
-
-
-          <div class="car_news">
-            <div class="c_menu"><img src="../images/c_news.png" alt="자동차 뉴스"></div>
-            <ul>
-              <li><span class="car_thumb"><a href="#"><img src="../images/c_news01.jpg" alt="르노삼성"/></a></span>
-                <span class="c_news"><a href="">르노삼성 부산공장 중대형 핵심 기지 될 것</a></span></li>
-                <li class="bul_dot"><a href=""> 쌍용 EREV, 전기자동차 2015년 양산</a></li>
-                <li class="bul_dot"><a href=""> [2012 결산] 전자, 자동차, 철강 등</a></li>
-                <li class="bul_dot"><a href=""> 남양연구소 'T-LPDi'상용화 박차</a></li>
-                <li class="bul_dot"><a href=""> 올해들어 수입차 CEO 대거 교체</a></li>
-              </ul>
-              <a href="" class="more">더보기<i class="bul_more"></i></a>
-            </div>
-
-            <div class="cm_favor">
-              <div class="cm_menu"><img src="../images/c_favor.png" alt="커뮤니티 인기글"></div>
-              <ul>
-                <li><span class="cm_thumb"><a href="#"><img src="../images/c_favor_01.jpg" alt="르노삼성"/></a></span>
-                  <span class="cm_news"><a href="#">르노삼성 부산공장 중대형 핵심 기지 될 것</a></span></li>
-                  <li><span class="cm_thumb"><a href="#"><img src="../images/c_favor_02.jpg" alt="르노삼성"/></a></span>
-                    <span class="cm_news"><a href="#">르노삼성 부산공장 중대형 핵심 기지 될 것</a></span></li>
-                    <li><span class="cm_thumb"><a href="#"><img src="../images/c_favor_03.jpg" alt="르노삼성"/></a></span>
-                      <span class="cm_news"><a href="#">르노삼성 부산공장 중대형 핵심 기지 될 것</a></span></li>
-                    </ul>
-                    <a href="" class="more">더보기<i class="bul_more"></i></a>
-                  </div>
-
-                  <div class="myc_hot">
-                      <div class="myc_group">
-                          <div class="ct_menu"><img src="../images/c_mycar.png" alt="내차소 인기순위"></div>
-                          <a href="" class="more">더보기<i class="bul_more"></i></a>
-                      </div>
-                      <div class="number-list">
-                          <ol>
-                              <li>
-                                  <img src="../images/c_myc_01.jpg" alt="">
-                                  <span>270ELISA 남의 현대 투스카니</span>
-                              </li>
-                              <li>
-                                  <img src="../images/c_myc_02.jpg" alt="">
-                                  <span>대금이 님의 현대 뉴 제네시스</span>
-                              </li>
-                              <li>
-                                  <img src="../images/c_myc_03.jpg" alt="">
-                                  <span>날아라콩떡 님의 아우디 뉴A6</span>
-                              </li>
-                          </ol>
-                      </div>
-                  </div>
-
-                  <div class="bb_story">
-                    <div class="bb_menu"><img src="../images/b_story.png" alt="보배드림이야기"></div>
-                    <div class="bb_slider">
-                    <span><a href=""><img src="../images/slider.jpg"></a></span>
-                        <div class="bb_tit">
-                            <div><cite>BMW 1시리즈의 가성비</cite></div>
-                            <div class="bb_btn">
+        <div class="sec-hotlist">
+            <div class="newcar-list">
+                <ul>
+                    <li class="main_banner">
+                        <span>
+                            <img src="../images/s_prod01.png" alt="특종매물1">
+                        </span>
+                        <div class="descrip">
+                            <div>
+                                <strong>사이버매장특종매물</strong>
+                                <cite>2013 아우디 R8 5.2 V10 스파이더</cite>
+                            </div>
+                            <div class="btngroup">
+                                <div class="count">
+                                    <span class="number">1</span><span>3</span>
+                                </div>
                                 <input type="button" value="다음">
                                 <input type="button" value="이전">
                             </div>
                         </div>
-                    </div>
-                    <a href="" class="more">더보기<i class="bul_more"></i></a>
-                  </div>
 
-                  <div class="event_news">
-                        <div class="ev_menu"><img src="../images/event_news_06.png" alt="이벤트 소식"></div>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="../images/s_prod02.jpg" alt="특종매물2">
+                            <strong>국산중고차 특종매물</strong>
+                            <cite>1988 현대 스텔라 1.5 88형 GLX 극 희소. 1988년 올림픽 공식모델!! </cite>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="../images/s_prod03.jpg" alt="특종매물3">
+                            <strong>수입중고차 특종매물</strong>
+                            <cite>2012 람보르기니 가야르도 LP560-411.8초 → 200km 람보르기니!!</cite>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="../images/s_prod04.jpg" alt="특종매물4">
+                            <strong>오토바이 특종매물</strong>
+                            <cite>2011 브램모 엠펄즈 R공인연비 1L → 16.km</cite>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 사이버매장 신규매물 -->
+        <div class="new_cyber">
+          <h3><img src="../images/prod_menu_01.png" alt="사이버매장 신규매물"></h3>
+          <ul>
+            <li class="c_list">
+              <div class="c_thumb">
+                <a href=""><img src="../images/c_prod01.jpg" alt="사이버매장 신규매물1"></a>
+              </div>
+              <dl class="p_txt">
+                <dt>BMW IM 쿠페</dt>
+                <dd>2001년식</dd>
+              </dl>
+            </li>
+            <li class="c_list">
+              <div class="c_thumb">
+                <a href=""><img src="../images/c_prod02.jpg" alt="사이버매장 신규매물1"></a>
+              </div>
+              <dl class="p_txt">
+                <dt>렉서스 뉴 ES300h</dt>
+                <dd>2001년식</dd>
+              </dl>
+            </li>
+            <li class="c_list">
+              <div class="c_thumb">
+                <a href=""><img src="../images/c_prod03.jpg" alt="사이버매장 신규매물1"></a>
+              </div>
+              <dl class="p_txt">
+                <dt>람보르기니 가야르도</dt>
+                <dd>2001년식</dd>
+              </dl>
+            </li>
+            <li class="c_list">
+              <div class="c_thumb">
+                <a href=""><img src="../images/c_prod04.jpg" alt="사이버매장 신규매물1"></a>
+              </div>
+              <dl class="p_txt">
+                <dt>렉서스 뉴 ES300h</dt>
+                <dd>2001년식m</dd>
+              </dl>
+            </li>
+            <li>
+              <div class="c_thumb">
+                <a href=""><img src="../images/c_prod05.jpg" alt="사이버매장 신규매물1"></a>
+              </div>
+              <dl class="p_txt">
+                <dt>2람보르기니 가야르도</dt>
+                <dd>2001년식</dd>
+              </dl>
+            </li>
+          </ul>
+          <a href="#" class="more">더보기<i class="bul_more"></i></a>
+        </div>
+
+        <!-- 국산중고차 신규매물 -->
+        <div class="korea_old">
+          <h3><img src="../images/prod_menu_02.png" alt="국산중고차 신규매물"></h3>
+          <ul>
+            <li class="c_list">
+              <div class="c_thumb">
+                <a href=""><img src="../images/c_prod21.jpg" alt="사이버매장 신규매물1"></a>
+              </div>
+              <dl class="p_txt">
+                <dt>BMW IM 쿠페</dt>
+                <dd>2001년식</dd>
+              </dl>
+            </li>
+            <li class="c_list">
+              <div class="c_thumb">
+                <a href=""><img src="../images/c_prod22.jpg" alt="사이버매장 신규매물1"></a>
+              </div>
+              <dl class="p_txt">
+                <dt>렉서스 뉴 ES300h</dt>
+                <dd>2001년식</dd>
+              </dl>
+            </li>
+            <li class="c_list">
+              <div class="c_thumb">
+                <a href=""><img src="../images/c_prod23.jpg" alt="사이버매장 신규매물1"></a>
+              </div>
+              <dl class="p_txt">
+                <dt>람보르기니 가야르도</dt>
+                <dd>2001년식</dd>
+              </dl>
+            </li>
+            <li class="c_list">
+              <div class="c_thumb">
+                <a href=""><img src="../images/c_prod24.jpg" alt="사이버매장 신규매물1"></a>
+              </div>
+              <dl class="p_txt">
+                <dt>렉서스 뉴 ES300h</dt>
+                <dd>2001년식m</dd>
+              </dl>
+            </li>
+            <li>
+              <div class="c_thumb">
+                <a href=""><img src="../images/c_prod25.jpg" alt="사이버매장 신규매물1"></a>
+              </div>
+              <dl class="p_txt">
+                <dt>2람보르기니 가야르도</dt>
+                <dd>2001년식</dd>
+              </dl>
+            </li>
+          </ul>
+          <a href="#" class="more">더보기<i class="bul_more"></i></a>
+        </div>
+
+        <!-- 수입중고차 신규매물 -->
+        <div class="import_old">
+          <h3><img src="../images/prod_menu_03.png" alt="수입중고차 신규매물"></h3>
+          <ul>
+            <li class="c_list">
+              <div class="c_thumb">
+                <a href=""><img src="../images/c_prod31.jpg" alt="사이버매장 신규매물1"></a>
+              </div>
+              <dl class="p_txt">
+                <dt>BMW IM 쿠페</dt>
+                <dd>2001년식</dd>
+              </dl>
+            </li>
+            <li class="c_list">
+              <div class="c_thumb">
+                <a href=""><img src="../images/c_prod32.jpg" alt="사이버매장 신규매물1"></a>
+              </div>
+              <dl class="p_txt">
+                <dt>렉서스 뉴 ES300h</dt>
+                <dd>2001년식</dd>
+              </dl>
+            </li>
+            <li class="c_list">
+              <div class="c_thumb">
+                <a href=""><img src="../images/c_prod33.jpg" alt="사이버매장 신규매물1"></a>
+              </div>
+              <dl class="p_txt">
+                <dt>람보르기니 가야르도</dt>
+                <dd>2001년식</dd>
+              </dl>
+            </li>
+            <li class="c_list">
+              <div class="c_thumb">
+                <a href=""><img src="../images/c_prod34.jpg" alt="사이버매장 신규매물1"></a>
+              </div>
+              <dl class="p_txt">
+                <dt>렉서스 뉴 ES300h</dt>
+                <dd>2001년식m</dd>
+              </dl>
+            </li>
+            <li>
+              <div class="c_thumb">
+                <a href=""><img src="../images/c_prod35.jpg" alt="사이버매장 신규매물1"></a>
+              </div>
+              <dl class="p_txt">
+                <dt>2람보르기니 가야르도</dt>
+                <dd>2001년식</dd>
+              </dl>
+            </li>
+          </ul>
+          <a href="#" class="more">더보기<i class="bul_more"></i></a>
+        </div>
+
+        <!-- 오토바이 신규매물 -->
+        <div class="mtcycle_old">
+          <h3><img src="../images/prod_menu_04.png" alt="오토바이 신규매물"></h3>
+          <ul>
+            <li class="c_list">
+              <div class="c_thumb">
+                <a href=""><img src="../images/c_prod41.jpg" alt="사이버매장 신규매물1"></a>
+              </div>
+              <dl class="p_txt">
+                <dt>BMW IM 쿠페</dt>
+                <dd>2001년식</dd>
+              </dl>
+            </li>
+            <li class="c_list">
+              <div class="c_thumb">
+                <a href=""><img src="../images/c_prod42.jpg" alt="사이버매장 신규매물1"></a>
+              </div>
+              <dl class="p_txt">
+                <dt>렉서스 뉴 ES300h</dt>
+                <dd>2001년식</dd>
+              </dl>
+            </li>
+            <li class="c_list">
+              <div class="c_thumb">
+                <a href=""><img src="../images/c_prod43.jpg" alt="사이버매장 신규매물1"></a>
+              </div>
+              <dl class="p_txt">
+                <dt>람보르기니 가야르도</dt>
+                <dd>2001년식</dd>
+              </dl>
+            </li>
+            <li class="c_list">
+              <div class="c_thumb">
+                <a href=""><img src="../images/c_prod44.jpg" alt="사이버매장 신규매물1"></a>
+              </div>
+              <dl class="p_txt">
+                <dt>렉서스 뉴 ES300h</dt>
+                <dd>2001년식m</dd>
+              </dl>
+            </li>
+            <li>
+              <div class="c_thumb">
+                <a href=""><img src="../images/c_prod45.jpg" alt="사이버매장 신규매물1"></a>
+              </div>
+              <dl class="p_txt">
+                <dt>2람보르기니 가야르도</dt>
+                <dd>2001년식</dd>
+              </dl>
+            </li>
+          </ul>
+          <a href="#" class="more">더보기<i class="bul_more"></i></a>
+        </div>
+
+        <!-- 협력업체 -->
+        <div class="cooper">
+          <h3><img src="../images/prod_menu_05.png" alt="협력업체"></h3>
+          <ul>
+            <li class="c_list">
+              <div class="c_thumb">
+                <a href=""><img src="../images/c_prod51.jpg" alt="사이버매장 신규매물1"></a>
+              </div>
+              <dl class="p_txt">
+                <dt>BMW IM 쿠페</dt>
+                <dd>2001년식</dd>
+              </dl>
+            </li>
+            <li class="c_list">
+              <div class="c_thumb">
+                <a href=""><img src="../images/c_prod52.jpg" alt="사이버매장 신규매물1"></a>
+              </div>
+              <dl class="p_txt">
+                <dt>렉서스 뉴 ES300h</dt>
+                <dd>2001년식</dd>
+              </dl>
+            </li>
+            <li class="c_list">
+              <div class="c_thumb">
+                <a href=""><img src="../images/c_prod53.jpg" alt="사이버매장 신규매물1"></a>
+              </div>
+              <dl class="p_txt">
+                <dt>람보르기니 가야르도</dt>
+                <dd>2001년식</dd>
+              </dl>
+            </li>
+            <li class="c_list">
+              <div class="c_thumb">
+                <a href=""><img src="../images/c_prod54.jpg" alt="사이버매장 신규매물1"></a>
+              </div>
+              <dl class="p_txt">
+                <dt>렉서스 뉴 ES300h</dt>
+                <dd>2001년식m</dd>
+              </dl>
+            </li>
+            <li>
+              <div class="c_thumb">
+                <a href=""><img src="../images/c_prod55.jpg" alt="사이버매장 신규매물1"></a>
+              </div>
+              <dl class="p_txt">
+                <dt>2람보르기니 가야르도</dt>
+                <dd>2001년식</dd>
+              </dl>
+            </li>
+          </ul>
+          <a href="#" class="more">더보기<i class="bul_more"></i></a>
+        </div>
+      </div>
+
+
+      <div id="aside">
+          <div class="login">
+              <fieldset>
+                  <legend>로그인</legend>
+                  <div class="login_field">
+                      <input type="text" name="" placeholder="아이디"/>
+                      <input type="password" name="" placeholder="패스워드"/>
+                      <input type="submit" name="" value="로그인"/>
+                  </div>
+                  <div class="login_option">
+                      <span class="fl"><input type="checkbox" id="idsave"> <label for="idsave">ID저장 </label></span>
+                      <span class="fr"><a href="" class="signin">회원가입</a> <a href="">ID / 비밀번호찾기</a></span>
+                  </div>
+              </fieldset>
+          </div>
+
+          <div class="hotnews">
+              <div class="title_group">
+                  <div class="c_menu"><img src="../images/c_issue.jpg" alt="자동차 뉴스"></div>
+
+                  <div class="btngroup fr">
+
+                      <input type="button" class="next">
+                      <span class="count">1</span><span>3</span>
+                      <input type="button" class="prev">
+
+                  </div>
+              </div>
+              <div class="number-list">
+                  <ol>
+                      <li>
+                          <img src="../images/c_issue_01.jpg" alt="">
+                          <span>길가에 멈춰선 차량돕는 훈훈한 모습</span>
+                      </li>
+                      <li>
+                          <img src="../images/c_issue_02.jpg" alt="">
+                          <span>유리를 박살내고 차량용품 싹쓸이</span>
+                      </li>
+                      <li>
+                          <img src="../images/c_issue_03.jpg" alt="">
+                          <span>짙은안개 고속도로 살벌한 추돌사고</span>
+                      </li>
+                  </ol>
+              </div>
+          </div>
+
+
+        <div class="car_news">
+          <div class="c_menu"><img src="../images/c_news.png" alt="자동차 뉴스"></div>
+          <ul>
+            <li><span class="car_thumb"><a href="#"><img src="../images/c_news01.jpg" alt="르노삼성"/></a></span>
+              <span class="c_news"><a href="">르노삼성 부산공장 중대형 핵심 기지 될 것</a></span></li>
+              <li class="bul_dot"><a href=""> 쌍용 EREV, 전기자동차 2015년 양산</a></li>
+              <li class="bul_dot"><a href=""> [2012 결산] 전자, 자동차, 철강 등</a></li>
+              <li class="bul_dot"><a href=""> 남양연구소 'T-LPDi'상용화 박차</a></li>
+              <li class="bul_dot"><a href=""> 올해들어 수입차 CEO 대거 교체</a></li>
+            </ul>
+            <a href="" class="more">더보기<i class="bul_more"></i></a>
+          </div>
+
+          <div class="cm_favor">
+            <div class="cm_menu"><img src="../images/c_favor.png" alt="커뮤니티 인기글"></div>
+            <ul>
+              <li><span class="cm_thumb"><a href="#"><img src="../images/c_favor_01.jpg" alt="르노삼성"/></a></span>
+                <span class="cm_news"><a href="#">르노삼성 부산공장 중대형 핵심 기지 될 것</a></span></li>
+                <li><span class="cm_thumb"><a href="#"><img src="../images/c_favor_02.jpg" alt="르노삼성"/></a></span>
+                  <span class="cm_news"><a href="#">르노삼성 부산공장 중대형 핵심 기지 될 것</a></span></li>
+                  <li><span class="cm_thumb"><a href="#"><img src="../images/c_favor_03.jpg" alt="르노삼성"/></a></span>
+                    <span class="cm_news"><a href="#">르노삼성 부산공장 중대형 핵심 기지 될 것</a></span></li>
+                  </ul>
+                  <a href="" class="more">더보기<i class="bul_more"></i></a>
+                </div>
+
+                <div class="myc_hot">
+                    <div class="myc_group">
+                        <div class="ct_menu"><img src="../images/c_mycar.png" alt="내차소 인기순위"></div>
                         <a href="" class="more">더보기<i class="bul_more"></i></a>
-                         <span class="ev_thumb"><a href=""><img src="../images/event_news_10.jpg" alt=""></a></span>
-                         <span class="ev_txt">맨즈박스에 참여한 브랜드 중 마음에 드는 상품을 골라주세요!</span>
-                  </div>
-                   <div class="sns">
-                      <div class="sns_menu"><img src="../images/sns.png" alt="이벤트 소식"></div>
-                      <a href=""><img src="../images/sns01.png" alt="페이스북"></a>
-                      <a href=""><img src="../images/sns02.png" alt="트위터"></a>
-                      <a href=""><img src="../images/sns03.png" alt="블로그"></a>
-                      <a href=""><img src="../images/sns04.png" alt="카카오톡"></a>
-                      <a href=""><img src="../images/sns05.png" alt="유투브"></a>
-                      <a href=""><img src="../images/sns06.png" alt="구글"></a>
-                  </div>
+                    </div>
+                    <div class="number-list">
+                        <ol>
+                            <li>
+                                <img src="../images/c_myc_01.jpg" alt="">
+                                <span>270ELISA 남의 현대 투스카니</span>
+                            </li>
+                            <li>
+                                <img src="../images/c_myc_02.jpg" alt="">
+                                <span>대금이 님의 현대 뉴 제네시스</span>
+                            </li>
+                            <li>
+                                <img src="../images/c_myc_03.jpg" alt="">
+                                <span>날아라콩떡 님의 아우디 뉴A6</span>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
 
+                <div class="bb_story">
+                  <div class="bb_menu"><img src="../images/b_story.png" alt="보배드림이야기"></div>
+                  <div class="bb_slider">
+                  <span><a href=""><img src="../images/slider.jpg"></a></span>
+                      <div class="bb_tit">
+                          <div><cite>BMW 1시리즈의 가성비</cite></div>
+                          <div class="bb_btn">
+                              <input type="button" value="다음">
+                              <input type="button" value="이전">
+                          </div>
+                      </div>
+                  </div>
+                  <a href="" class="more">더보기<i class="bul_more"></i></a>
+                </div>
+
+                <div class="evnews">
+                      <div class="ev_menu"><img src="../images/event_news_06.png" alt="이벤트 소식"></div>
+                      <a href="" class="more">더보기<i class="bul_more"></i></a>
+                       <span class="ev_thumb"><a href=""><img src="../images/event_news_10.jpg" alt=""></a></span>
+                       <span class="ev_txt">맨즈박스에 참여한 브랜드 중 마음에 드는 상품을 골라주세요!</span>
+                </div>
+                 <div class="sns">
+                    <div class="sns_menu"><img src="../images/sns.png" alt="이벤트 소식"></div>
+                    <a href=""><img src="../images/sns01.png" alt="페이스북"></a>
+                    <a href=""><img src="../images/sns02.png" alt="트위터"></a>
+                    <a href=""><img src="../images/sns03.png" alt="블로그"></a>
+                    <a href=""><img src="../images/sns04.png" alt="카카오톡"></a>
+                    <a href=""><img src="../images/sns05.png" alt="유투브"></a>
+                    <a href=""><img src="../images/sns06.png" alt="구글"></a>
                 </div>
 
               </div>
-              <div id="footer">
-                <div class="noti_map">
-                      <span class="noti"><a href="">공지사항</a></span>
-                      <span class="all_map"><a href="" class="more">서비스 전체보기<i class="bul_more"></a></span>
-                      <span class="not_news"><a href="">보배드림 어플 업데이트 안내</a></span>
-                </div>
-                <div class="sitemap">
-                    <div class="smap01">
-                     <h5>사이버매장</h5>
-                        <ul>
-                            <li><a href="">국산차매장</a></li>
-                            <li><a href="">수입차매장</a></li>
-                            <li><a href="">튜닝카매장</a></li>
-                            <li><a href="">승용차매장</a></li>
-                            <li><a href="">스포트카매장</a></li>
-                            <li><a href="">4륜/SUV매장</a></li>
-                            <li><a href="">승합차매장</a></li>
-                            <li><a href="">오토갤러리매장</a></li>
-                        </ul>
-                    </div>
-                    <div class="smap02">
-                     <h5>국한중고차</h5>
-                        <ul>
-                            <li><a href="">전체차량</a></li>
-                            <li><a href="">인기차량</a></li>
-                            <li><a href="">확인차량</a></li>
-                            <li><a href="">경매차량</a></li>
-                            <li><a href="">특수/특장차</a></li>
-                            <li><a href="">국산차매장</a></li>
-                            <li><a href="">중고차시세</a></li>
-                            <li><a href="">차종별검색</a></li>
-                        </ul>
-                    </div>
-                    <div class="smap03">
-                     <h5>수입중고차</h5>
-                        <ul>
-                            <li><a href="">전체차량</a></li>
-                            <li><a href="">인기차량</a></li>
-                            <li><a href="">확인차량</a></li>
-                            <li><a href="">경매차량</a></li>
-                            <li><a href="">특수/특장차</a></li>
-                            <li><a href="">국산차매장</a></li>
-                            <li><a href="">중고차시세</a></li>
-                            <li><a href="">차종별검색</a></li>
-                        </ul>
-                    </div>
-                    <div class="smap04">
-                     <h5>내차팔기</h5>
-                        <ul>
-                            <li><a href="">사이버매물등록</a></li>
-                            <li><a href="">국산차등록</a></li>
-                            <li><a href="">수입차등록</a></li>
-                            <li><a href="">매물등록권 구입</a></li>
-                        </ul>
-                    </div>
-                    <div class="smap05">
-                     <h5>게시판</h5>
-                        <ul>
-                            <li><a href="">베스트글</a></li>
-                            <li><a href="">자유게시판</a></li>
-                            <li><a href="">질문과 답변</a></li>
-                            <li><a href="">시승기</a></li>
-                            <li><a href="">내차소개</a></li>
-                            <li><a href="">자동차동영상</a></li>
-                            <li><a href="">특종사진</a></li>
-                            <li><a href="">레이싱모델</a></li>
-                        </ul>
-                    </div>
-                    <div class="smap06">
-                     <h5>자료실</h5>
-                        <ul>
-                            <li><a href="">내차소개</a></li>
-                            <li><a href="">자동차동영상</a></li>
-                            <li><a href="">특종사진</a></li>
-                            <li><a href="">레이싱모델</a></li>
-                        </ul>
-                    </div>
-                    <div class="smap07">
-                     <h5>특종모델</h5>
-                        <ul>
-                            <li><a href="">국산차매장</a></li>
-                            <li><a href="">수입차매장</a></li>
-                            <li><a href="">튜닝카매장</a></li>
-                            <li><a href="">승용차매장</a></li>
-                            <li><a href="">스포트카매장</a></li>
-                            <li><a href="">4륜/SUV매장</a></li>
-                            <li><a href="">qps/승합차매장</a></li>
-                            <li><a href="">오토갤러리매장</a></li>
-                        </ul>
-                    </div>
-                </div>
+
+            </div>
+            <div id="footer">
+              <div class="noti_map">
+                    <span class="noti"><a href="">공지사항</a></span>
+                    <span class="all_map"><a href="">서비스 전체보기</a></span>
+                    <span class="not_news"><a href="">보배드림 어플 업데이트 안내</a></span>
+              </div>
+              <div class="sitemap">
+                  <div class="smap01">
+                   <h5>사이버매장</h5>
+                      <ul>
+                          <li><a href="">국산차매장</a></li>
+                          <li><a href="">수입차매장</a></li>
+                          <li><a href="">튜닝카매장</a></li>
+                          <li><a href="">승용차매장</a></li>
+                          <li><a href="">스포트카매장</a></li>
+                          <li><a href="">4륜/SUV매장</a></li>
+                          <li><a href="">승합차매장</a></li>
+                          <li><a href="">오토갤러리매장</a></li>
+                      </ul>
+                  </div>
+                  <div class="smap02">
+                   <h5>국한중고차</h5>
+                      <ul>
+                          <li><a href="">전체차량</a></li>
+                          <li><a href="">인기차량</a></li>
+                          <li><a href="">확인차량</a></li>
+                          <li><a href="">경매차량</a></li>
+                          <li><a href="">특수/특장차</a></li>
+                          <li><a href="">국산차매장</a></li>
+                          <li><a href="">중고차시세</a></li>
+                          <li><a href="">차종별검색</a></li>
+                      </ul>
+                  </div>
+                  <div class="smap03">
+                   <h5>수입중고차</h5>
+                      <ul>
+                          <li><a href="">전체차량</a></li>
+                          <li><a href="">인기차량</a></li>
+                          <li><a href="">확인차량</a></li>
+                          <li><a href="">경매차량</a></li>
+                          <li><a href="">특수/특장차</a></li>
+                          <li><a href="">국산차매장</a></li>
+                          <li><a href="">중고차시세</a></li>
+                          <li><a href="">차종별검색</a></li>
+                      </ul>
+                  </div>
+                  <div class="smap04">
+                   <h5>내차팔기</h5>
+                      <ul>
+                          <li><a href="">사이버매물등록</a></li>
+                          <li><a href="">국산차등록</a></li>
+                          <li><a href="">수입차등록</a></li>
+                          <li><a href="">매물등록권 구입</a></li>
+                      </ul>
+                  </div>
+                  <div class="smap05">
+                   <h5>게시판</h5>
+                      <ul>
+                          <li><a href="">베스트글</a></li>
+                          <li><a href="">자유게시판</a></li>
+                          <li><a href="">질문과 답변</a></li>
+                          <li><a href="">시승기</a></li>
+                          <li><a href="">내차소개</a></li>
+                          <li><a href="">자동차동영상</a></li>
+                          <li><a href="">특종사진</a></li>
+                          <li><a href="">레이싱모델</a></li>
+                      </ul>
+                  </div>
+                  <div class="smap06">
+                   <h5>자료실</h5>
+                      <ul>
+                          <li><a href="">내차소개</a></li>
+                          <li><a href="">자동차동영상</a></li>
+                          <li><a href="">특종사진</a></li>
+                          <li><a href="">레이싱모델</a></li>
+                      </ul>
+                  </div>
+                  <div class="smap07">
+                   <h5>특종모델</h5>
+                      <ul>
+                          <li><a href="">국산차매장</a></li>
+                          <li><a href="">수입차매장</a></li>
+                          <li><a href="">튜닝카매장</a></li>
+                          <li><a href="">승용차매장</a></li>
+                          <li><a href="">스포트카매장</a></li>
+                          <li><a href="">4륜/SUV매장</a></li>
+                          <li><a href="">qps/승합차매장</a></li>
+                          <li><a href="">오토갤러리매장</a></li>
+                      </ul>
+                  </div>
               </div>
             </div>
-          </body>
+          </div>
+        </body>
 
-          </html>
+        </html>
