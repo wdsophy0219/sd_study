@@ -13,12 +13,16 @@
 			#wrap { border:1px solid red; }
 		</style>
 		<script>
-			$(document).ready(function(){
-				
-			});
+		var el = $('#list > li').eq(1).bind('click', function(){
+			alert('click');
+		})
+
+		el.detach();
+
+		$('body').append(el);
 		</script>
 	</head>
-	
+
 	<body>
 		<span>3-1이 두개가 들어가 있네요. 표시된 부분을 지워주세요.</span>
 		<div id="wrapper">

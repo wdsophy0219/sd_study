@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            var  offleft = $('.wrap').offset().left;
+            var wrapwidth = $('.wrap').width();
+            $('.fly').css('left',offleft+wrapwidth+10);
+
+            $(window).scroll(function(){
+
+                var sct = $(window).scrollTop();
+                $('.fly').stop().animate({
+                    'top':sct
+                })
+
+                if (sct > 1000) {
+                    $('fly').css('left',offleft+wrapwidth+10);
+
+                } else if  (sct < 1000) {
+                    $('fly').css('left',offleft+wrapwidth+30);
+
+                }
+            })
+
+        });
+
+
+        // var a = prompt("숫자를 입력하세요");
+        //
+        // if(a % 2 === 0){
+        //     console.log(a + "0");
+        //
+        //     }else if(a % 2 == 1){
+        //
+        //         console.log(a + "홀수")
+        //
+        //     }else if(a % 2 == 0){
+        //         console.log(a + "짝수")
+        //     }
+    </script>
+
+    <style>
+        .wrap{width:800px; height:4000px; border:1px #F00 solid; margin:0 auto;}
+        .fly{width:80px; height:200px; border:1px #F00 solid; position:absolute; left:0; top:0;}
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+
+    </div>
+    <div class="fly">
+
+    </div>
+
+</body>
+</html>
