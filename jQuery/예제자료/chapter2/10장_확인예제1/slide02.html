@@ -37,7 +37,7 @@
         display:inline-block;
     }
     li.on a{
-        background-color: #F00;
+        background-color: #000;
     }
     li a{
         position:relative;
@@ -89,10 +89,10 @@
             var idx = 0;
 
             $('.next').click(function(){
-                $('.slide li').eq(idx).find('div')
+                $('.slide li').eq(idx).removeClass('on').find('div')
                 .animate({
                     "left":-ww
-                }).parent().next().find('div')
+                }).parent().next().addClass('on').find('div')
                 .css({
                     'display':'block',
                     'left':ww
@@ -104,7 +104,7 @@
 
                 if(idx == $('.slide li').length){
                     idx = 0;
-                    $('.slide li').eq(idx)
+                    $('.slide li').eq(idx).addClass('on')
                     .find('div').css({
                         'left':ww
                     }).stop().animate({
@@ -114,10 +114,10 @@
             })
 
             $('.prev').click(function(){
-                $('.slide li').eq(idx).find('div')
+                $('.slide li').eq(idx).removeClass('on').find('div')
                 .animate({
                     "left":ww
-                }).parent().prev().find('div')
+                }).parent().prev().addClass('on').find('div')
                 .css({
                     'display':'block',
                     'left':-ww
@@ -129,7 +129,8 @@
 
                 if(idx < 0){
                     idx = $('.slide li').length -1;
-                    $('.slide li').eq(idx).find('div').css({
+                    $('.slide li').eq(idx).addClass('on')
+                    .find('div').css({
                         'left':-ww,
                         'display':'block'
                     }).animate({
