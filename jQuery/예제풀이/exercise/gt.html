@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sidemenu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+      td {color: blue; font-weight: bold;}
+    </style>
+
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>TD #0</td>
+            <td>TD #1</td>
+            <td>TD #2</td>
+        </tr>
+        <tr>
+            <td>TD #3</td>
+            <td>TD #4</td>
+            <td>TD #5</td>
+        </tr>
+        <tr>
+            <td>TD #6</td>
+            <td>TD #7</td>
+            <td>TD #8</td>
+        </tr>
+    </table>
+    <script>
+    $("td:gt(4)").css("text-decoration", "line-through");
+    </script>
+
+
+</body>
+</html>

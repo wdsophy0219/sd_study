@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sidemenu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+<body>
+    <div>
+        <input type="radio" name="newsletter" value="Hot Fuzz" />
+        <span>name?</span>
+    </div>
+    <div>
+        <input type="radio" name="newsletters" value="Cold Fusion" />
+        <span>name?</span>
+    </div>
+    <div>
+        <input type="radio" name="accept" value="Evil Plans" />
+        <span>name?</span>
+    </div>
+    <script>
+    $('input[name="newsletter"]').next().text(' is newsletter');
+    </script>
+    
+
+
+</body>
+</html>

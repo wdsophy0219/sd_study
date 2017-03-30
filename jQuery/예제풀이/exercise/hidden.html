@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sidemenu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+      .test {border: 3px inset red;}
+    </style>
+
+</head>
+<body>
+    <span></span>
+    <div></div>
+    <div style="display:none;">Hider!</div>
+    <div></div>
+    <div class="starthidden">Hider!</div>
+    <div></div>
+    <form>
+        <input type="hidden" />
+        <input type="hidden" />
+        <input type="hidden" />
+    </form>
+    <span> </span>
+    <script> // in some browsers :hidden includes head, title, script, etc... so limit to body
+    $("span:first").text("Found " + $(":hidden", document.body).length + " hidden elements total.");
+    $("div:hidden").show(3000); $("span:last").text("Found " +
+    $("input:hidden").length + " hidden inputs.");
+    </script>
+
+
+<p>보이지 않는 div 를 3초 후에 보이게 하고 hidden input 들을 모두 찾아서 개수(숫자를 세다)합니다.
+    요소들은 몇가지 원인에 의해 숨겨져 있게 됩니다.
+◎ CSS display 속성값이 none 일때
+◎ form 요소 중에 type='hidden' 일때
+◎ 요소의 width 와 height 가 0 일때
+◎ 부모 요소가 보이지 않거나 숨겨져 있을 때
+visibility:hidden 이나 opacity:0 속성을 가진 요소들은 레이아웃(layout)을 위해 일정 공간을 차지하고 있기 때문에 보이는 것으로 간주(considered to be visible)됩니다. 요소가 사라지고 있는 동안에는 그 움직임(animation)이 끝날때 까지는 보이는(visible) 것으로 간주됩니다. 요소가 나타나고 있는 동안에는 그 움직임(animation)이 시작되면 보이는 것으로 간주됩니다. 뭔 얘기인지 헷갈리시죠. ^^;; 저도 좀.. 의역을 해봐도 잘 와닿지는 않습니다. 아마 어떤 상태이든 보이고 있는 것은 동일하다는 뜻을 표현하려 한게 아닌가 합니다. 그래서 눈에 보이지 않는다고 그 요소가 실제로 없다고 여길 수는 없다. 뭐 이런정도 아닐까요? 하하;;;
+</p>
+</body>
+</html>

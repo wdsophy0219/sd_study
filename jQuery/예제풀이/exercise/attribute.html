@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sidemenu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+      td {text-align: center;}
+    </style>
+
+</head>
+<body>
+    <div>no id</div>
+    <div id="hey">with id</div>
+    <div id="there">has an id</div>
+    <div>nope</div>
+     <script>
+     $('div[id]').one('click', function(){
+         var idString = $(this).text() + ' = ' + $(this).attr('id');
+         $(this).text(idString);
+     });
+     </script>
+
+     <p>
+     스크립트에 보지 못했던 것들이 좀 많이 들어가 있습니다. one() 이라는 함수가 보이고, 'click' 이라는 인자도 보이네요. one() 이라는 함수는 해당 객체에 이벤트를 묶어주는 함수입니다. 위에서 보면 div 에 id 값이 있다면 onclick 이라는 이벤트를 묶어(bind)주라는 뜻입니다. 그래서 해당 객체가 onclick 이벤트가 발생하였을 경우 일어날 일들을 그 안에 정의하고 있죠. 여기서는 id 속성값을 기존의 문자열과 묶어서 다시 그 객체안에 텍스트로 집어 넣어 주고 있습니다.
+     </p>
+
+
+</body>
+</html>

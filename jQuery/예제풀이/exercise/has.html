@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sidemenu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+      .test {border: 3px inset red;}
+    </style>
+
+</head>
+<body>
+    <div>
+        <p>Hello in a paragraph</p>
+    </div>
+    <div>
+        Hello again! (with no paragraph)
+    </div>
+    <script>
+    $("div:has(p)").addClass("test");
+    </script>
+
+   <p>$('div:has(p)') 라고 했다면 p 태그를 가진 div 태그를 찾아낼 수 있겠네요.
+       p 태그가 자식요소로 들어만 있으면 됩니다. 그 단계가 몇 단계인지는 고려치 않네요.</p>
+
+</body>
+</html>

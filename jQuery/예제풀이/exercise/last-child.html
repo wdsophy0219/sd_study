@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sidemenu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+     span.solast {text-decoration: line-through;}
+    </style>
+
+</head>
+<body>
+    <div>
+        <span>John,</span>
+        <span>Karl,</span>
+        <span>Brandon,</span>
+        <span>Sam</span>
+    </div>
+    <div>
+        <span>Glen,</span>
+        <span>Tane,</span>
+        <span>Ralph,</span>
+        <span>David</span>
+    </div>
+
+    <script>
+    $("div span:last-child")
+    .css({color:"red", fontSize:"80%"})
+    .hover(function () {
+        $(this).addClass("solast");
+    }, function () {
+        $(this).removeClass("solast");
+    });
+    </script>
+
+</body>
+</html>

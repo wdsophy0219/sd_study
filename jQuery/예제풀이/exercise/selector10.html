@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sidemenu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+<body>
+    <form>
+        <input type="checkbox" name="newsletter" checked="checked" value="Hourly" />
+        <input type="checkbox" name="newsletter" value="Daily" />
+        <input type="checkbox" name="newsletter" value="Weekly" />
+        <input type="checkbox" name="newsletter" checked="checked" value="Monthly" />
+        <input type="checkbox" name="newsletter" value="Yearly" />
+    </form>
+    <div></div>
+    <script>
+    function countChecked() {
+        var n = $("input:checked").length;
+        $("div").text(n + (n <= 1 ? " is" : " are") + " checked!");
+    } countChecked();
+    $(":checkbox").click(countChecked);
+    </script>
+
+
+    <!-- if(n <= 1)
+    a = " is";
+    else
+    a = " are";  위의 표현은 삼항식-->
+
+</body>
+</html>

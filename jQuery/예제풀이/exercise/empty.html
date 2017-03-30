@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sidemenu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+      td {text-align: center;}
+    </style>
+
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>TD #0</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>TD #2</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>TD#5</td>
+        </tr>
+    </table>
+
+    <script>
+    $("td:empty").text("Was empty!").css('background', 'rgb(255,220,200)');
+    </script>
+
+   <!-- 공백도 텍스트로 인식하므로 empty가 적용안됨 -->
+
+</body>
+</html>

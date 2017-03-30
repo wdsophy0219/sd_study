@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sidemenu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        textarea { height:45px; }
+    </style>
+
+</head>
+<body>
+    <form>
+        <input type="button" value="Input Button"/>
+        <input type="checkbox" />
+        <input type="file" />
+        <input type="hidden" />
+        <input type="image" />
+        <input type="password" />
+        <input type="radio" />
+        <input type="reset" />
+        <input type="submit" />
+        <input type="text" />
+        <select>
+            <option>Option</option>
+        </select>
+        <span></span>
+        <textarea></textarea>
+        <button>Button</button>
+    </form>
+    <div id="messages"> </div>
+
+    <script>
+    var allInputs = $(":input"); //폼에 속하는 하위 요소들인 input, textarea, select 와 같은 사용자 입력 요소들을 이 선택자로 모두 찾아낼 수 있다.
+    var formChildren = $("form > *");  //form 에 속한 모든 하위요소
+
+    $("#messages").text("Found " + allInputs.length + " inputs and the form has " + formChildren.length + " children."); // so it won't submit
+    $("form").submit(function () { return false; });
+     </script>
+
+
+
+
+
+</body>
+</html>
