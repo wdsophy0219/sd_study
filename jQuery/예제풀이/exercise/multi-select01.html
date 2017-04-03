@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sidemenu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+    b { color:red; font-size:16px; display:block; clear:left; }
+    div,span,p { width: 40px; height: 40px; float:left; margin: 10px; background-color: blue; padding:3px; color:white;}
+
+
+    </style>
+
+</head>
+<body>
+<span>span</span>
+<p>p</p>
+<p>p</p>
+<div>div</div>
+<span>span</span>
+<p>p</p>
+<div>div</div>
+<b></b> 
+
+<script>
+var list = $("div,p,span").map(function () { return this.tagName; }).get().join(", ");
+$("b").append(document.createTextNode(list));
+</script>
+
+</body>
+</html>

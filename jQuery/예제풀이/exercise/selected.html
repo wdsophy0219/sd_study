@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sidemenu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+     textarea { height:45px; }
+    </style>
+
+</head>
+<body>
+    <select name="garden" multiple="multiple">
+        <option>Flowers</option>
+        <option selected="selected">Shrubs</option>
+        <option>Trees</option>
+        <option selected="selected">Bushes</option>
+        <option>Grass</option>
+        <option>Dirt</option>
+    </select>
+    <div></div>
+
+    <script>
+    $("select").change(function () { var str = "";
+    $("select option:selected").each(function () { str +=
+        $(this).text() + " "; });
+        $("div").text(str); })
+        .trigger('change');
+    </script>
+
+
+    <p>
+        :selected 선택자는 <option> 태그 전용입니다. 체크박스나 라디오 버튼은 :checked 선택자를 사용하셔야 합니다.
+        select 의 change 함수가 나왔네요. 뭔가가 변화된다면 호출되는 함수입니다.
+        기본 JavaScript의 이벤트함수인 onchange의 역할을 하네요. 그리고 그 안에 each 함수가 있습니다.
+        선택된 것이 있는 만큼 루프(Loop)를 돌리는 함수입니다. 선택상자 제어하기 참 쉽네요.
+        jQuery 사용의 최대 강점은 이런 류의 코딩 노가다를 획기적으로 줄여 주는 것에 있는 것 같습니다.
+
+    </p>
+
+</body>
+</html>

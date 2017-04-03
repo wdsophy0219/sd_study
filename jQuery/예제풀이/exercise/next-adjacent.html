@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sidemenu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+    </style>
+
+</head>
+<body>
+    <form>
+        <label>Name:</label>
+        <input name="name" />
+        <fieldset>
+            <label>Newsletter:</label> 
+            <input name="newsletter" />
+        </fieldset>
+    </form>
+    <input name="none" />
+
+    <script>
+    $("label + input").css("color", "blue").val("Labeled!")
+    </script>
+
+</body>
+</html>
