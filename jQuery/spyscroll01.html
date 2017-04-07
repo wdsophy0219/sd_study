@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+
+            var spyscorll = function(){
+                var sct = $(this).scrollTop();
+                console.log('')
+            }
+
+            $(window).scroll(spyscorll);
+        })
+    </script>
+
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style:none; text-align:center;}
+
+        a{color:#FFF;}
+        li{display:inline-block;}
+        li.on a{color:#F00;}
+        header{height:80px; width:100%; left:0; top:0; background-color:rgba(0,0,0,.5); line-height:80px; position:fixed; left:0; top:0;}
+        section{
+            text-align:center;
+            height:1000px;
+            border:1px #F00 solid;
+            padding-top:80px;
+            box-sizing:border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li class="on"><a href="">Menu1</a></li>
+                <li><a href="">Menu2</a></li>
+                <li><a href="">Menu3</a></li>
+                <li><a href="">Menu4</a></li>
+                <li><a href="">Menu5</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="wrap">
+        <section>
+            <h1>title1</h1>
+        </section>
+        <section>
+            <h1>title2</h1>
+        </section>
+        <section>
+            <h1>title3</h1>
+        </section>
+        <section>
+            <h1>title4</h1>
+        </section>
+        <section>
+            <h1>title5</h1>
+        </section>
+    </div>
+
+
+</body>
+</html>

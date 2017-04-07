@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>etc</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+
+    </style>
+
+</head>
+<body>
+    <div>할 일 목록</div>
+    <ol>
+        <li>jQuery를 배운다</li>
+        <li>연봉을 올린다</li>
+        <li>휴가계획을 세운다</li>
+    </ol>
+    <button id="btnRemove"></button>
+
+    <script>
+    $(function(){
+
+    $("#btnRemove").click(function(){
+        $("li").remove();
+    })
+    });
+    </script>
+
+</body>
+</html>
