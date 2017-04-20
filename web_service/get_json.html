@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>03_get_json</title>
+		<style>
+			* { margin:20px; }
+			h2 { color:red; }
+			#fruits_data tbody .head { font-size:20px; }
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+
+
+			$.get('data/team.json', function(data){
+
+
+				$('body').append('<ul>')
+
+				for(i=0;i<data.group.length; i++) {
+
+					//console.log(i)
+
+					var proName = data.group[i].porjectName;
+					$('body ul').append('<li>'+proName+'</li>');
+
+				}
+
+				$('body').append('</ul>')
+
+
+
+			}, 'json');
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

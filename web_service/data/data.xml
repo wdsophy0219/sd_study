@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+	<fruits name="사과">
+		<price>1000원</price>
+		<date>2013.12.10</date>
+		<origin>국산</origin>
+	</fruits>
+		<fruits name="사과">
+		<price>1000원</price>
+		<date>2013.12.10</date>
+		<origin>국산</origin>
+	</fruits>
+		<fruits name="사과">
+		<price>1000원</price>
+		<date>2013.12.10</date>
+		<origin>국산</origin>
+	</fruits>
+</data>
