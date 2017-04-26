@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <style>
+            html,body{height:100%;}
+            *{margin:0; padding:0;}
+
+            div{height:100%;}
+            div section{
+            width:100%;
+            left:0;
+            height:100%; border:1px #F00 solid;
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center;
+            }
+
+            div section:nth-child(1){background-image: url(../images/Desert.jpg);}
+            div section:nth-child(2){background-image: url(../images/Chrysanthemum.jpg);}
+            div section:nth-child(3){background-image: url(../images/Jellyfish.jpg);}
+            div section:nth-child(4){background-image: url(../images/Koala.jpg);}
+            div section:nth-child(5){background-image: url(../images/Tulips.jpg);}
+        </style>
+        <script>
+            //이미지 태그를 사용하여 section 이 늘어나는 경우 로드방법
+            //$(window).load(function(){})
+
+            $(function(){
+
+                var spot = [];
+            // 배열에 spot을 담는다
+                var h = 0;
+            // 4에 0을 담는다
+
+                $('div section').each(function(i){
+            // div section 각각을 실행하게 한다.
+                    var offtop = $(this).offset().top;
+            //  offtop에 div section 각각의 top 값을 담는다.
+                    spot.push(offtop)
+            //  spot 배열에 offtop을 담는다
+                    $(this).css('top',spot[i])
+            //  각각의 div section의 top을 spot배열 값을 준다.
+                    h += $(this).height();
+            //  각각의 div section의 height를 증감시켜 h에 담는다  -> div의 전체높이
+                })
+
+                // $('div section').css('position','fixed')
+            //  각각의 div section에 position을 fixed로 준다.
+                $('div').height(h)
+            //  div의 height에 h값을 준다.
+                $(window).scroll(function(){
+            //  window의 scroll을 실행하게 한다
+                    var sct = $(this).scrollTop()
+            //  window의 scrollTop 값을 sct에 담는다.
+                    $('div section').each(function(i){
+            //  div section 각각을 실행하게 한다.
+                        var tt = -1*sct+spot[i];
+            // sct에 음수를 곱하고, spot[i]을 더한 값을 tt에 담는다.
+                        if(sct >  spot[i]) tt *=.3
+            // sct가 spot[i]보다 클때 tt에 0.3곱하여 대입한디.            //
+                        $(this).css('top',tt)
+            // div section에 top값에 tt를 준다.
+
+                    })
+                })
+
+
+            })
+
+        </script>
+</head>
+<body>
+    <div>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+    </div>
+
+</body>
+</html>

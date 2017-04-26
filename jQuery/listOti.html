@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        *{margin:0; padding:0;}
+        ul{list-style:none;}
+        .btngroup{border-top:1px #F00 solid;border-bottom:1px #F00 solid; margin-bottom:50px;}
+        .btngroup ul {text-align:center; overflow: hidden;}
+        .btngroup li {display:inline-block; line-height:50px;}
+
+        .list li{float:left; width:25%; padding-bottom:25%; outline:1px #F00 solid;}
+    </style>
+    <script>
+        $(function(){
+
+         $(".btngroup li:nth-child(2)").on('mouseover',function(){
+            $("img:not([alt='브런치'])").parents('li').css('display','none');
+            $("img[alt='브런치']").parents('li').css('display','block');
+         })
+         $(".btngroup li:nth-child(3)").on('mouseover',function(){
+            $("img:not([alt='런치메뉴'])").parents('li').css('display','none');
+            $("img[alt='런치메뉴']").parents('li').css('display','block');
+         })
+         $(".btngroup li:nth-child(4)").on('mouseover',function(){
+            $("img:not([alt='디너'])").parents('li').css('display','none');
+            $("img[alt='디너']").parents('li').css('display','block');
+         })
+         $(".btngroup li:nth-child(5)").on('mouseover',function(){
+            $("img:not([alt='드링크'])").parents('li').css('display','none');
+            $("img[alt='드링크']").parents('li').css('display','block');
+         })
+         $(".btngroup li:nth-child(6)").on('mouseover',function(){
+            $("img:not([alt='애피타이저'])").parents('li').css('display','none');
+            $("img[alt='애피타이저']").parents('li').css('display','block');
+         })
+
+
+
+    })
+    </script>
+</head>
+<body>
+
+    <div class="btngroup">
+        <ul>
+            <li><a href="">ALL</a></li>
+            <li><a href="">브런치</a></li>
+            <li><a href="">런치 메뉴</a></li>
+            <li><a href="">디너</a></li>
+            <li><a href="">드링크</a></li>
+            <li><a href="">에피타이저</a></li>
+        </ul>
+    </div>
+
+    <ul class="list">
+        <li><a href=""><img src="" alt="브런치"></a></li>
+        <li><a href=""><img src="" alt="런치메뉴"></a></li>
+        <li><a href=""><img src="" alt="디너"></a></li>
+        <li><a href=""><img src="" alt="드링크"></a></li>
+        <li><a href=""><img src="" alt="애피타이저"></a></li>
+        <li><a href=""><img src="" alt="브런치"></a></li>
+        <li><a href=""><img src="" alt="런치메뉴"></a></li>
+        <li><a href=""><img src="" alt="디너"></a></li>
+        <li><a href=""><img src="" alt="드링크"></a></li>
+        <li><a href=""><img src="" alt="애피타이저"></a></li>
+        <li><a href=""><img src="" alt="브런치"></a></li>
+        <li><a href=""><img src="" alt="런치메뉴"></a></li>
+        <li><a href=""><img src="" alt="디너"></a></li>
+        <li><a href=""><img src="" alt="드링크"></a></li>
+        <li><a href=""><img src="" alt="애피타이저"></a></li>
+        <li><a href=""><img src="" alt="브런치"></a></li>
+        <li><a href=""><img src="" alt="런치메뉴"></a></li>
+        <li><a href=""><img src="" alt="디너"></a></li>
+        <li><a href=""><img src="" alt="드링크"></a></li>
+        <li><a href=""><img src="" alt="애피타이저"></a></li>
+        <li><a href=""><img src="" alt="브런치"></a></li>
+        <li><a href=""><img src="" alt="런치메뉴"></a></li>
+        <li><a href=""><img src="" alt="디너"></a></li>
+        <li><a href=""><img src="" alt="드링크"></a></li>
+        <li><a href=""><img src="" alt="애피타이저"></a></li>
+        <li><a href=""><img src="" alt="브런치"></a></li>
+        <li><a href=""><img src="" alt="런치메뉴"></a></li>
+        <li><a href=""><img src="" alt="디너"></a></li>
+        <li><a href=""><img src="" alt="드링크"></a></li>
+        <li><a href=""><img src="" alt="애피타이저"></a></li>
+        <li><a href=""><img src="" alt="브런치"></a></li>
+        <li><a href=""><img src="" alt="런치메뉴"></a></li>
+        <li><a href=""><img src="" alt="디너"></a></li>
+        <li><a href=""><img src="" alt="드링크"></a></li>
+        <li><a href=""><img src="" alt="애피타이저"></a></li>
+        <li><a href=""><img src="" alt="브런치"></a></li>
+        <li><a href=""><img src="" alt="런치메뉴"></a></li>
+        <li><a href=""><img src="" alt="디너"></a></li>
+        <li><a href=""><img src="" alt="드링크"></a></li>
+        <li><a href=""><img src="" alt="애피타이저"></a></li>
+
+    </ul>
+
+
+
+</body>
+</html>

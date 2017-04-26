@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+
+    body{
+        background: #000;
+    }
+
+    div{
+        border:1px #F00 solid;
+        display:inline-block;
+    }
+        div>span{border:1px #F00 solid;
+            width:41px;
+            height:100px;
+            display:block;
+            float:left;
+            background-image:url(http://dept.galleria.co.kr/web/img/main/txt-num.png)
+        }
+
+
+    </style>
+    <script>
+    $(function(){
+        // https://www.w3schools.com/js/js_date_methods.asp
+
+
+
+
+        var weekArr=['일요일','월요일','화요일','수요일','목요일','금요일','토요일']
+        var time  = new Date();
+        var week = time.getDay();
+        var Hours = time.getHours();
+
+        var HoresArr = [];
+        var minArr = [];
+        var secArr = [];
+
+        //ex.1 : 12시 기반
+        /*if(Hours >12){
+           Hours - 12
+        }*/
+        var Min = time.getMinutes()
+        var sec =time.getSeconds();
+
+        console.log("사용자가 접속한 시간:"+Hours+":"+Min+":"+sec);
+
+        // 시스템의 현재시간을 1초 간격으로 갱신하여 호출하기 위해
+        // 일정시간마다 반복하게 하는 setInterval를 호출해서
+        // 시간과 분, 초의 메소드를 이용해 지역변수를 선언한다.
+        // 전역변수일경우 setInterval이 되지 않는다.
+        //
+        setInterval(function(){
+
+             time  = new Date();
+        // 함수를 생성
+             Hours = time.getHours();
+        // getHours 메소드로 현재 시를 뽑아 hours 대입 hours -> 현재시간
+             Min = time.getMinutes();
+        // getMinutes 메소드로 Min 변수를 선언
+             sec = time.getSeconds();
+        // getSeconds 메소드로 sec 변수를 선언
+
+
+       // 오전8시부터 오후 17시까지 배경색을 달리하기 위해
+        if(Hours > 8 && Hours < 17){
+        // Hours 가 8보다 크고 17보다 작을때가 모두 참이면
+            $('body').css('background','blue')
+        //body에 background를 blue로 css를 변경하고
+            //   css중 bg 를 BLUE 입력
+        }else{
+        //  위의 if를 제외한 경우에는
+            $('body').css('background','black')
+        //body에 background를 black로 css를 변경하고
+        }
+
+
+            // $('body').text("현재시간:"+Hours+":"+Min+":"+sec)
+
+             arrOpti(Hours,HoresArr,$('.hh'))
+             //arrOpti 호출 - > 자료값(근거값)  Hours , HoresArr , $('.hh')
+             arrOpti(Min,minArr,$('.mm'))
+            //arrOpti 호출 - > 자료값(근거값)  Min , minArr , $('.mm')
+             arrOpti(sec,secArr,$('.ss'))
+            //arrOpti 호출 - > 자료값(근거값)  sec , secArr , $('.ss')
+
+        },1000)
+        //1초 간격으로 setInterval을 실행
+
+
+
+        function arrOpti(time,arr,select){
+         //
+            arr = [];
+        //arr에 배뎔을 담는다.
+
+
+            for(i=0; i<String(time).length; i++){
+        // i는 0부터 time의 length값만큼 실행하고, 1씩 증감하여 반복한다.
+        // String(time).length
+        // time의 length값을 구하기 위해 String을 사욯해 숫자를 문자열로 바꾸고 문자의 길이는 글자의 갯수
+
+            var num = String(time).substring(i,i+1);
+        // 문자열로 변화한 time을 substring으로 i번째에서 시작해 i+1째에서 자른 값을 변수 num에 담는다 혹 대입한다
+            arr.push(num);
+        //  arr 배열에 num 을 담는다 -----
+            select.children('span').eq(i).animate({
+        // 대상의 자식이 span인 선택자에게 애니메이션을 주고
+            'background-position-y':"-"+Number(arr[i])*100+"px"
+            })
+        // 속성 백그라운드 포지션y 값 반영
+        // 문자열로 바뀐 i를 Number를 사욯애  숫자로 바꾸고 100px을 더해준다.
+        // 배열에 담긴 값을을 숫자 형태로 가져오고 가저온 값에 100을 곱해  값을 반영한다 .
+
+            }
+
+        }
+     })
+
+    </script>
+</head>
+<body>
+    <div class="hh">
+        <span></span>
+        <span></span>
+    </div>
+    <div class="mm">
+        <span></span>
+        <span></span>
+    </div>
+    <div class="ss">
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>
