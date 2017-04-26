@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        *{margin:0; padding:0;}
+        ul{list-style:none;}
+        .btngroup{border-top:1px #F00 solid;border-bottom:1px #F00 solid; margin-bottom:50px;}
+        .btngroup ul {text-align:center; overflow: hidden;}
+        .btngroup li {display:inline-block; line-height:50px;}
+        .list li{float:left; width:25%; padding-bottom:25%; outline:1px #F00 solid;}
+    </style>
+
+    <script>
+        $(function(){
+
+            var menu = {
+                "food":
+                    [{
+                        "url":"../images/a.jpg",
+                        "menuName":"케이준샐러드",
+                        "price":"10,000",
+                        "time":"brunch"
+                    },{
+                        "url":"../images/b.jpg",
+                        "menuName":"이탈리아모듬치즈",
+                        "price":"15,000",
+                        "time":"brunch"
+                    },{
+                        "url":"../images/c.jpg",
+                        "menuName":"사과 샐러드",
+                        "price":"7,000",
+                        "time":"brunch"
+                    },{
+                        "url":"../images/d.jpg",
+                        "menuName":"치킨파니니",
+                        "price":"25,000",
+                        "time":"brunch"
+                    },{
+                        "url":"../images/e.jpg",
+                        "menuName":"소고기 까르파쵸",
+                        "price":"11,000",
+                        "time":"brunch"
+                    },{
+                        "url":"../images/f.jpg",
+                        "menuName":"해산물파스타",
+                        "price":"10,000",
+                        "time":"brunch"
+                    },{
+                        "url":"../images/g.jpg",
+                        "menuName":"스테이크",
+                        "price":"10,000",
+                        "time":"dinner"
+                    },{
+                        "url":"../images/h.jpg",
+                        "menuName":"모닝세트A",
+                        "price":"13,000",
+                        "time":"brunch"
+                    },{
+                        "url":"../images/i.jpg",
+                        "menuName":"모닝세트B",
+                        "price":"10,000",
+                        "time":"brunch"
+                    },{
+                        "url":"../images/j.jpg",
+                        "menuName":"브로콜리양파수프",
+                        "price":"7,000",
+                        "time":"brunchr"
+                    },{
+                        "url":"../images/k.jpg",
+                        "menuName":"새우리조또",
+                        "price":"8,000",
+                        "time":"lunch"
+                    },{
+                        "url":"../images/l.jpg",
+                        "menuName":"버섯리조또",
+                        "price":"9,000",
+                        "time":"lunch"
+                    },{
+                        "url":"../images/m.jpg",
+                        "menuName":"포모도로",
+                        "price":"12,000",
+                        "time":"lunch"
+                    },{
+                        "url":"../images/n.jpg",
+                        "menuName":"라구 스파게티",
+                        "price":"11,000",
+                        "time":"lunch"
+                    },{
+                        "url":"../images/k.jpg",
+                        "menuName":"봉골레 링귀니",
+                        "price":"15,000",
+                        "time":"lunch"
+                    },{
+                        "url":"../images/l.jpg",
+                        "menuName":"버섯리조또",
+                        "price":"9,000",
+                        "time":"lunch"
+                    },{
+                        "url":"../images/k.jpg",
+                        "menuName":"새우리조또",
+                        "price":"8,000",
+                        "time":"lunch"
+                    },{
+                        "url":"../images/l.jpg",
+                        "menuName":"버섯리조또",
+                        "price":"9,000",
+                        "time":"lunch"
+                    },{
+                        "url":"../images/k.jpg",
+                        "menuName":"새우리조또",
+                        "price":"8,000",
+                        "time":"lunch"
+                    },{
+                        "url":"../images/l.jpg",
+                        "menuName":"버섯리조또",
+                        "price":"9,000",
+                        "time":"lunch"
+                    },{
+                        "url":"../images/k.jpg",
+                        "menuName":"로스팅 양갈비",
+                        "price":"8,000",
+                        "time":"dinner"
+                    },{
+                        "url":"../images/l.jpg",
+                        "menuName":"채끝 등심",
+                        "price":"9,000",
+                        "time":"dinner"
+                    },{
+                        "url":"../images/k.jpg",
+                        "menuName":"꽃등심 스테이크",
+                        "price":"20,000",
+                        "time":"dinner"
+                    },{
+                        "url":"../images/l.jpg",
+                        "menuName":"칠면조구이",
+                        "price":"18.000",
+                        "time":"dinner"
+                    },{
+                        "url":"../images/k.jpg",
+                        "menuName":"로스팅 양갈비",
+                        "price":"8,000",
+                        "time":"dinner"
+                    },{
+                        "url":"../images/l.jpg",
+                        "menuName":"채끝 등심",
+                        "price":"9,000",
+                        "time":"dinner"
+                    },{
+                        "url":"../images/k.jpg",
+                        "menuName":"꽃등심 스테이크",
+                        "price":"20,000",
+                        "time":"dinner"
+                    },{
+                        "url":"../images/l.jpg",
+                        "menuName":"칠면조구이",
+                        "price":"18.000",
+                        "time":"dinner"
+                    }]
+            }
+
+
+
+            //  $('.btngroup li#brunch').click(function(){
+            //      $('.list li').hide()
+            //      $('.brunch').show()
+            //  })
+            //  $('.btngroup li#brunch').click(function(){
+            //      $('.list li').hide()
+            //      $('.brunch').show()
+            //  })
+
+            //  $('.btngroup li#brunch').click(function(){
+            //      $('.list li').hide()
+            //      $('.brunch').show()
+            //  })
+
+            //  $('.btngroup li#brunch').click(function(){
+            //      $('.list li').hide()
+            //      $('.brunch').show()
+            //  })
+
+
+            // $('.btngroup li a').click(function(e){
+            //     e.preventDefault();
+            //
+            //    var item =  $(this).attr('id');
+
+            //   $('.list li').each(function(i){
+
+            //       if($(this).is('.'+item)){
+            //           $(this).show()
+            //       }else{
+            //           $(this).hide()
+            //       }
+
+            //   })
+
+
+
+            // for(var i = 0; i< $('.list li').size(); i++){
+
+            //     if($('.list li').eq(i).is('.'+item)){
+            //         $('.list li').eq(i).show();
+            //     }else{
+            //         $('.list li').eq(i).hide();
+            //     }
+            // }
+
+            //$('.list li')
+            //$('.list li').filter('.'+item).show().end().not('.'+item).hide();
+
+
+                // $('.btngroup li a').click(function(e){
+                //     e.preventDefault();
+                //
+                //       var attr = $(this).parent().attr('class')
+                //
+                //       for(i = 0; i<menu.food.length; i++){
+                //         if(menu.food[i].time == attr){
+                //           $('.list').append('<li><img src="' + menu.food[i].url + '"/></li>');
+                //         }
+                //       }
+                //     })
+                $.each(menu.food,function(i,e){
+
+                    var strs = "";
+
+                    strs += "<li class='"+e.time+"+</br>"+e.menuName+"</br>"+e.price+"</br>"+e.url+"'>";
+                    strs += e.time+e.price+e.menuName+e.url;
+                    strs += "</li>";
+
+                    $('.list').append(strs)
+
+                   })
+               })
+
+    </script>
+</head>
+<body>
+
+    <div class="btngroup">
+        <ul>
+            <li><a href="" id="all">ALL</a></li>
+            <li><a href="" id="brunch">브런치</a></li>
+            <li><a href="" id="lunch">런치 메뉴</a></li>
+            <li><a href="" id="dinner">디너</a></li>
+            <li><a href="" id="drink">드링크</a></li>
+            <li><a href="" id="apt">에피타이저</a></li>
+        </ul>
+    </div>
+
+    <ul class="list">
+
+    </ul>
+
+
+
+</body>
+</html>
