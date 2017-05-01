@@ -14,17 +14,12 @@
 		</style>
 		<script>
 			$(document).ready(function(){
-				var imageList = $('#slideList > p');
-				$('#slider').slider({
-					slide:function(event, ui){
-						var max = $('#slider').slider( "option", "max" );
-						var min = $('#slider').slider( "option", "min" );
-						var start = 0;
-						var end = imageList.size() - 1;
-						var imgIndex = parseInt((ui.value - min) * (end - start) / (max - min) + start);
 
-						imageList.css('display', 'none');
-						imageList.eq(imgIndex).css('display', 'block');
+				$('#slider').slider({
+					min:0,
+					max:80,
+					slide:function(event,ui){
+						$('#slideList > p').eq(ui.value).show().siblings().hide()
 					}
 				});
 			});

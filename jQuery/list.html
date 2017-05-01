@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+    // var datas = ["10","20","30","40","50","60","70","80","90","00"]
+    //
+    // for (var i=0; i < 52; i++){
+    //
+    //     if(i == 3){
+    //         console.log(i)
+    //     }else if(i> 4 && i <= 8){
+    //         console.log(i+":몰라몰라")
+    //     }else if(i ==12){
+    //         console.log(i+":바보")
+    //     }else if(i>15 && i<20){
+    //         console.log(i+"힘들어")
+    //     } else{
+    //         console.log(i+":난의미없어")
+    //     }
+    // }
+
+      //list 끊어서 불러오기
+
+    //   var i = 0;
+    //   var yy = 10;
+    //
+    //   function a(){
+    //       for(i; i <yy; i++){
+    //           console.log(i)
+    //       }
+    //       console.log("---더해짐-----")
+    //        yy += 10;
+    //   }
+    //
+    // a()
+    // a()
+
+       //리스트 불러오기
+
+      var list = 100;
+      var count = 90;
+      var i = 0;
+
+      console.log("리스트불러움")
+      for(i; i < list - count; i++){
+        console.log(i)
+      }
+      //이벤트
+
+      function Exports(){
+         count -= 10;
+        console.log("리스트 갱신")
+        for(i; i < list - count; i++){
+          console.log(i)
+        }
+
+      }
+
+      $('.b').click(function(){
+        Exports()
+      })
+
+          
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

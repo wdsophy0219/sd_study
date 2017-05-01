@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <style>
+        html,body{height:100%;}
+        ul{list-style:none;}
+        *{margin:0;padding:0;}
+        .contents{height:100%; border:1px #F00 solid; background-color: green;}
+        nav{
+            height:100%;
+            background-color:rgba(0,0,0,.5);
+            width:250px;
+            position:absolute;
+            left:-250px;
+        }
+        nav .on {position:absolute; left :0; transition: 0.3s}
+
+        nav h1{color:#FFF;}
+        .hamburger{
+            display:block;
+            width:50px;
+            height:50px;
+            border:1px #F00 solid;
+            background-color: #fff;
+            position:absolute;
+            right: -60px;
+            top:10px;
+        }
+        .hamburger .on {color: orange; position:absolute; left:250; transition: 0.3s}
+
+    </style>
+
+
+    <script>
+
+        $(function(){
+
+            $('.hamburger').on({
+             "mouseenter":function(){
+                 $('nav').addClass('on').siblings().removeClass('on')
+             },
+             "click":function(event){
+                 event.preventDefault();
+             }
+
+          })
+
+        })
+
+    </script>
+
+</head>
+<body>
+
+    <nav>
+        <a href="" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <h1>comdegarson</h1>
+    </nav>
+
+    <div class="contents">
+
+    </div>
+
+</body>
+</html>

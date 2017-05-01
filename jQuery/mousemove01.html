@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        html,body{
+            height:100%;
+        }
+        .box{
+            width:100%;
+            height:100%;
+            background-image: url(http://dint.img18.kr/smartpc/custom_img/main_1.jpg);
+            background-repeat: no-repeat;
+            transition:.3s;
+        }
+
+    </style>
+
+    <script>
+        $(function(){
+
+            $('body').mousemove(function(e){
+
+                var x = e.pageX/5 - $(this).width()/2
+                var y = e.pageY/5 - $(this).height()/2
+
+                $('.x').text(x)
+                $('.y').text(y)
+
+
+                $(".box").css({
+                    'transform':'translate('+ -x +'px,'+ -y +'px) scale(2,2)'
+                })
+
+            })
+
+        })
+
+    </script>
+
+</head>
+<body>
+    X: <span class="x"></span> /
+    Y: <span class="y"></span>
+    <div class="box">
+
+    </div>
+
+</body>
+</html>
