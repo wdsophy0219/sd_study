@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  $light-blue: #c7e7ec;
+  $green: #344216;
+  $dark-blue: #0d1a1d;
+  $blue: #3b8697;
+  $white: #FFFFFF;
+  $black: #000000;
+  $orange: #af7245;
+
+  .box{
+    position: relative;
+    margin: auto;
+    display: block;
+    margin-top: 8%;
+    width: 600px;
+    height: 420px;
+    background: $light-blue;
+  }
+
+  .body{
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    width: 55%;
+    height: 74%;
+    background: $green;
+    border-radius: 0 45% 0 0;
+
+  }
+
+  .ear{
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    left: 0%;
+    top: 1%;
+    background: $dark-blue;
+    border-radius: 0 100% 100% 0;
+  }
+
+  .head{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    left: -30%;
+    top: 0%;
+    background: $blue;
+    border-radius: 70% 0 0 40%;
+  }
+
+  .eye{
+    position: absolute;
+    background: $white;
+    width: 17%;
+    height: 7%;
+    top: 38%;
+    left: 30%;
+    border-radius: 50%;
+    /*z-index: 2;*/
+  }
+
+  .pupil{
+    position: absolute;
+    background: $black;
+    width: 50%;
+    height: 50%;
+    top: 40%;
+    left: 40%;
+    border-radius: 50%;
+
+  }
+  .tusk{
+    position: absolute;
+    background: none;
+    width: 0;
+    height: 0;
+    top: 57%;
+    right: 0%;
+    border-top: 10px solid transparent;
+  	border-right: 90px solid $orange;
+  	border-bottom: 10px solid transparent;
+    z-index: 4;
+  }
+
+  .trunk{
+    position: absolute;
+    background: $light-blue;
+    width: 63%;
+    height: 39%;
+    right: 0%;
+    bottom: 0;
+    border-radius: 40% 0 0 30%;
+    z-index: 3;
+  }
+
+  .legs-2{
+    position: absolute;
+    background: $light-blue;
+    width: 85%;
+    height: 100%;
+    bottom: 0;
+    left: 15%;
+    border-radius: 50% 70% 0 0;
+  }
+
+  .legs{
+    position: absolute;
+    background: $orange;
+    width: 45%;
+    height: 30%;
+    bottom: 0;
+    left: 30%;
+    border-radius: 50% 70% 0 0;
+    z-index: 2;
+  }
+  .tail{
+    position: absolute;
+    top: 56%;
+    right: -30%;
+    width: 0;
+  	height: 0;
+  	border-bottom: 12px solid $green;
+  	border-right: 170px solid transparent;
+    transform: rotate(70deg);
+  }
+
+
+  </style>
+</head>
+<body>
+ <!-- Begin Image -->
+ <!-- Invisible Box-->
+ <div class="box">
+    <!-- Elephant's Body-->
+    <div class="body">
+      <!-- Elephant's Ear ~ dark-blue-->
+      <div class="ear"></div>
+      <div class="legs">
+        <div class="legs-2"></div>
+      <!--End of Elephant's Legs-->
+      </div>
+
+      <!--Elephant's Head-->
+      <div class="head">
+        <div class="eye">
+          <div class="pupil"></div>
+        </div>
+        <div class="tusk"></div>
+        <div class="trunk"></div>
+      <!-- End of Elephant's Head-->
+      </div>
+
+      <div class="tail"></div>
+   <!-- End of Elephant's Body -->
+  </div>
+
+ <!-- End Invisible Box -->
+ </div>
+
+</body>
+</html>
