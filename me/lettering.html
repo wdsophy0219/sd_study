@@ -1,0 +1,34 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <script src="jquery.lettering.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+     <title>Document</title>
+ </head>
+ <style>
+    body {margin: 0; padding: 0; font-family: verdana; background: #ca0e62;}
+    .center {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+    .letter {color: #fff; font-size: 6em; margin: 0; padding: 0; transition: .5s; transform: perspective(1000px) rotateX(35deg);}
+    .letter .char1, .letter .char2, .letter .char3, .letter .char4, .letter .char5, .letter .char6 {display: inline-block; padding: 0 10px; transition: .5s; text-shadow: 0 5px 2px rgba(0, 0,0,.1); box-shadow: 10px 50px 20px rgba(0, 0,0,.1);
+        -webkit-filter: filter:blur(.5); /* Chrome, Safari, Opera */filter:blur(.5);}
+    .letter .char2, .letter .char4, .letter .char6 {background: #FF54a1; transform: skewY(-15deg);}
+    .letter .char1, .letter .char3, .letter .char5 {background: #FF54a1; transform: skewY(15deg);}
+    .letter:hover .char1, .letter:hover .char2, .letter:hover .char3, .letter:hover .char4, .letter:hover .char5, .letter:hover .char6 {background: #FF54a1; transform: skewY(0deg); -webkit-filter: filter:blur(0); /* Chrome, Safari, Opera */
+    filter:blur(0); box-shadow: 0 2px 2px rgba(0,0,0,1);}
+    .letter:hover {transform: perspective(0px) rotateX(0deg);}
+ </style>
+ <script>
+    $(function(){
+  	    $(".letter").lettering();
+
+    })
+ </script>
+ <body>
+   <div class="center">
+       <h1 class="letter">ABCDEF</h1>
+   </div>
+
+ </body>
+ </html>

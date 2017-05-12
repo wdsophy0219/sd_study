@@ -1,0 +1,78 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+     <title>Document</title>
+ </head>
+ <style>
+     body {margin: 0; padding: 0; font-family: verdana;}
+     .container {position:relative; width:800px; height: auto; margin: 800px auto; box-sizing: border-box;}
+     ul {position: relative; width: 100%; margin: 0; padding: 0; box-sizing: border-box; border-top: 2px solid #348dff;}
+     ul li {list-style: none; display: inline;}
+     ul li a {display: inline-block; width: 19.4%; height: 50px; line-height: 55px; text-align: center; text-decoration: none;}
+     ul li a.active {background: #348dff;}
+     ul li a .fa {color: #348dff; font-size: 30px;}
+     ul li a.active .fa {color: #FFF;}
+     ul li .box {position: absolute; top:50px; padding: 20px; background: #348dff; box-sizing: border-box; display: none;}
+     ul li .box.active {display: block;}
+     ul li .box h1 {margin: 0; padding: 0 0 15px; font-size: 24px; color: #fff; font-weight: normal; border-bottom: 2px solid #fff;}
+     ul li .box p {color: #fff;}
+
+ </style>
+ <script>
+    $(function(){
+        $('#accordion>li>a').on("click", function(){
+            $(this).siblings('.box').addClass('active');
+            $(this).closest('li').siblings('li').find('.box').removeClass('active');
+        })
+        $('#accordion').on('click', 'li>a', function(){
+            $('#accordion li a.active').removeClass('active');
+            $(this).addClass('active');
+        })
+    })
+ </script>
+ <body>
+    <div class="container">
+        <ul id="accordion">
+            <li>
+                <a href="#" class="active"><i class="fa fa-h-square" aria-hidden="true"></i></a>
+                <div class="box active">
+                    <h1>Home</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ad, saepe dolorum, non reiciendis numquam beatae dicta voluptas, autem reprehenderit voluptatum possimus! Laborum deserunt ex, ab veniam obcaecati quidem animi.</p>
+                </div>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-gift" aria-hidden="true"></i></a>
+                <div class="box">
+                    <h1>Gift</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ad, saepe dolorum, non reiciendis numquam beatae dicta voluptas, autem reprehenderit voluptatum possimus! Laborum deserunt ex, ab veniam obcaecati quidem animi.</p>
+                </div>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <div class="box">
+                    <h1>Github</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ad, saepe dolorum, non reiciendis numquam beatae dicta voluptas, autem reprehenderit voluptatum possimus! Laborum deserunt ex, ab veniam obcaecati quidem animi.</p>
+                </div>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-bitbucket" aria-hidden="true"></i></a>
+                <div class="box">
+                    <h1>Bitbucket</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ad, saepe dolorum, non reiciendis numquam beatae dicta voluptas, autem reprehenderit voluptatum possimus! Laborum deserunt ex, ab veniam obcaecati quidem animi.</p>
+                </div>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                <div class="box">
+                    <h1>Facebook</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ad, saepe dolorum, non reiciendis numquam beatae dicta voluptas, autem reprehenderit voluptatum possimus! Laborum deserunt ex, ab veniam obcaecati quidem animi.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+ </body>
+ </html>
